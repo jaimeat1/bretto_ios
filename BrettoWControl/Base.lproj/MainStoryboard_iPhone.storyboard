@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="11">
+            <objects>
+                <viewController title="First" id="2" userLabel="Home View Controller" customClass="BWCHomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HJp-wa-t9V">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aiI-Gf-bHu" userLabel="View iPhone 5">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDX-cJ-ABw" userLabel="Button - Armar">
+                                        <accessibility key="accessibilityConfiguration" label="assembleOn"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="217" id="7wu-zN-jwk"/>
+                                            <constraint firstAttribute="width" constant="160" id="k5Y-Q6-5nm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                        <state key="normal" backgroundImage="assemble_on_iphone5.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="assemble_on_pressed_iphone5.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="7K9-FQ-KaY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I23-8G-laC" userLabel="Button - Desarmar">
+                                        <accessibility key="accessibilityConfiguration" label="assembleOff"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="Nsb-BS-hI6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="assemble_off_iphone5.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="assemble_off_pressed_iphone5.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="QYG-QG-WcY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7m9-y1-TKC" userLabel="Button - Motor">
+                                        <accessibility key="accessibilityConfiguration" label="engine"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="engine_iphone5.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="engine_pressed_iphone5.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="ofM-vY-ovQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vO5-Mf-2Tj" userLabel="Button - Sirena">
+                                        <accessibility key="accessibilityConfiguration" label="siren"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="217" id="Toc-au-ZLr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="siren_iphone5.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="siren_pressed_iphone5.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="uLT-Nf-8um"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpX-cg-Iud" userLabel="Button - Sensor">
+                                        <accessibility key="accessibilityConfiguration" label="sensor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="x42-s0-UQo"/>
+                                            <constraint firstAttribute="width" constant="95" id="xOw-JL-tIM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="sensor_iphone5.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="sensor_pressed_iphone5.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="m2d-ll-UGv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfF-YK-GjC" userLabel="Button - Localizar">
+                                        <accessibility key="accessibilityConfiguration" label="location"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="134" id="8Y4-9v-JV7"/>
+                                            <constraint firstAttribute="width" constant="134" id="YkT-vS-bVl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="location_iphone5.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="location_pressed_iphone5.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="Os2-kj-VKq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJV-U4-0KP" userLabel="Button - Ahorro">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="95" id="22I-iq-LHG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="save_iphone5.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="save_pressed_iphone5.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="RjG-oh-EVk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Izt-Lo-CSd" userLabel="Button - Banner">
+                                        <accessibility key="accessibilityConfiguration" label="bretto"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="67" id="6sK-fK-ILA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Bretto" backgroundImage="banner_iphone5.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="j4e-B7-BlN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="I23-8G-laC" firstAttribute="bottom" secondItem="qDX-cJ-ABw" secondAttribute="bottom" type="default" id="1mc-4A-gis"/>
+                                    <constraint firstItem="qDX-cJ-ABw" firstAttribute="top" secondItem="aiI-Gf-bHu" secondAttribute="top" type="default" id="2w3-Fx-hBd"/>
+                                    <constraint firstAttribute="bottom" secondItem="Izt-Lo-CSd" secondAttribute="bottom" constant="322" id="3Qu-5s-LPS"/>
+                                    <constraint firstItem="jJV-U4-0KP" firstAttribute="trailing" secondItem="aiI-Gf-bHu" secondAttribute="trailing" type="default" id="CuI-bl-urU"/>
+                                    <constraint firstItem="vO5-Mf-2Tj" firstAttribute="trailing" secondItem="aiI-Gf-bHu" secondAttribute="trailing" type="default" id="DL6-wN-Wyc"/>
+                                    <constraint firstItem="UfF-YK-GjC" firstAttribute="top" secondItem="aiI-Gf-bHu" secondAttribute="top" constant="147" id="HUN-8L-q8L"/>
+                                    <constraint firstItem="I23-8G-laC" firstAttribute="top" secondItem="aiI-Gf-bHu" secondAttribute="top" type="default" id="HkO-HU-QSl"/>
+                                    <constraint firstItem="dpX-cg-Iud" firstAttribute="centerY" secondItem="UfF-YK-GjC" secondAttribute="centerY" type="default" id="Iwp-sC-tSf"/>
+                                    <constraint firstItem="Izt-Lo-CSd" firstAttribute="trailing" secondItem="aiI-Gf-bHu" secondAttribute="trailing" type="default" id="Nt4-M7-ree"/>
+                                    <constraint firstItem="7m9-y1-TKC" firstAttribute="bottom" secondItem="vO5-Mf-2Tj" secondAttribute="bottom" type="default" id="U9o-q1-eeI"/>
+                                    <constraint firstItem="qDX-cJ-ABw" firstAttribute="leading" secondItem="aiI-Gf-bHu" secondAttribute="leading" type="default" id="WhF-pO-4Fv"/>
+                                    <constraint firstItem="UfF-YK-GjC" firstAttribute="centerX" secondItem="Izt-Lo-CSd" secondAttribute="centerX" type="default" id="eWO-gb-ybF"/>
+                                    <constraint firstItem="jJV-U4-0KP" firstAttribute="top" secondItem="dpX-cg-Iud" secondAttribute="top" type="default" id="gqa-zs-lCV"/>
+                                    <constraint firstItem="7m9-y1-TKC" firstAttribute="leading" secondItem="aiI-Gf-bHu" secondAttribute="leading" type="default" id="idS-fn-lhg"/>
+                                    <constraint firstItem="7m9-y1-TKC" firstAttribute="centerY" secondItem="vO5-Mf-2Tj" secondAttribute="centerY" type="default" id="lS9-Hk-WRB"/>
+                                    <constraint firstItem="7m9-y1-TKC" firstAttribute="trailing" secondItem="qDX-cJ-ABw" secondAttribute="trailing" type="default" id="sB2-TJ-X1N"/>
+                                    <constraint firstItem="jJV-U4-0KP" firstAttribute="bottom" secondItem="dpX-cg-Iud" secondAttribute="bottom" type="default" id="t9a-Ji-HR4"/>
+                                    <constraint firstItem="Izt-Lo-CSd" firstAttribute="leading" secondItem="aiI-Gf-bHu" secondAttribute="leading" type="default" id="uWN-nN-4JE"/>
+                                    <constraint firstItem="7m9-y1-TKC" firstAttribute="top" secondItem="aiI-Gf-bHu" secondAttribute="top" constant="216" id="vVT-Ip-Hs5"/>
+                                    <constraint firstItem="dpX-cg-Iud" firstAttribute="leading" secondItem="aiI-Gf-bHu" secondAttribute="leading" type="default" id="wlG-sB-kaK"/>
+                                    <constraint firstItem="vO5-Mf-2Tj" firstAttribute="leading" secondItem="I23-8G-laC" secondAttribute="leading" type="default" id="xC2-O0-ysc"/>
+                                    <constraint firstItem="I23-8G-laC" firstAttribute="trailing" secondItem="aiI-Gf-bHu" secondAttribute="trailing" type="default" id="ysk-9Z-nXt"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYy-Hq-Ebk" userLabel="View iPhone">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdn-tn-Kup" userLabel="Button - Armar">
+                                        <accessibility key="accessibilityConfiguration" label="assembleOn"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="Uhf-UX-rIE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="assemble_on.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="assemble_on_pressed.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="EA4-Hg-ot9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqe-Gj-lMR" userLabel="Button - Desarmar">
+                                        <accessibility key="accessibilityConfiguration" label="assembleOff"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="Nvt-RA-ygB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="assemble_off.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="assemble_off_pressed.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="zhC-wD-s5i"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJF-gQ-Yv6" userLabel="Button - Motor">
+                                        <accessibility key="accessibilityConfiguration" label="engine"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="engine.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="engine_pressed.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="dja-lg-C1I"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKB-zk-KTO" userLabel="Button - Sirena">
+                                        <accessibility key="accessibilityConfiguration" label="siren"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="siren.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="siren_pressed.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="Qer-D4-lfP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hb-YD-ogd" userLabel="Button - Location">
+                                        <accessibility key="accessibilityConfiguration" label="location"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="134" id="umu-9d-m54"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="location.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="location_pressed.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="OmU-iF-xZX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35e-7x-WvK" userLabel="Button - Save">
+                                        <accessibility key="accessibilityConfiguration" label="save"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="95" id="ndM-11-RmV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="save.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="save_pressed.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="t8O-9s-n1y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTv-55-Jqj" userLabel="Button - Sensor">
+                                        <accessibility key="accessibilityConfiguration" label="sensor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="95" id="Ray-H3-5d8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="sensor.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="sensor_pressed.png">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="xU0-yZ-9vw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fI-Qn-1eg" userLabel="Button - Banner">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" backgroundImage="banner.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9fI-Qn-1eg" firstAttribute="top" secondItem="IYy-Hq-Ebk" secondAttribute="top" constant="368" id="1zS-ew-ULv"/>
+                                    <constraint firstItem="BJF-gQ-Yv6" firstAttribute="leading" secondItem="IYy-Hq-Ebk" secondAttribute="leading" type="default" id="3PF-cx-1i8"/>
+                                    <constraint firstItem="Bqe-Gj-lMR" firstAttribute="top" secondItem="IYy-Hq-Ebk" secondAttribute="top" type="default" id="9Wf-sv-0eW"/>
+                                    <constraint firstItem="6Hb-YD-ogd" firstAttribute="top" secondItem="IYy-Hq-Ebk" secondAttribute="top" constant="105" id="AJx-ka-iCY"/>
+                                    <constraint firstItem="BTv-55-Jqj" firstAttribute="leading" secondItem="IYy-Hq-Ebk" secondAttribute="leading" type="default" id="FJc-aS-N0G"/>
+                                    <constraint firstItem="BTv-55-Jqj" firstAttribute="top" secondItem="35e-7x-WvK" secondAttribute="top" type="default" id="Kn6-wK-Ld0"/>
+                                    <constraint firstItem="BTv-55-Jqj" firstAttribute="centerY" secondItem="6Hb-YD-ogd" secondAttribute="centerY" type="default" id="M1N-xw-cUi"/>
+                                    <constraint firstItem="rdn-tn-Kup" firstAttribute="leading" secondItem="IYy-Hq-Ebk" secondAttribute="leading" type="default" id="M6T-fP-Ez0"/>
+                                    <constraint firstItem="BJF-gQ-Yv6" firstAttribute="top" secondItem="IYy-Hq-Ebk" secondAttribute="top" constant="171" id="MT5-0U-B3b"/>
+                                    <constraint firstItem="rdn-tn-Kup" firstAttribute="top" secondItem="IYy-Hq-Ebk" secondAttribute="top" type="default" id="PRh-oQ-nf3"/>
+                                    <constraint firstItem="bKB-zk-KTO" firstAttribute="leading" secondItem="Bqe-Gj-lMR" secondAttribute="leading" type="default" id="Qai-PF-WM7"/>
+                                    <constraint firstItem="35e-7x-WvK" firstAttribute="trailing" secondItem="IYy-Hq-Ebk" secondAttribute="trailing" type="default" id="Zfn-b5-7lv"/>
+                                    <constraint firstItem="BJF-gQ-Yv6" firstAttribute="trailing" secondItem="rdn-tn-Kup" secondAttribute="trailing" type="default" id="b1V-Ir-xBz"/>
+                                    <constraint firstItem="9fI-Qn-1eg" firstAttribute="leading" secondItem="IYy-Hq-Ebk" secondAttribute="leading" type="default" id="fx8-cE-kga"/>
+                                    <constraint firstItem="Bqe-Gj-lMR" firstAttribute="leading" secondItem="IYy-Hq-Ebk" secondAttribute="leading" constant="161" id="kVO-Mq-CAd"/>
+                                    <constraint firstItem="bKB-zk-KTO" firstAttribute="top" secondItem="BJF-gQ-Yv6" secondAttribute="top" type="default" id="mqO-yf-Fyb"/>
+                                    <constraint firstItem="bKB-zk-KTO" firstAttribute="trailing" secondItem="Bqe-Gj-lMR" secondAttribute="trailing" type="default" id="xEk-8J-IL1"/>
+                                    <constraint firstItem="6Hb-YD-ogd" firstAttribute="centerX" secondItem="9fI-Qn-1eg" secondAttribute="centerX" type="default" id="y0X-KE-GE3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="aiI-Gf-bHu" firstAttribute="leading" secondItem="HJp-wa-t9V" secondAttribute="leading" type="default" id="5jK-1m-0SW"/>
+                            <constraint firstItem="IYy-Hq-Ebk" firstAttribute="trailing" secondItem="HJp-wa-t9V" secondAttribute="trailing" type="default" id="BYs-kw-Ycf"/>
+                            <constraint firstItem="aiI-Gf-bHu" firstAttribute="top" secondItem="HJp-wa-t9V" secondAttribute="top" type="default" id="MFD-Mo-ThT"/>
+                            <constraint firstItem="aiI-Gf-bHu" firstAttribute="trailing" secondItem="HJp-wa-t9V" secondAttribute="trailing" type="default" id="QRX-wY-n55"/>
+                            <constraint firstItem="IYy-Hq-Ebk" firstAttribute="leading" secondItem="HJp-wa-t9V" secondAttribute="leading" type="default" id="XQT-AJ-2Tv"/>
+                            <constraint firstAttribute="bottom" secondItem="IYy-Hq-Ebk" secondAttribute="bottom" constant="88" id="Yoo-AE-BUD"/>
+                            <constraint firstItem="IYy-Hq-Ebk" firstAttribute="top" secondItem="HJp-wa-t9V" secondAttribute="top" type="default" id="k6v-eo-qpw"/>
+                            <constraint firstAttribute="bottom" secondItem="aiI-Gf-bHu" secondAttribute="bottom" constant="-324" id="wbM-Kz-XWZ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Inicio" image="home.png" id="7"/>
+                    <connections>
+                        <outlet property="assembleOffBtn" destination="Bqe-Gj-lMR" id="3JM-qq-DNP"/>
+                        <outlet property="assembleOffBtniPhone5" destination="I23-8G-laC" id="dC1-d4-054"/>
+                        <outlet property="assembleOnBtn" destination="rdn-tn-Kup" id="MoK-i2-89T"/>
+                        <outlet property="assembleOnBtniPhone5" destination="qDX-cJ-ABw" id="7vO-rN-3fe"/>
+                        <outlet property="bannerBtniPhone5" destination="Izt-Lo-CSd" id="fqk-bJ-q7S"/>
+                        <outlet property="engineBtn" destination="BJF-gQ-Yv6" id="fEJ-aF-SQw"/>
+                        <outlet property="engineBtniPhone5" destination="7m9-y1-TKC" id="XRi-9F-9Y1"/>
+                        <outlet property="locationBtn" destination="6Hb-YD-ogd" id="LUn-Cb-81Y"/>
+                        <outlet property="locationBtniPhone5" destination="UfF-YK-GjC" id="s21-5w-RbH"/>
+                        <outlet property="saveBtn" destination="35e-7x-WvK" id="f1e-EB-dGH"/>
+                        <outlet property="saveBtniPhone5" destination="jJV-U4-0KP" id="Itc-eb-CEO"/>
+                        <outlet property="sensorBtn" destination="BTv-55-Jqj" id="X3e-yh-74l"/>
+                        <outlet property="sensorBtniPhone5" destination="dpX-cg-Iud" id="RtZ-5G-z2P"/>
+                        <outlet property="sirenBtn" destination="bKB-zk-KTO" id="fzb-Gd-c3O"/>
+                        <outlet property="sirenBtniPhone5" destination="vO5-Mf-2Tj" id="yQA-ZQ-TDX"/>
+                        <outlet property="viewiPhone" destination="IYy-Hq-Ebk" id="tgx-D7-fBT"/>
+                        <outlet property="viewiPhone5" destination="aiI-Gf-bHu" id="jdQ-0W-hVP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957" y="-556"/>
+        </scene>
+        <!--Alarm View Controller-->
+        <scene sceneID="13">
+            <objects>
+                <viewController title="Second" id="3" userLabel="Alarm View Controller" customClass="BWCAlarmViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="center" id="17">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDR-ZU-xfo">
+                                <accessibility key="accessibilityConfiguration" label="call"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="5h7-Gb-3Yl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal" title="Llamar" backgroundImage="button.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" title="Llamar" backgroundImage="button_pressed.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="3" eventType="touchUpInside" id="zcG-QW-gpJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maW-Nw-s69">
+                                <accessibility key="accessibilityConfiguration" label="imei"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="qui-jq-pd7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Obtener IMEI" backgroundImage="button.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="button_pressed.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="3" eventType="touchUpInside" id="u5g-dg-cEh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7N-1S-mBb">
+                                <accessibility key="accessibilityConfiguration" label="setDevices"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="nm0-gB-6TO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Configurar móviles" backgroundImage="button.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="button_pressed.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="3" eventType="touchUpInside" id="K1q-ig-zi4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2R2-Ft-6q4">
+                                <accessibility key="accessibilityConfiguration" label="getDevices"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Hh1-ny-CBV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Comprobar móviles" backgroundImage="button.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="button_pressed.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="3" eventType="touchUpInside" id="u97-t5-5WL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZN9-Bf-uHD">
+                                <accessibility key="accessibilityConfiguration" label="sensibility"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ILc-E4-nXf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Ajustar sensibilidad" backgroundImage="button.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="button_pressed.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="3" eventType="touchUpInside" id="Swq-UL-679"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T7N-1S-mBb" firstAttribute="trailing" secondItem="2R2-Ft-6q4" secondAttribute="trailing" type="default" id="1CZ-35-Y0g"/>
+                            <constraint firstItem="T7N-1S-mBb" firstAttribute="top" secondItem="17" secondAttribute="top" constant="228" id="1VX-JE-W7E"/>
+                            <constraint firstItem="maW-Nw-s69" firstAttribute="trailing" secondItem="aDR-ZU-xfo" secondAttribute="trailing" type="default" id="61V-b9-fdy"/>
+                            <constraint firstItem="ZN9-Bf-uHD" firstAttribute="centerX" secondItem="17" secondAttribute="centerX" type="default" id="7oH-3K-0An"/>
+                            <constraint firstItem="aDR-ZU-xfo" firstAttribute="leading" secondItem="maW-Nw-s69" secondAttribute="leading" type="default" id="88P-Mc-L9B"/>
+                            <constraint firstItem="maW-Nw-s69" firstAttribute="trailing" secondItem="T7N-1S-mBb" secondAttribute="trailing" type="default" id="E4q-nK-wFw"/>
+                            <constraint firstItem="aDR-ZU-xfo" firstAttribute="top" secondItem="17" secondAttribute="top" constant="125" id="F9u-Id-f66"/>
+                            <constraint firstItem="2R2-Ft-6q4" firstAttribute="leading" secondItem="ZN9-Bf-uHD" secondAttribute="leading" type="default" id="HZR-g4-Gyi"/>
+                            <constraint firstAttribute="bottom" secondItem="2R2-Ft-6q4" secondAttribute="bottom" constant="176" id="OUb-gA-F5A"/>
+                            <constraint firstItem="ZN9-Bf-uHD" firstAttribute="trailing" secondItem="2R2-Ft-6q4" secondAttribute="trailing" type="default" id="VDi-SX-uJO"/>
+                            <constraint firstAttribute="bottom" secondItem="ZN9-Bf-uHD" secondAttribute="bottom" constant="125" id="cKX-9z-h2S"/>
+                            <constraint firstItem="T7N-1S-mBb" firstAttribute="leading" secondItem="maW-Nw-s69" secondAttribute="leading" type="default" id="eC4-pR-raf"/>
+                            <constraint firstItem="T7N-1S-mBb" firstAttribute="leading" secondItem="2R2-Ft-6q4" secondAttribute="leading" type="default" id="mKM-0N-lAD"/>
+                            <constraint firstItem="maW-Nw-s69" firstAttribute="top" secondItem="aDR-ZU-xfo" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wii-NA-5kW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Alarma" image="alarm.png" id="6"/>
+                    <connections>
+                        <outlet property="callBtn" destination="aDR-ZU-xfo" id="ncg-yU-cdM"/>
+                        <outlet property="getDevicesBtn" destination="2R2-Ft-6q4" id="g9B-s5-8S1"/>
+                        <outlet property="imeiBtn" destination="maW-Nw-s69" id="uiD-AO-7wh"/>
+                        <outlet property="setDevicesBtn" destination="T7N-1S-mBb" id="pfp-mj-e9s"/>
+                        <outlet property="setSensibilityBtn" destination="ZN9-Bf-uHD" id="8ct-Ma-dRl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957" y="186"/>
+        </scene>
+        <!--System View Controller-->
+        <scene sceneID="CGt-OC-dRD">
+            <objects>
+                <viewController id="OC0-ui-226" userLabel="System View Controller" customClass="BWCSystemViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jBd-c1-8lo">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfK-Fa-0gG">
+                                <accessibility key="accessibilityConfiguration" label="state"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Estado" backgroundImage="button.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="button_pressed.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="OC0-ui-226" eventType="touchUpInside" id="Pf3-9q-aTX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwP-nw-SaB">
+                                <accessibility key="accessibilityConfiguration" label="reset"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Reseteo parcial" backgroundImage="button.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="button_pressed.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="OC0-ui-226" eventType="touchUpInside" id="0Yh-o8-BQN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHr-Nw-rGU">
+                                <accessibility key="accessibilityConfiguration" label="hardReset"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Reseteo completo" backgroundImage="button.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="button_pressed.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="OC0-ui-226" eventType="touchUpInside" id="K6S-xG-iTX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RwP-nw-SaB" firstAttribute="leading" secondItem="sfK-Fa-0gG" secondAttribute="leading" type="default" id="KqD-Jl-3Qw"/>
+                            <constraint firstItem="UHr-Nw-rGU" firstAttribute="top" secondItem="RwP-nw-SaB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="VKZ-hQ-hhs"/>
+                            <constraint firstItem="RwP-nw-SaB" firstAttribute="top" secondItem="sfK-Fa-0gG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="fjG-SL-OWO"/>
+                            <constraint firstItem="sfK-Fa-0gG" firstAttribute="top" secondItem="jBd-c1-8lo" secondAttribute="top" constant="125" id="hob-1y-yal"/>
+                            <constraint firstItem="RwP-nw-SaB" firstAttribute="leading" secondItem="UHr-Nw-rGU" secondAttribute="leading" type="default" id="uDV-YU-HXY"/>
+                            <constraint firstItem="sfK-Fa-0gG" firstAttribute="centerX" secondItem="jBd-c1-8lo" secondAttribute="centerX" type="default" id="x7Q-RP-us6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Sistema" image="system.png" id="paA-Mg-otC"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="hardResetBtn" destination="UHr-Nw-rGU" id="zEU-Qu-CBq"/>
+                        <outlet property="softResetBtn" destination="RwP-nw-SaB" id="ZBw-1l-y7w"/>
+                        <outlet property="stateBtn" destination="sfK-Fa-0gG" id="3Pl-so-CHQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YVq-VG-pLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957" y="887"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="yep-Xh-Rea">
+            <objects>
+                <tableViewController id="lg7-0J-JGr" userLabel="Settings View Controller" customClass="BWCSettingsViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="7jz-Rd-8MM">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Aplicación" id="JcX-Pw-DZl">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Qro-jF-BVa" style="IBUITableViewCellStyleDefault" id="bY7-8C-qgO">
+                                        <rect key="frame" x="0.0" y="46" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Cambiar contraseña" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qro-jF-BVa">
+                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="HPd-bS-BPK" style="IBUITableViewCellStyleDefault" id="qDQ-XZ-8bo">
+                                        <rect key="frame" x="0.0" y="91" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Pedir contraseña" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HPd-bS-BPK">
+                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Alarma" id="i8s-mG-gn7">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="MKr-gS-297" detailTextLabel="YnY-85-1SL" style="IBUITableViewCellStyleSubtitle" id="16Q-1J-aVs">
+                                        <rect key="frame" x="0.0" y="182" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Número de la alarma" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MKr-gS-297">
+                                                    <rect key="frame" x="10" y="2" width="178" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YnY-85-1SL">
+                                                    <rect key="frame" x="10" y="24" width="47" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="LCj-Bx-J5D" style="IBUITableViewCellStyleDefault" id="9Dv-Hd-8vT">
+                                        <rect key="frame" x="0.0" y="227" width="320" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Cambiar Contraseña" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LCj-Bx-J5D">
+                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="lg7-0J-JGr" id="6JQ-Wn-2ab"/>
+                            <outlet property="delegate" destination="lg7-0J-JGr" id="QH2-GN-Syr"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Ajustes" image="settings.png" id="0FW-hc-AOb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYB-kf-j5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957" y="1604"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="15">
+            <objects>
+                <tabBarController id="4" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="26"/>
+                        <segue destination="3" kind="relationship" relationship="viewControllers" id="27"/>
+                        <segue destination="OC0-ui-226" kind="relationship" relationship="viewControllers" id="Yxa-P3-Ok3"/>
+                        <segue destination="lg7-0J-JGr" kind="relationship" relationship="viewControllers" id="GUg-kZ-sev"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="180"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="alarm.png" width="30" height="30"/>
+        <image name="assemble_off.png" width="159" height="170"/>
+        <image name="assemble_off_iphone5.png" width="317" height="434"/>
+        <image name="assemble_off_pressed.png" width="159" height="170"/>
+        <image name="assemble_off_pressed_iphone5.png" width="317" height="434"/>
+        <image name="assemble_on.png" width="161" height="170"/>
+        <image name="assemble_on_iphone5.png" width="323" height="434"/>
+        <image name="assemble_on_pressed.png" width="161" height="170"/>
+        <image name="assemble_on_pressed_iphone5.png" width="323" height="434"/>
+        <image name="banner.png" width="320" height="47"/>
+        <image name="banner_iphone5.png" width="640" height="136"/>
+        <image name="button.png" width="220" height="44"/>
+        <image name="button_pressed.png" width="220" height="44"/>
+        <image name="engine.png" width="161" height="194"/>
+        <image name="engine_iphone5.png" width="323" height="428"/>
+        <image name="engine_pressed.png" width="161" height="194"/>
+        <image name="engine_pressed_iphone5.png" width="323" height="428"/>
+        <image name="home.png" width="30" height="30"/>
+        <image name="location.png" width="135" height="134"/>
+        <image name="location_iphone5.png" width="261" height="260"/>
+        <image name="location_pressed.png" width="135" height="134"/>
+        <image name="location_pressed_iphone5.png" width="261" height="260"/>
+        <image name="save.png" width="98" height="110"/>
+        <image name="save_iphone5.png" width="194" height="220"/>
+        <image name="save_pressed.png" width="98" height="110"/>
+        <image name="save_pressed_iphone5.png" width="194" height="220"/>
+        <image name="sensor.png" width="98" height="110"/>
+        <image name="sensor_iphone5.png" width="194" height="220"/>
+        <image name="sensor_pressed.png" width="98" height="110"/>
+        <image name="sensor_pressed_iphone5.png" width="194" height="220"/>
+        <image name="settings.png" width="30" height="30"/>
+        <image name="siren.png" width="159" height="194"/>
+        <image name="siren_iphone5.png" width="317" height="428"/>
+        <image name="siren_pressed.png" width="159" height="194"/>
+        <image name="siren_pressed_iphone5.png" width="317" height="428"/>
+        <image name="system.png" width="30" height="30"/>
+    </resources>
+    <classes>
+        <class className="BWCAlarmViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BWCAlarmViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:"/>
+                <relationship kind="outlet" name="callBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="getDevicesBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="imeiBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="setDevicesBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="setSensibilityBtn" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="BWCHomeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BWCHomeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:"/>
+                <relationship kind="outlet" name="assembleOffBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="assembleOffBtniPhone5" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="assembleOnBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="assembleOnBtniPhone5" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="bannerBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="bannerBtniPhone5" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="engineBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="engineBtniPhone5" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="locationBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="locationBtniPhone5" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="saveBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="saveBtniPhone5" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="sensorBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="sensorBtniPhone5" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="sirenBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="sirenBtniPhone5" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="viewiPhone" candidateClass="UIView"/>
+                <relationship kind="outlet" name="viewiPhone5" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="BWCSettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BWCSettingsViewController.h"/>
+        </class>
+        <class className="BWCSystemViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BWCSystemViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:"/>
+                <relationship kind="outlet" name="hardResetBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="softResetBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="stateBtn" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

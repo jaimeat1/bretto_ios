@@ -1,0 +1,34 @@
+/* Localized versions of Info.plist keys */
+
+"Accept" = "Aceptar";
+"Cancel" = "Cancelar";
+"Enable" = "Activar";
+"Disable" = "Desactivar";
+"Yes" = "Sí";
+"No" = "No";
+"GPRMC" = "Datos GPRMC";
+"GPS" = "Datos GPS";
+"Web" = "Enlace a mapa web";
+
+"AssembleOn" = "Armar";
+"AssembleOff" = "Desarmar";
+"Sensibility" = "Sensor de golpes";
+"Save" = "Ahorro de energía";
+"Location" = "Localizar";
+"Engine" = "Motor";
+"Siren" = "Sirena";
+"Banner" = "Bretto";
+
+"Engine" = "Motor";
+"Call" = "Llamar";
+"GetImei" = "Obtener IMEI";
+"SetDevices" = "Configurar móviles";
+"GetDevices" = "Comprobar móviles";
+"Sensibility" = "Ajustar sensibilidad";
+"State" = "Estado de la alarma";
+"Reset" = "Reseteo parcial";
+"ResetHard" = "Reseteo completo";
+
+"Confirmation1" = "¿Estás seguro de esta operación?";
+"Confirmation2" = "¿Estás seguro? Esta operación no se puede deshacer.";
+"Confirmation3" = "¿Estás seguro? Esta operación no se puede deshacer. Tendrás que configurar de nuevo la aplicación.";

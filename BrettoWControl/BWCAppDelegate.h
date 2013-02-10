@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BWCAppDelegate : UIResponder <UIApplicationDelegate>
+@protocol BWCButtonDelegate <NSObject>
+
+@required
+- (void)buttonPressed:(id)sender;
+
+@end
+
+@interface BWCAppDelegate : UIResponder <UIApplicationDelegate, BWCButtonDelegate, UIActionSheetDelegate, UITabBarControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
