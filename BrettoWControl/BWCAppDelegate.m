@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 MobiOak. All rights reserved.
 //
 
+#import <MessageUI/MessageUI.h>
+
 #import "BWCCommandBuilder.h"
 #import "BWCAppDelegate.h"
 
@@ -83,11 +85,11 @@
     
     if ([self.currentCommand isEqualToString:@"assembleOn"]){
         
-        [BWCCommandBuilder buildCommand:BWCCommandAssembleOn withParameters:param];
+        [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandAssembleOn withParameters:param]];
         
     } else if ([self.currentCommand isEqualToString:@"assembleOff"]) {
         
-        [BWCCommandBuilder buildCommand:BWCCommandAssembleOff withParameters:param];
+        [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandAssembleOff withParameters:param]];
         
     } else if ([self.currentCommand isEqualToString:@"sensor"]) {
         
@@ -115,19 +117,19 @@
         
     } else if ([self.currentCommand isEqualToString:@"imei"]) {
         
-        [BWCCommandBuilder buildCommand:BWCCommandImei withParameters:param];
+        [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandImei withParameters:param]];
         
     } else if ([self.currentCommand isEqualToString:@"setDevices"]) {
         
     } else if ([self.currentCommand isEqualToString:@"getDevices"]) {
         
-        [BWCCommandBuilder buildCommand:BWCCommandGetDevices withParameters:param];
+        [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandGetDevices withParameters:param]];
         
     } else if ([self.currentCommand isEqualToString:@"sensibility"]) {
         
     } else if ([self.currentCommand isEqualToString:@"state"]) {
         
-        [BWCCommandBuilder buildCommand:BWCCommandState withParameters:param];
+        [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandState withParameters:param]];
         
     } else if ([self.currentCommand isEqualToString:@"reset"]) {
         
@@ -276,10 +278,10 @@
             
             switch (buttonIndex) {
                 case 0:
-                    [BWCCommandBuilder buildCommand:BWCCommandSensorOn withParameters:param];
+                    [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandSensorOn withParameters:param]];
                     break;
                 case 1:
-                    [BWCCommandBuilder buildCommand:BWCCommandSensorOff withParameters:param];
+                    [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandSensorOff withParameters:param]];
                     break;
                 default:
                     break;
@@ -289,10 +291,10 @@
             
             switch (buttonIndex) {
                 case 0:
-                    [BWCCommandBuilder buildCommand:BWCCommandSaveOn withParameters:param];
+                    [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandSaveOn withParameters:param]];
                     break;
                 case 1:
-                    [BWCCommandBuilder buildCommand:BWCCommandSaveOff withParameters:param];
+                    [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandSaveOff withParameters:param]];
                     break;
                 default:
                     break;
@@ -302,13 +304,13 @@
             
             switch (buttonIndex) {
                 case 0:
-                    [BWCCommandBuilder buildCommand:BWCCommandLocationGPRMC withParameters:param];
+                    [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandLocationGPRMC withParameters:param]];
                     break;
                 case 1:
-                    [BWCCommandBuilder buildCommand:BWCCommandLocationGPSD withParameters:param];
+                    [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandLocationGPSD withParameters:param]];
                     break;
                 case 2:
-                    [BWCCommandBuilder buildCommand:BWCCommandLocationWeb withParameters:param];
+                    [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandLocationWeb withParameters:param]];
                     break;
                 default:
                     break;
@@ -318,10 +320,10 @@
             
             switch (buttonIndex) {
                 case 0:
-                    [BWCCommandBuilder buildCommand:BWCCommandSirenOn withParameters:param];
+                    [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandSirenOn withParameters:param]];
                     break;
                 case 1:
-                    [BWCCommandBuilder buildCommand:BWCCommandSirenOff withParameters:param];
+                    [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandSirenOff withParameters:param]];
                     break;
                 default:
                     break;
@@ -337,9 +339,9 @@
             switch (buttonIndex) {
                 case 0:
                     if (self.actionIndex == 0) {
-                        [BWCCommandBuilder buildCommand:BWCCommandImmobilizeOff withParameters:param];
+                        [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandImmobilizeOff withParameters:param]];
                     } else {
-                        [BWCCommandBuilder buildCommand:BWCCommandImmobilizeOn withParameters:param];
+                        [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandImmobilizeOn withParameters:param]];
                     }
                     break;
                 case 1:
@@ -353,7 +355,7 @@
             
             switch (buttonIndex) {
                 case 0:
-                    [BWCCommandBuilder buildCommand:BWCCommandReset withParameters:param];
+                    [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandReset withParameters:param]];
                     break;
                 case 1:
                     // NO, do nothing
@@ -366,7 +368,7 @@
             
             switch (buttonIndex) {
                 case 0:
-                    [BWCCommandBuilder buildCommand:BWCCommandHardReset withParameters:param];
+                    [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandHardReset withParameters:param]];
                     break;
                 case 1:
                     // NO, do nothing
@@ -379,6 +381,25 @@
         
     } // end ask confirmation
     
+}
+
+- (void)composeMessage:(NSString *)message
+{
+// TODO uncomment to send SMS
+/*
+    MFMessageComposeViewController *messageComposer = [[MFMessageComposeViewController alloc] init];
+    messageComposer.body = message;
+    messageComposer.recipients = [NSArray arrayWithObject:[[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
+    [self.tabBarController presentModalViewController:messageComposer animated:YES];
+*/
+    NSString* title = [NSString stringWithFormat:@"SMS se enviará a %@", [[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
+    
+    [[[UIAlertView alloc] initWithTitle:title
+                                message:message
+                               delegate:self
+                      cancelButtonTitle:NSLocalizedString(@"Accept", @"")
+                     otherButtonTitles:nil]
+     show];
 }
 
 #pragma mark - UITabBarControllerDelegate methods

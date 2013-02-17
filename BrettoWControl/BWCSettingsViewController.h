@@ -10,4 +10,6 @@
 
 @interface BWCSettingsViewController : UITableViewController
 
+@property (nonatomic, weak) IBOutlet UITableViewCell* numberCell;
+
 @end

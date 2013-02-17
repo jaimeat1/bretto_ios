@@ -7,6 +7,7 @@
 //
 
 #import "BWCSettingsViewController.h"
+#import "BWCPasswordViewController.h"
 
 @interface BWCSettingsViewController ()
 
@@ -27,12 +28,30 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    // Show current alarm number
+    self.numberCell.detailTextLabel.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get reference to the destination view controller
+    BWCPasswordViewController* passwordViewController = (BWCPasswordViewController*)[(UINavigationController*)[segue destinationViewController] topViewController];
+    
+    if ([[segue identifier] isEqualToString:@"appSegue"])
+    {
+        passwordViewController.isAppPassword = YES;
+        
+    } else if ([[segue identifier] isEqualToString:@"alarmSegue"])
+    {
+        passwordViewController.isAppPassword = NO;
+    }
 }
 
 #pragma mark - UITableViewDataSource methods

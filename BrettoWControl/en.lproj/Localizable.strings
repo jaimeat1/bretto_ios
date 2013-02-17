@@ -32,3 +32,12 @@
 "Confirmation1" = "¿Estás seguro de esta operación?";
 "Confirmation2" = "¿Estás seguro? Esta operación no se puede deshacer.";
 "Confirmation3" = "¿Estás seguro? Esta operación no se puede deshacer. Tendrás que configurar de nuevo la aplicación.";
+
+"PasswordApp" = "Aplicación";
+"PasswordAlarm" = "Alarma";
+
+"ErrorTitle" = "Error";
+"ErrorPassEmpty" = "La contraseña no puede estar vacía";
+"ErrorPassOld" = "La contraseña no es correcta";
+"ErrorPassNew" = "La contraseña no coincide";
+"ErrorNumber" = "El número no puede estar vacío";
