@@ -96,16 +96,16 @@ NSInteger const BWCCommandState = 21;
         case BWCCommandSetDevices:
             // Concat add parameters 
             switch (parameters.count) {
-                case 1:
+                case 2:
                     message = [NSString stringWithFormat:@"%@A%@#", message,
                                [parameters objectAtIndex:1]];
                     break;
-                case 2:
+                case 3:
                     message = [NSString stringWithFormat:@"%@A%@*B%@#", message,
                                [parameters objectAtIndex:1],
                                [parameters objectAtIndex:2]];
                     break;
-                case 3:
+                case 4:
                     message = [NSString stringWithFormat:@"%@A%@*B%@*C%@#", message,
                                [parameters objectAtIndex:1],
                                [parameters objectAtIndex:2],

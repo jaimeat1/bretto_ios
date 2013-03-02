@@ -39,6 +39,7 @@
     [[NSUserDefaults standardUserDefaults] setObject:@"1234" forKey:@"passwordApp"];
     [[NSUserDefaults standardUserDefaults] setObject:@"5678" forKey:@"parsswordAlarm"];
     [[NSUserDefaults standardUserDefaults] setObject:@"660856634" forKey:@"numberAlarm"];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"askPassword"];
     
     self.tabBarController = (UITabBarController*)self.window.rootViewController;
     self.tabBarController.delegate = self;
@@ -66,6 +67,10 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"askPassword"]) {
+        [self showPasswordAlertWithError:NO];
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -250,6 +255,29 @@
 
 }
 
+/**
+ Shows an alert view to ask for the application password.
+ @param error YES includes an error message , NO doesn't includes an error message
+ */
+- (void)showPasswordAlertWithError:(bool)error
+{
+    NSString *message;
+    
+    if (error) {
+        message = NSLocalizedString(@"AskPasswordError", @"");
+    } else {
+        message = NSLocalizedString(@"AskPassword", @"");
+    }
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"PasswordTitle", @"")
+                                                    message:message
+                                                   delegate:self
+                                          cancelButtonTitle:nil
+                                          otherButtonTitles:@"Accept", nil];
+    [alert setAlertViewStyle:UIAlertViewStyleSecureTextInput];
+    [alert show];
+}
+
 
 #pragma mark - UIActionSheetDelgate methods
 
@@ -402,6 +430,17 @@
      show];
 }
 
-#pragma mark - UITabBarControllerDelegate methods
+#pragma mark - UIAlertViewDelegate methods
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    UITextField *password = [alertView textFieldAtIndex:0];
+    
+    NSString* validPassword = [[NSUserDefaults standardUserDefaults] stringForKey:@"passwordApp"];
+    
+    if ((password.text.length == 0) || (![validPassword isEqualToString:password.text])) {
+        [self showPasswordAlertWithError:YES];
+    }
+}
 
 @end

@@ -62,11 +62,15 @@
         UITableViewCell* aCell = [tableView dequeueReusableCellWithIdentifier:@"switchCell"];
         if( aCell == nil ) {
             aCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"switchCell"];
-            aCell.textLabel.text = @"Pedir contraseña";
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 150, 44)];
+            label.backgroundColor = [UIColor clearColor];
+            label.text = @"Pedir contraseña";
+            [label setFont:[UIFont fontWithName:@"Arial-BoldMT" size:17]];
+            [aCell addSubview:label];
             aCell.selectionStyle = UITableViewCellSelectionStyleNone;
             UISwitch *switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
             aCell.accessoryView = switchView;
-            [switchView setOn:NO animated:NO];
+            [switchView setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"askPassword"] animated:NO];
             [switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
             return aCell;
         }
@@ -84,9 +88,9 @@
 
 #pragma mark - Switch delegate
 
--(void)switchChanged:(id)sender
+-(void)switchChanged:(UISwitch *)sender
 {
-    
+    [[NSUserDefaults standardUserDefaults] setBool:sender.on forKey:@"askPassword"];
 }
 
 @end

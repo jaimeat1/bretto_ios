@@ -10,6 +10,9 @@
 		6F10344116D0E836004A7C35 /* BWCPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10344016D0E836004A7C35 /* BWCPasswordViewController.m */; };
 		6F10344516D117F8004A7C35 /* BWCNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10344416D117F8004A7C35 /* BWCNumberViewController.m */; };
 		6F10344716D131F9004A7C35 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F10344616D131F9004A7C35 /* MessageUI.framework */; };
+		6F1830E316E2011600F3DF88 /* BWCCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1830E216E2011600F3DF88 /* BWCCallViewController.m */; };
+		6F1830E716E2097A00F3DF88 /* BWCSetDevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1830E616E2097A00F3DF88 /* BWCSetDevicesViewController.m */; };
+		6F1830EA16E215E000F3DF88 /* BWCSensibilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1830E916E215E000F3DF88 /* BWCSensibilityViewController.m */; };
 		6F2B11E016B401DC00C07BE8 /* BWCCommandBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2B11DF16B401DC00C07BE8 /* BWCCommandBuilder.m */; };
 		6F67C13016A32C5B00874715 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F67C12F16A32C5A00874715 /* UIKit.framework */; };
 		6F67C13216A32C5B00874715 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F67C13116A32C5B00874715 /* Foundation.framework */; };
@@ -77,6 +80,12 @@
 		6F10344316D117F8004A7C35 /* BWCNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCNumberViewController.h; sourceTree = "<group>"; };
 		6F10344416D117F8004A7C35 /* BWCNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCNumberViewController.m; sourceTree = "<group>"; };
 		6F10344616D131F9004A7C35 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		6F1830E116E2011600F3DF88 /* BWCCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCCallViewController.h; sourceTree = "<group>"; };
+		6F1830E216E2011600F3DF88 /* BWCCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCCallViewController.m; sourceTree = "<group>"; };
+		6F1830E516E2097A00F3DF88 /* BWCSetDevicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSetDevicesViewController.h; sourceTree = "<group>"; };
+		6F1830E616E2097A00F3DF88 /* BWCSetDevicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCSetDevicesViewController.m; sourceTree = "<group>"; };
+		6F1830E816E215E000F3DF88 /* BWCSensibilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSensibilityViewController.h; sourceTree = "<group>"; };
+		6F1830E916E215E000F3DF88 /* BWCSensibilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCSensibilityViewController.m; sourceTree = "<group>"; };
 		6F2B11DE16B401DC00C07BE8 /* BWCCommandBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCCommandBuilder.h; sourceTree = "<group>"; };
 		6F2B11DF16B401DC00C07BE8 /* BWCCommandBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCCommandBuilder.m; sourceTree = "<group>"; };
 		6F67C12B16A32C5A00874715 /* BrettoWControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrettoWControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,6 +266,12 @@
 				6F10344016D0E836004A7C35 /* BWCPasswordViewController.m */,
 				6F10344316D117F8004A7C35 /* BWCNumberViewController.h */,
 				6F10344416D117F8004A7C35 /* BWCNumberViewController.m */,
+				6F1830E116E2011600F3DF88 /* BWCCallViewController.h */,
+				6F1830E216E2011600F3DF88 /* BWCCallViewController.m */,
+				6F1830E516E2097A00F3DF88 /* BWCSetDevicesViewController.h */,
+				6F1830E616E2097A00F3DF88 /* BWCSetDevicesViewController.m */,
+				6F1830E816E215E000F3DF88 /* BWCSensibilityViewController.h */,
+				6F1830E916E215E000F3DF88 /* BWCSensibilityViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -450,6 +465,9 @@
 				6FF247D916BEC178004A9629 /* BWCSettingsViewController.m in Sources */,
 				6F10344116D0E836004A7C35 /* BWCPasswordViewController.m in Sources */,
 				6F10344516D117F8004A7C35 /* BWCNumberViewController.m in Sources */,
+				6F1830E316E2011600F3DF88 /* BWCCallViewController.m in Sources */,
+				6F1830E716E2097A00F3DF88 /* BWCSetDevicesViewController.m in Sources */,
+				6F1830EA16E215E000F3DF88 /* BWCSensibilityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

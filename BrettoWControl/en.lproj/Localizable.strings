@@ -25,6 +25,7 @@
 "SetDevices" = "Configurar móviles";
 "GetDevices" = "Comprobar móviles";
 "Sensibility" = "Ajustar sensibilidad";
+"SensibilityShort" = "Sensibilidad";
 "State" = "Estado de la alarma";
 "Reset" = "Reseteo parcial";
 "ResetHard" = "Reseteo completo";
@@ -41,3 +42,8 @@
 "ErrorPassOld" = "La contraseña no es correcta";
 "ErrorPassNew" = "La contraseña no coincide";
 "ErrorNumber" = "El número no puede estar vacío";
+"ErrorDevices" = "Debes introducir al menos un número receptor";
+
+"PasswordTitle" = "Contraseña";
+"AskPassword" = "Introduce contraseña de acceso";
+"AskPasswordError" = "Contraseña incorrecta. Introduce contraseña de acceso";

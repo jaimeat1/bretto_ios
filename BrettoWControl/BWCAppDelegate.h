@@ -19,4 +19,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+- (void)composeMessage:(NSString *)message;
+
 @end
