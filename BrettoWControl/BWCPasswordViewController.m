@@ -7,6 +7,8 @@
 //
 
 #import "BWCPasswordViewController.h"
+#import "BWCAppDelegate.h"
+#import "BWCCommandBuilder.h"
 
 @interface BWCPasswordViewController ()
 
@@ -96,6 +98,14 @@
         } else {
          
             [[NSUserDefaults standardUserDefaults] setObject:self.theNewPassword.text forKey:self.passwordKey];
+            
+            // It's alarm password, send command
+            if (!self.isAppPassword) {
+                NSMutableArray* params = [NSMutableArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"parsswordAlarm"], self.theNewPassword.text, nil];
+                NSString *message = [BWCCommandBuilder buildCommand:BWCCommandPassword withParameters:params];
+                [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
+            }
+            
             [self dismissModalViewControllerAnimated:YES];
         }
     

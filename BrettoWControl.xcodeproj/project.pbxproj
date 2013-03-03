@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F0EA6D016E3522900043C39 /* BWCStep1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0EA6CF16E3522900043C39 /* BWCStep1ViewController.m */; };
+		6F0EA6D316E3590D00043C39 /* BWCStep2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0EA6D216E3590D00043C39 /* BWCStep2ViewController.m */; };
+		6F0EA6D616E35F3200043C39 /* BWCStep3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0EA6D516E35F3200043C39 /* BWCStep3ViewController.m */; };
 		6F10344116D0E836004A7C35 /* BWCPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10344016D0E836004A7C35 /* BWCPasswordViewController.m */; };
 		6F10344516D117F8004A7C35 /* BWCNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10344416D117F8004A7C35 /* BWCNumberViewController.m */; };
 		6F10344716D131F9004A7C35 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F10344616D131F9004A7C35 /* MessageUI.framework */; };
@@ -75,6 +78,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F0EA6CE16E3522900043C39 /* BWCStep1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCStep1ViewController.h; sourceTree = "<group>"; };
+		6F0EA6CF16E3522900043C39 /* BWCStep1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCStep1ViewController.m; sourceTree = "<group>"; };
+		6F0EA6D116E3590D00043C39 /* BWCStep2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCStep2ViewController.h; sourceTree = "<group>"; };
+		6F0EA6D216E3590D00043C39 /* BWCStep2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCStep2ViewController.m; sourceTree = "<group>"; };
+		6F0EA6D416E35F3200043C39 /* BWCStep3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCStep3ViewController.h; sourceTree = "<group>"; };
+		6F0EA6D516E35F3200043C39 /* BWCStep3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCStep3ViewController.m; sourceTree = "<group>"; };
 		6F10343F16D0E836004A7C35 /* BWCPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCPasswordViewController.h; sourceTree = "<group>"; };
 		6F10344016D0E836004A7C35 /* BWCPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCPasswordViewController.m; sourceTree = "<group>"; };
 		6F10344316D117F8004A7C35 /* BWCNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCNumberViewController.h; sourceTree = "<group>"; };
@@ -171,6 +180,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F0EA6CC16E3521700043C39 /* Wizzard */ = {
+			isa = PBXGroup;
+			children = (
+				6F0EA6CE16E3522900043C39 /* BWCStep1ViewController.h */,
+				6F0EA6CF16E3522900043C39 /* BWCStep1ViewController.m */,
+				6F0EA6D116E3590D00043C39 /* BWCStep2ViewController.h */,
+				6F0EA6D216E3590D00043C39 /* BWCStep2ViewController.m */,
+				6F0EA6D416E35F3200043C39 /* BWCStep3ViewController.h */,
+				6F0EA6D516E35F3200043C39 /* BWCStep3ViewController.m */,
+			);
+			name = Wizzard;
+			sourceTree = "<group>";
+		};
 		6F2B11DB16B4017A00C07BE8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +276,7 @@
 		6F67C16016A32CAD00874715 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6F0EA6CC16E3521700043C39 /* Wizzard */,
 				6F67C16116A32CDE00874715 /* BWCHomeViewController.h */,
 				6F67C16216A32CDE00874715 /* BWCHomeViewController.m */,
 				6F67C16416A32CF200874715 /* BWCAlarmViewController.h */,
@@ -468,6 +491,9 @@
 				6F1830E316E2011600F3DF88 /* BWCCallViewController.m in Sources */,
 				6F1830E716E2097A00F3DF88 /* BWCSetDevicesViewController.m in Sources */,
 				6F1830EA16E215E000F3DF88 /* BWCSensibilityViewController.m in Sources */,
+				6F0EA6D016E3522900043C39 /* BWCStep1ViewController.m in Sources */,
+				6F0EA6D316E3590D00043C39 /* BWCStep2ViewController.m in Sources */,
+				6F0EA6D616E35F3200043C39 /* BWCStep3ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

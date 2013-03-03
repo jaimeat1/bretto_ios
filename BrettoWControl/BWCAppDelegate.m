@@ -36,10 +36,7 @@
     // Override point for customization after application launch.
     
     // TODO: delete
-    [[NSUserDefaults standardUserDefaults] setObject:@"1234" forKey:@"passwordApp"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"5678" forKey:@"parsswordAlarm"];
-    [[NSUserDefaults standardUserDefaults] setObject:@"660856634" forKey:@"numberAlarm"];
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"askPassword"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"1234" forKey:@"parsswordAlarm"];
     
     self.tabBarController = (UITabBarController*)self.window.rootViewController;
     self.tabBarController.delegate = self;
@@ -118,7 +115,11 @@
         
     } else if ([self.currentCommand isEqualToString:@"bretto"]) {
         
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.bretto.es"]];
+        
     } else if ([self.currentCommand isEqualToString:@"call"]) {
+        
+        // segue in storyboard
         
     } else if ([self.currentCommand isEqualToString:@"imei"]) {
         
@@ -126,11 +127,15 @@
         
     } else if ([self.currentCommand isEqualToString:@"setDevices"]) {
         
+        // segue in storyboard
+        
     } else if ([self.currentCommand isEqualToString:@"getDevices"]) {
         
         [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandGetDevices withParameters:param]];
         
     } else if ([self.currentCommand isEqualToString:@"sensibility"]) {
+        
+        // segue in storyboard
         
     } else if ([self.currentCommand isEqualToString:@"state"]) {
         
@@ -396,7 +401,16 @@
             
             switch (buttonIndex) {
                 case 0:
-                    [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandHardReset withParameters:param]];
+                    
+                    [[NSUserDefaults standardUserDefaults] setObject:@"1234" forKey:@"parsswordAlarm"];
+                    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"passwordApp"];
+                    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"numberAlarm"];
+                    [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"askPassword"];
+                    [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"wizzardShown"];
+                    
+                    [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandHardReset withParameters:param]];                    
+                    [self.tabBarController setSelectedIndex:0];
+                    
                     break;
                 case 1:
                     // NO, do nothing
@@ -424,7 +438,7 @@
     
     [[[UIAlertView alloc] initWithTitle:title
                                 message:message
-                               delegate:self
+                               delegate:nil
                       cancelButtonTitle:NSLocalizedString(@"Accept", @"")
                      otherButtonTitles:nil]
      show];

@@ -42,6 +42,16 @@
     }
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    // If its firts time after installation, show wizzard
+    if (([[NSUserDefaults standardUserDefaults] objectForKey:@"wizzardShown"] == nil) || ([[NSUserDefaults standardUserDefaults] boolForKey:@"wizzardShown"] == NO)) {
+        [self performSegueWithIdentifier:@"wizzard" sender:nil];
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
