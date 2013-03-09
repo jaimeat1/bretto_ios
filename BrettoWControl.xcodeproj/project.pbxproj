@@ -25,6 +25,21 @@
 		6F67C16316A32CDE00874715 /* BWCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F67C16216A32CDE00874715 /* BWCHomeViewController.m */; };
 		6F67C16616A32CF200874715 /* BWCAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F67C16516A32CF200874715 /* BWCAlarmViewController.m */; };
 		6F67C16916A32CFF00874715 /* BWCSystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F67C16816A32CFF00874715 /* BWCSystemViewController.m */; };
+		6F715C8416EB58C600AAFE32 /* assemble_off_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F715C7516EB58C600AAFE32 /* assemble_off_pressed@2x.png */; };
+		6F715C8516EB58C600AAFE32 /* assemble_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F715C7616EB58C600AAFE32 /* assemble_off@2x.png */; };
+		6F715C8616EB58C600AAFE32 /* assemble_on_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F715C7716EB58C600AAFE32 /* assemble_on_pressed@2x.png */; };
+		6F715C8716EB58C600AAFE32 /* assemble_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F715C7816EB58C600AAFE32 /* assemble_on@2x.png */; };
+		6F715C8816EB58C600AAFE32 /* banner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F715C7916EB58C600AAFE32 /* banner@2x.png */; };
+		6F715C8916EB58C600AAFE32 /* engine_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F715C7A16EB58C600AAFE32 /* engine_pressed@2x.png */; };
+		6F715C8A16EB58C600AAFE32 /* engine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F715C7B16EB58C600AAFE32 /* engine@2x.png */; };
+		6F715C8B16EB58C600AAFE32 /* location_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F715C7C16EB58C600AAFE32 /* location_pressed@2x.png */; };
+		6F715C8C16EB58C600AAFE32 /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F715C7D16EB58C600AAFE32 /* location@2x.png */; };
+		6F715C8D16EB58C600AAFE32 /* save_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F715C7E16EB58C600AAFE32 /* save_pressed@2x.png */; };
+		6F715C8E16EB58C600AAFE32 /* save@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F715C7F16EB58C600AAFE32 /* save@2x.png */; };
+		6F715C8F16EB58C600AAFE32 /* sensor_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F715C8016EB58C600AAFE32 /* sensor_pressed@2x.png */; };
+		6F715C9016EB58C600AAFE32 /* sensor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F715C8116EB58C600AAFE32 /* sensor@2x.png */; };
+		6F715C9116EB58C600AAFE32 /* siren_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F715C8216EB58C600AAFE32 /* siren_pressed@2x.png */; };
+		6F715C9216EB58C600AAFE32 /* siren@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F715C8316EB58C600AAFE32 /* siren@2x.png */; };
 		6FD22A9916B72727009AEFE4 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD22A9616B72727009AEFE4 /* MainStoryboard_iPhone.storyboard */; };
 		6FD22A9D16B72759009AEFE4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6FD22A9B16B72759009AEFE4 /* Localizable.strings */; };
 		6FF247D916BEC178004A9629 /* BWCSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF247D816BEC178004A9629 /* BWCSettingsViewController.m */; };
@@ -112,6 +127,21 @@
 		6F67C16516A32CF200874715 /* BWCAlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCAlarmViewController.m; sourceTree = "<group>"; };
 		6F67C16716A32CFF00874715 /* BWCSystemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSystemViewController.h; sourceTree = "<group>"; };
 		6F67C16816A32CFF00874715 /* BWCSystemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCSystemViewController.m; sourceTree = "<group>"; };
+		6F715C7516EB58C600AAFE32 /* assemble_off_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "assemble_off_pressed@2x.png"; sourceTree = "<group>"; };
+		6F715C7616EB58C600AAFE32 /* assemble_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "assemble_off@2x.png"; sourceTree = "<group>"; };
+		6F715C7716EB58C600AAFE32 /* assemble_on_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "assemble_on_pressed@2x.png"; sourceTree = "<group>"; };
+		6F715C7816EB58C600AAFE32 /* assemble_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "assemble_on@2x.png"; sourceTree = "<group>"; };
+		6F715C7916EB58C600AAFE32 /* banner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner@2x.png"; sourceTree = "<group>"; };
+		6F715C7A16EB58C600AAFE32 /* engine_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "engine_pressed@2x.png"; sourceTree = "<group>"; };
+		6F715C7B16EB58C600AAFE32 /* engine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "engine@2x.png"; sourceTree = "<group>"; };
+		6F715C7C16EB58C600AAFE32 /* location_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location_pressed@2x.png"; sourceTree = "<group>"; };
+		6F715C7D16EB58C600AAFE32 /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location@2x.png"; sourceTree = "<group>"; };
+		6F715C7E16EB58C600AAFE32 /* save_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save_pressed@2x.png"; sourceTree = "<group>"; };
+		6F715C7F16EB58C600AAFE32 /* save@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "save@2x.png"; sourceTree = "<group>"; };
+		6F715C8016EB58C600AAFE32 /* sensor_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sensor_pressed@2x.png"; sourceTree = "<group>"; };
+		6F715C8116EB58C600AAFE32 /* sensor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sensor@2x.png"; sourceTree = "<group>"; };
+		6F715C8216EB58C600AAFE32 /* siren_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "siren_pressed@2x.png"; sourceTree = "<group>"; };
+		6F715C8316EB58C600AAFE32 /* siren@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "siren@2x.png"; sourceTree = "<group>"; };
 		6FD22A9716B72727009AEFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		6FD22A9C16B72759009AEFE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6FF247D716BEC178004A9629 /* BWCSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSettingsViewController.h; sourceTree = "<group>"; };
@@ -348,6 +378,21 @@
 		6FFCDF2916C7C03600BB4A9E /* iphone */ = {
 			isa = PBXGroup;
 			children = (
+				6F715C7516EB58C600AAFE32 /* assemble_off_pressed@2x.png */,
+				6F715C7616EB58C600AAFE32 /* assemble_off@2x.png */,
+				6F715C7716EB58C600AAFE32 /* assemble_on_pressed@2x.png */,
+				6F715C7816EB58C600AAFE32 /* assemble_on@2x.png */,
+				6F715C7916EB58C600AAFE32 /* banner@2x.png */,
+				6F715C7A16EB58C600AAFE32 /* engine_pressed@2x.png */,
+				6F715C7B16EB58C600AAFE32 /* engine@2x.png */,
+				6F715C7C16EB58C600AAFE32 /* location_pressed@2x.png */,
+				6F715C7D16EB58C600AAFE32 /* location@2x.png */,
+				6F715C7E16EB58C600AAFE32 /* save_pressed@2x.png */,
+				6F715C7F16EB58C600AAFE32 /* save@2x.png */,
+				6F715C8016EB58C600AAFE32 /* sensor_pressed@2x.png */,
+				6F715C8116EB58C600AAFE32 /* sensor@2x.png */,
+				6F715C8216EB58C600AAFE32 /* siren_pressed@2x.png */,
+				6F715C8316EB58C600AAFE32 /* siren@2x.png */,
 				6FFCDF4E16C7C34700BB4A9E /* assemble_off_pressed.png */,
 				6FFCDF4F16C7C34700BB4A9E /* assemble_off.png */,
 				6FFCDF5016C7C34700BB4A9E /* assemble_on_pressed.png */,
@@ -469,6 +514,21 @@
 				6FFCDF6916C7C34700BB4A9E /* sensor.png in Resources */,
 				6FFCDF6A16C7C34700BB4A9E /* siren_pressed.png in Resources */,
 				6FFCDF6B16C7C34700BB4A9E /* siren.png in Resources */,
+				6F715C8416EB58C600AAFE32 /* assemble_off_pressed@2x.png in Resources */,
+				6F715C8516EB58C600AAFE32 /* assemble_off@2x.png in Resources */,
+				6F715C8616EB58C600AAFE32 /* assemble_on_pressed@2x.png in Resources */,
+				6F715C8716EB58C600AAFE32 /* assemble_on@2x.png in Resources */,
+				6F715C8816EB58C600AAFE32 /* banner@2x.png in Resources */,
+				6F715C8916EB58C600AAFE32 /* engine_pressed@2x.png in Resources */,
+				6F715C8A16EB58C600AAFE32 /* engine@2x.png in Resources */,
+				6F715C8B16EB58C600AAFE32 /* location_pressed@2x.png in Resources */,
+				6F715C8C16EB58C600AAFE32 /* location@2x.png in Resources */,
+				6F715C8D16EB58C600AAFE32 /* save_pressed@2x.png in Resources */,
+				6F715C8E16EB58C600AAFE32 /* save@2x.png in Resources */,
+				6F715C8F16EB58C600AAFE32 /* sensor_pressed@2x.png in Resources */,
+				6F715C9016EB58C600AAFE32 /* sensor@2x.png in Resources */,
+				6F715C9116EB58C600AAFE32 /* siren_pressed@2x.png in Resources */,
+				6F715C9216EB58C600AAFE32 /* siren@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,11 +635,15 @@
 		6F67C15E16A32C5B00874715 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jaime Aranaz (JHP429439D)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jaime Aranaz (JHP429439D)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BrettoWControl/BrettoWControl-Prefix.pch";
 				INFOPLIST_FILE = "BrettoWControl/BrettoWControl-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -588,11 +652,15 @@
 		6F67C15F16A32C5B00874715 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jaime Aranaz";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jaime Aranaz";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BrettoWControl/BrettoWControl-Prefix.pch";
 				INFOPLIST_FILE = "BrettoWControl/BrettoWControl-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "5163F261-C755-4144-A24A-ED064B2F68F0";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5163F261-C755-4144-A24A-ED064B2F68F0";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
