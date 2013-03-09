@@ -149,7 +149,11 @@
         
         [self askForConfirmation];
         
-    } else {
+    } else if ([self.currentCommand isEqualToString:@"contact"]) {
+        
+        MFMailComposeViewController *emailComposer = [[MFMailComposeViewController alloc] init];
+        [emailComposer setToRecipients:[NSArray arrayWithObject:@"contacto@bretto.es"]];
+        [self.tabBarController presentModalViewController:emailComposer animated:YES];
         
     }
 }

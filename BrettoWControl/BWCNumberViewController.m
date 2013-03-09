@@ -28,6 +28,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    self.navigationItem.title = NSLocalizedString(@"PasswordAlarm", @"");
+    
     // Show current number
     self.numberFld.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"];
     

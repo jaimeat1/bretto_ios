@@ -415,9 +415,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6F67C12A16A32C5A00874715 /* BrettoWControl */ = {
+		6F67C12A16A32C5A00874715 /* Bretto W-Control */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6F67C15D16A32C5B00874715 /* Build configuration list for PBXNativeTarget "BrettoWControl" */;
+			buildConfigurationList = 6F67C15D16A32C5B00874715 /* Build configuration list for PBXNativeTarget "Bretto W-Control" */;
 			buildPhases = (
 				6F67C12716A32C5A00874715 /* Sources */,
 				6F67C12816A32C5A00874715 /* Frameworks */,
@@ -427,7 +427,7 @@
 			);
 			dependencies = (
 			);
-			name = BrettoWControl;
+			name = "Bretto W-Control";
 			productName = BrettoWControl;
 			productReference = 6F67C12B16A32C5A00874715 /* BrettoWControl.app */;
 			productType = "com.apple.product-type.application";
@@ -455,7 +455,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6F67C12A16A32C5A00874715 /* BrettoWControl */,
+				6F67C12A16A32C5A00874715 /* Bretto W-Control */,
 			);
 		};
 /* End PBXProject section */
@@ -678,7 +678,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6F67C15D16A32C5B00874715 /* Build configuration list for PBXNativeTarget "BrettoWControl" */ = {
+		6F67C15D16A32C5B00874715 /* Build configuration list for PBXNativeTarget "Bretto W-Control" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6F67C15E16A32C5B00874715 /* Debug */,

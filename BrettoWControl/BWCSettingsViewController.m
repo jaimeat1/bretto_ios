@@ -27,7 +27,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    self.delegate = (BWCAppDelegate*)[[UIApplication sharedApplication] delegate];
     
     // Show current alarm number
     self.numberCell.detailTextLabel.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"];
@@ -52,6 +53,11 @@
     {
         passwordViewController.isAppPassword = NO;
     }
+}
+
+- (IBAction)buttonPressed:(id)sender
+{
+    [self.delegate buttonPressed:sender];
 }
 
 #pragma mark - UITableViewDataSource methods

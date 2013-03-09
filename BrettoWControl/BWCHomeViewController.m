@@ -46,10 +46,15 @@
 {
     [super viewDidAppear:animated];
     
-    // If its firts time after installation, show wizzard
+    // If its first time after installation, show wizzard
     if (([[NSUserDefaults standardUserDefaults] objectForKey:@"wizzardShown"] == nil) || ([[NSUserDefaults standardUserDefaults] boolForKey:@"wizzardShown"] == NO)) {
         [self performSegueWithIdentifier:@"wizzard" sender:nil];
     }
+    
+    CGRect frame = self.viewiPhone.frame;
+    NSLog(@"view iPhone x,y: %f,%f, witdh,height: %f,%f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
+    frame = self.viewiPhone5.frame;
+    NSLog(@"view iPhone5 x,y: %f,%f, witdh,height: %f,%f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
 }
 
 - (void)didReceiveMemoryWarning

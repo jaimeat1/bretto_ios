@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6F67C12A16A32C5A00874715"
                BuildableName = "BrettoWControl.app"
-               BlueprintName = "BrettoWControl"
+               BlueprintName = "Bretto W-Control"
                ReferencedContainer = "container:BrettoWControl.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,7 +34,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6F67C12A16A32C5A00874715"
             BuildableName = "BrettoWControl.app"
-            BlueprintName = "BrettoWControl"
+            BlueprintName = "Bretto W-Control"
             ReferencedContainer = "container:BrettoWControl.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -53,7 +53,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6F67C12A16A32C5A00874715"
             BuildableName = "BrettoWControl.app"
-            BlueprintName = "BrettoWControl"
+            BlueprintName = "Bretto W-Control"
             ReferencedContainer = "container:BrettoWControl.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -71,7 +71,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6F67C12A16A32C5A00874715"
             BuildableName = "BrettoWControl.app"
-            BlueprintName = "BrettoWControl"
+            BlueprintName = "Bretto W-Control"
             ReferencedContainer = "container:BrettoWControl.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
