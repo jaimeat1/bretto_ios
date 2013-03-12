@@ -70,18 +70,11 @@
 
         NSArray* param = [NSArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"parsswordAlarm"], self.numberFld.text, nil];
         
-        NSString *message = [BWCCommandBuilder buildCommand:BWCCommandCall withParameters:param];
-        [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
         [self dismissModalViewControllerAnimated:YES];
         
+        NSString *message = [BWCCommandBuilder buildCommand:BWCCommandCall withParameters:param];
+        [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];   
     }
-    
-    // Comprobar no está vacío
-    
-    // Enviar comando
-    
-    // Dismiss view
-    
 }
 
 #pragma mark - UITableViewDataSource methods

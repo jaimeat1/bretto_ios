@@ -84,10 +84,10 @@
             [param addObject:self.numberC.text];
         }
         
-        NSString *message = [BWCCommandBuilder buildCommand:BWCCommandSetDevices withParameters:param];
-        [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
         [self dismissModalViewControllerAnimated:YES];
         
+        NSString *message = [BWCCommandBuilder buildCommand:BWCCommandSetDevices withParameters:param];
+        [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
     }
     
 }

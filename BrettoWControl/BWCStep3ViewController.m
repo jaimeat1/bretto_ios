@@ -75,6 +75,8 @@
             [param addObject:self.numberC.text];
         }
         
+        [self dismissModalViewControllerAnimated:YES];
+        
         NSString *message = [BWCCommandBuilder buildCommand:BWCCommandSetDevices withParameters:param];
         [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
         
@@ -87,8 +89,6 @@
                           cancelButtonTitle:NSLocalizedString(@"Accept", @"")
                           otherButtonTitles:nil]
          show];
-        
-        [self dismissModalViewControllerAnimated:YES];
     }
     
 }

@@ -112,7 +112,7 @@
 		6F1830E916E215E000F3DF88 /* BWCSensibilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCSensibilityViewController.m; sourceTree = "<group>"; };
 		6F2B11DE16B401DC00C07BE8 /* BWCCommandBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCCommandBuilder.h; sourceTree = "<group>"; };
 		6F2B11DF16B401DC00C07BE8 /* BWCCommandBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCCommandBuilder.m; sourceTree = "<group>"; };
-		6F67C12B16A32C5A00874715 /* BrettoWControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrettoWControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F67C12B16A32C5A00874715 /* W-Bretto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "W-Bretto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F67C12F16A32C5A00874715 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6F67C13116A32C5B00874715 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6F67C13316A32C5B00874715 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -256,7 +256,7 @@
 		6F67C12C16A32C5A00874715 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6F67C12B16A32C5A00874715 /* BrettoWControl.app */,
+				6F67C12B16A32C5A00874715 /* W-Bretto.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -415,9 +415,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6F67C12A16A32C5A00874715 /* Bretto W-Control */ = {
+		6F67C12A16A32C5A00874715 /* W-Bretto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6F67C15D16A32C5B00874715 /* Build configuration list for PBXNativeTarget "Bretto W-Control" */;
+			buildConfigurationList = 6F67C15D16A32C5B00874715 /* Build configuration list for PBXNativeTarget "W-Bretto" */;
 			buildPhases = (
 				6F67C12716A32C5A00874715 /* Sources */,
 				6F67C12816A32C5A00874715 /* Frameworks */,
@@ -427,9 +427,9 @@
 			);
 			dependencies = (
 			);
-			name = "Bretto W-Control";
+			name = "W-Bretto";
 			productName = BrettoWControl;
-			productReference = 6F67C12B16A32C5A00874715 /* BrettoWControl.app */;
+			productReference = 6F67C12B16A32C5A00874715 /* W-Bretto.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -455,7 +455,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6F67C12A16A32C5A00874715 /* Bretto W-Control */,
+				6F67C12A16A32C5A00874715 /* W-Bretto */,
 			);
 		};
 /* End PBXProject section */
@@ -678,7 +678,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6F67C15D16A32C5B00874715 /* Build configuration list for PBXNativeTarget "Bretto W-Control" */ = {
+		6F67C15D16A32C5B00874715 /* Build configuration list for PBXNativeTarget "W-Bretto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6F67C15E16A32C5B00874715 /* Debug */,

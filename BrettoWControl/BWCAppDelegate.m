@@ -11,7 +11,7 @@
 #import "BWCCommandBuilder.h"
 #import "BWCAppDelegate.h"
 
-@interface BWCAppDelegate()
+@interface BWCAppDelegate() <MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate>
 
 /** Main tab bar controller */
 @property (nonatomic, strong) UITabBarController *tabBarController;
@@ -76,7 +76,7 @@
 }
 
 /**
- Called when the user press a button. Some command must be process.
+ Called when the user presses a button. Prepares the command launching
  */
 - (void)buttonPressed:(id)sender
 {
@@ -151,9 +151,12 @@
         
     } else if ([self.currentCommand isEqualToString:@"contact"]) {
         
-        MFMailComposeViewController *emailComposer = [[MFMailComposeViewController alloc] init];
-        [emailComposer setToRecipients:[NSArray arrayWithObject:@"contacto@bretto.es"]];
-        [self.tabBarController presentModalViewController:emailComposer animated:YES];
+        if ([MFMailComposeViewController canSendMail]) {
+            MFMailComposeViewController *emailComposer = [[MFMailComposeViewController alloc] init];
+            [emailComposer setMailComposeDelegate:self];
+            [emailComposer setToRecipients:[NSArray arrayWithObject:@"contacto@bretto.es"]];
+            [self.tabBarController presentModalViewController:emailComposer animated:YES];
+        }
         
     }
 }
@@ -191,6 +194,7 @@
 {
     self.actionSheetOptions = nil;
     
+    // Enable/ Disable options
     if ([self.currentCommand isEqualToString:@"sensor"] ||
         [self.currentCommand isEqualToString:@"save"] ||
         [self.currentCommand isEqualToString:@"engine"] ||
@@ -202,6 +206,7 @@
                                                    destructiveButtonTitle:nil
                                                         otherButtonTitles:NSLocalizedString(@"Enable", @""), NSLocalizedString(@"Disable", @""), nil];
         
+    // Location options
     } else if ([self.currentCommand isEqualToString:@"location"]) {
         
         self.actionSheetOptions = [[UIActionSheet alloc] initWithTitle:[self getTitleForActionSheet]
@@ -287,6 +292,48 @@
     [alert show];
 }
 
+/**
+ Opens SMS application
+ */
+- (void)composeMessage:(NSString *)message
+{
+    MFMessageComposeViewController *messageComposer = [[MFMessageComposeViewController alloc] init];
+    messageComposer.messageComposeDelegate = self;
+    messageComposer.body = message;
+    messageComposer.recipients = [NSArray arrayWithObject:[[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
+    [self.tabBarController presentModalViewController:messageComposer animated:YES];
+    
+    // Shows pop-up with message to send
+    /*
+     NSString* title = [NSString stringWithFormat:@"SMS se enviará a %@", [[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
+     
+     [[[UIAlertView alloc] initWithTitle:title
+     message:message
+     delegate:nil
+     cancelButtonTitle:NSLocalizedString(@"Accept", @"")
+     otherButtonTitles:nil]
+     show];
+     */
+}
+
+#pragma mark - MFMessageComposeViewController
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{
+    [controller dismissModalViewControllerAnimated:YES];
+}
+
+#pragma mark - MFMailComposeViewControllerDelegate
+
+/**
+ Called when user sends or cancels the email composition
+ */
+- (void)mailComposeController:(MFMailComposeViewController*)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError*)error
+{
+    [controller dismissModalViewControllerAnimated:YES];
+}
 
 #pragma mark - UIActionSheetDelgate methods
 
@@ -427,25 +474,6 @@
         
     } // end ask confirmation
     
-}
-
-- (void)composeMessage:(NSString *)message
-{
-// TODO uncomment to send SMS
-/*
-    MFMessageComposeViewController *messageComposer = [[MFMessageComposeViewController alloc] init];
-    messageComposer.body = message;
-    messageComposer.recipients = [NSArray arrayWithObject:[[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
-    [self.tabBarController presentModalViewController:messageComposer animated:YES];
-*/
-    NSString* title = [NSString stringWithFormat:@"SMS se enviará a %@", [[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
-    
-    [[[UIAlertView alloc] initWithTitle:title
-                                message:message
-                               delegate:nil
-                      cancelButtonTitle:NSLocalizedString(@"Accept", @"")
-                     otherButtonTitles:nil]
-     show];
 }
 
 #pragma mark - UIAlertViewDelegate methods
