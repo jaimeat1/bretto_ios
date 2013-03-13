@@ -75,20 +75,21 @@
             [param addObject:self.numberC.text];
         }
         
-        [self dismissModalViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:^(void){
+
+            NSString *message = [BWCCommandBuilder buildCommand:BWCCommandSetDevices withParameters:param];
+            [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
+            
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"wizzardShown"];
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"askPassword"];
+            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Attention", @"")
+                                        message:NSLocalizedString(@"Advice", @"")
+                                       delegate:nil
+                              cancelButtonTitle:NSLocalizedString(@"Accept", @"")
+                              otherButtonTitles:nil]
+             show];
+        }];
         
-        NSString *message = [BWCCommandBuilder buildCommand:BWCCommandSetDevices withParameters:param];
-        [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
-        
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"wizzardShown"];
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"askPassword"];
-        
-        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Attention", @"")
-                                    message:NSLocalizedString(@"Advice", @"")
-                                   delegate:nil
-                          cancelButtonTitle:NSLocalizedString(@"Accept", @"")
-                          otherButtonTitles:nil]
-         show];
     }
     
 }

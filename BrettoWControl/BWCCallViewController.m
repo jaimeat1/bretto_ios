@@ -70,10 +70,13 @@
 
         NSArray* param = [NSArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"parsswordAlarm"], self.numberFld.text, nil];
         
-        [self dismissModalViewControllerAnimated:YES];
-        
-        NSString *message = [BWCCommandBuilder buildCommand:BWCCommandCall withParameters:param];
-        [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];   
+        [self dismissViewControllerAnimated:YES completion:^(void){
+            
+            NSString *message = [BWCCommandBuilder buildCommand:BWCCommandCall withParameters:param];
+            [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
+            
+        }];
+
     }
 }
 

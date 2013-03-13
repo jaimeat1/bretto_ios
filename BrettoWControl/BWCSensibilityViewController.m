@@ -56,12 +56,14 @@
 
 - (void)savePressed:(id)sender
 {
-    [self dismissModalViewControllerAnimated:YES];
-    
-    NSString *sensibility = [NSString stringWithFormat:@"%d", [[NSNumber numberWithFloat:self.slider.value] integerValue]];
-    NSMutableArray* params = [NSMutableArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"parsswordAlarm"], sensibility, nil];
-    NSString *message = [BWCCommandBuilder buildCommand:BWCCommandSetDevices withParameters:params];
-    [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
+    [self dismissViewControllerAnimated:YES completion:^(void){
+        
+        NSString *sensibility = [NSString stringWithFormat:@"%d", [[NSNumber numberWithFloat:self.slider.value] integerValue]];
+        NSMutableArray* params = [NSMutableArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"parsswordAlarm"], sensibility, nil];
+        NSString *message = [BWCCommandBuilder buildCommand:BWCCommandSetDevices withParameters:params];
+        [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
+        
+    }];
 }
 
 #pragma mark - UITableViewDataSource methods

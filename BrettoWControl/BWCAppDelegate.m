@@ -297,11 +297,14 @@
  */
 - (void)composeMessage:(NSString *)message
 {
+/*
     MFMessageComposeViewController *messageComposer = [[MFMessageComposeViewController alloc] init];
     messageComposer.messageComposeDelegate = self;
     messageComposer.body = message;
     messageComposer.recipients = [NSArray arrayWithObject:[[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
-    [self.tabBarController presentModalViewController:messageComposer animated:YES];
+*/    
+    UIViewController *controller = [[UIViewController alloc] init];
+    [self.tabBarController presentModalViewController:controller animated:YES];
     
     // Shows pop-up with message to send
     /*
