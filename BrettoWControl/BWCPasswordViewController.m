@@ -99,11 +99,12 @@
          
             [[NSUserDefaults standardUserDefaults] setObject:self.theNewPassword.text forKey:self.passwordKey];
             
-            // It's alarm password, send command
-            if (!self.isAppPassword) {
+            
+            if (self.isAppPassword) {
                 
                 [self dismissModalViewControllerAnimated:YES];
             
+            // It's alarm password, send command    
             } else {
                 
                 [self dismissViewControllerAnimated:YES completion:^(void){

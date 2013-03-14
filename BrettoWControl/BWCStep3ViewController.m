@@ -59,8 +59,7 @@
         
         // Send set devices command
     } else {
-        
-        
+                
         NSMutableArray* param = [NSMutableArray arrayWithObject:[[NSUserDefaults standardUserDefaults] objectForKey:@"parsswordAlarm"]];
         
         if (self.numberA.text.length != 0) {
@@ -75,13 +74,15 @@
             [param addObject:self.numberC.text];
         }
         
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"wizzardShown"];
+        
         [self dismissViewControllerAnimated:YES completion:^(void){
 
             NSString *message = [BWCCommandBuilder buildCommand:BWCCommandSetDevices withParameters:param];
             [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
             
-            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"wizzardShown"];
             [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"askPassword"];
+
             [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Attention", @"")
                                         message:NSLocalizedString(@"Advice", @"")
                                        delegate:nil

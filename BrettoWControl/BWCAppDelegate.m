@@ -302,12 +302,10 @@
     messageComposer.messageComposeDelegate = self;
     messageComposer.body = message;
     messageComposer.recipients = [NSArray arrayWithObject:[[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
+    [self.tabBarController presentModalViewController:messageComposer animated:YES];
 */    
-    UIViewController *controller = [[UIViewController alloc] init];
-    [self.tabBarController presentModalViewController:controller animated:YES];
-    
     // Shows pop-up with message to send
-    /*
+    
      NSString* title = [NSString stringWithFormat:@"SMS se enviará a %@", [[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
      
      [[[UIAlertView alloc] initWithTitle:title
@@ -316,7 +314,6 @@
      cancelButtonTitle:NSLocalizedString(@"Accept", @"")
      otherButtonTitles:nil]
      show];
-     */
 }
 
 #pragma mark - MFMessageComposeViewController
@@ -456,13 +453,14 @@
             switch (buttonIndex) {
                 case 0:
                     
+                    [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandHardReset withParameters:param]];  
+                    
                     [[NSUserDefaults standardUserDefaults] setObject:@"1234" forKey:@"parsswordAlarm"];
                     [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"passwordApp"];
                     [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"numberAlarm"];
                     [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"askPassword"];
                     [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"wizzardShown"];
-                    
-                    [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandHardReset withParameters:param]];                    
+                                                    
                     [self.tabBarController setSelectedIndex:0];
                     
                     break;

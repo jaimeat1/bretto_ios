@@ -60,7 +60,7 @@
         
         NSString *sensibility = [NSString stringWithFormat:@"%d", [[NSNumber numberWithFloat:self.slider.value] integerValue]];
         NSMutableArray* params = [NSMutableArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"parsswordAlarm"], sensibility, nil];
-        NSString *message = [BWCCommandBuilder buildCommand:BWCCommandSetDevices withParameters:params];
+        NSString *message = [BWCCommandBuilder buildCommand:BWCCommandSensibility withParameters:params];
         [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
         
     }];
