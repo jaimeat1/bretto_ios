@@ -297,15 +297,15 @@
  */
 - (void)composeMessage:(NSString *)message
 {
-/*
+
     MFMessageComposeViewController *messageComposer = [[MFMessageComposeViewController alloc] init];
     messageComposer.messageComposeDelegate = self;
     messageComposer.body = message;
     messageComposer.recipients = [NSArray arrayWithObject:[[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
     [self.tabBarController presentModalViewController:messageComposer animated:YES];
-*/    
+ 
     // Shows pop-up with message to send
-    
+/*
      NSString* title = [NSString stringWithFormat:@"SMS se enviará a %@", [[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
      
      [[[UIAlertView alloc] initWithTitle:title
@@ -314,6 +314,7 @@
      cancelButtonTitle:NSLocalizedString(@"Accept", @"")
      otherButtonTitles:nil]
      show];
+*/
 }
 
 #pragma mark - MFMessageComposeViewController
