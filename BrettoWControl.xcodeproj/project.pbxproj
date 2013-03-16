@@ -13,6 +13,8 @@
 		6F10344116D0E836004A7C35 /* BWCPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10344016D0E836004A7C35 /* BWCPasswordViewController.m */; };
 		6F10344516D117F8004A7C35 /* BWCNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10344416D117F8004A7C35 /* BWCNumberViewController.m */; };
 		6F10344716D131F9004A7C35 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F10344616D131F9004A7C35 /* MessageUI.framework */; };
+		6F11C6D916F4FE0D00DE7ADD /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F11C6D716F4FE0D00DE7ADD /* iTunesArtwork.png */; };
+		6F11C6DA16F4FE0D00DE7ADD /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F11C6D816F4FE0D00DE7ADD /* iTunesArtwork@2x.png */; };
 		6F1830E316E2011600F3DF88 /* BWCCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1830E216E2011600F3DF88 /* BWCCallViewController.m */; };
 		6F1830E716E2097A00F3DF88 /* BWCSetDevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1830E616E2097A00F3DF88 /* BWCSetDevicesViewController.m */; };
 		6F1830EA16E215E000F3DF88 /* BWCSensibilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1830E916E215E000F3DF88 /* BWCSensibilityViewController.m */; };
@@ -104,6 +106,8 @@
 		6F10344316D117F8004A7C35 /* BWCNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCNumberViewController.h; sourceTree = "<group>"; };
 		6F10344416D117F8004A7C35 /* BWCNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCNumberViewController.m; sourceTree = "<group>"; };
 		6F10344616D131F9004A7C35 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		6F11C6D716F4FE0D00DE7ADD /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		6F11C6D816F4FE0D00DE7ADD /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		6F1830E116E2011600F3DF88 /* BWCCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCCallViewController.h; sourceTree = "<group>"; };
 		6F1830E216E2011600F3DF88 /* BWCCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCCallViewController.m; sourceTree = "<group>"; };
 		6F1830E516E2097A00F3DF88 /* BWCSetDevicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSetDevicesViewController.h; sourceTree = "<group>"; };
@@ -290,6 +294,8 @@
 		6F67C13616A32C5B00874715 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6F11C6D716F4FE0D00DE7ADD /* iTunesArtwork.png */,
+				6F11C6D816F4FE0D00DE7ADD /* iTunesArtwork@2x.png */,
 				6FFCDF2716C7BFD400BB4A9E /* Icon@2x.png */,
 				6FFCDF2516C7BFCC00BB4A9E /* Icon.png */,
 				6FFCDF2316C7BEA000BB4A9E /* Default-568h@2x.png */,
@@ -529,6 +535,8 @@
 				6F715C9016EB58C600AAFE32 /* sensor@2x.png in Resources */,
 				6F715C9116EB58C600AAFE32 /* siren_pressed@2x.png in Resources */,
 				6F715C9216EB58C600AAFE32 /* siren@2x.png in Resources */,
+				6F11C6D916F4FE0D00DE7ADD /* iTunesArtwork.png in Resources */,
+				6F11C6DA16F4FE0D00DE7ADD /* iTunesArtwork@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
