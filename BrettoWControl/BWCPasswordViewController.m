@@ -40,7 +40,7 @@
         self.passwordKey = @"passwordApp";
         self.navigationItem.title = NSLocalizedString(@"PasswordApp", @"");
     } else {
-        self.passwordKey = @"parsswordAlarm";
+        self.passwordKey = @"passwordAlarm";
         self.navigationItem.title = NSLocalizedString(@"PasswordAlarm", @"");
     }
     // Cancel button
@@ -96,12 +96,10 @@
             
         // Save new password in preferences
         } else {
-         
-            [[NSUserDefaults standardUserDefaults] setObject:self.theNewPassword.text forKey:self.passwordKey];
-            
-            
+          
             if (self.isAppPassword) {
                 
+                [[NSUserDefaults standardUserDefaults] setObject:self.theNewPassword.text forKey:self.passwordKey];
                 [self dismissModalViewControllerAnimated:YES];
             
             // It's alarm password, send command    
@@ -109,9 +107,13 @@
                 
                 [self dismissViewControllerAnimated:YES completion:^(void){
                     
-                    NSMutableArray* params = [NSMutableArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"parsswordAlarm"], self.theNewPassword.text, nil];
+                    [[NSUserDefaults standardUserDefaults] setObject:self.theNewPassword.text forKey:@"newPasswordAlarm"];
+                    
+                    NSMutableArray* params = [NSMutableArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"passwordAlarm"], self.theNewPassword.text, nil];
                     NSString *message = [BWCCommandBuilder buildCommand:BWCCommandPassword withParameters:params];
+                    
                     [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
+                    [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] setCurrentCommand:@"passwordAlarm"];
                     
                 }];
             }

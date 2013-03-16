@@ -59,7 +59,7 @@
     [self dismissViewControllerAnimated:YES completion:^(void){
         
         NSString *sensibility = [NSString stringWithFormat:@"%d", [[NSNumber numberWithFloat:self.slider.value] integerValue]];
-        NSMutableArray* params = [NSMutableArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"parsswordAlarm"], sensibility, nil];
+        NSMutableArray* params = [NSMutableArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"passwordAlarm"], sensibility, nil];
         NSString *message = [BWCCommandBuilder buildCommand:BWCCommandSensibility withParameters:params];
         [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
         

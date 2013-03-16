@@ -18,6 +18,8 @@
 @interface BWCAppDelegate : UIResponder <UIApplicationDelegate, BWCButtonDelegate, UIActionSheetDelegate, UITabBarControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+/** Command in process */
+@property (nonatomic, copy) NSString* currentCommand;
 
 - (void)composeMessage:(NSString *)message;
 

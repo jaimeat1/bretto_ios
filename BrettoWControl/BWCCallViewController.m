@@ -68,7 +68,7 @@
     // Send call command
     } else {
 
-        NSArray* param = [NSArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"parsswordAlarm"], self.numberFld.text, nil];
+        NSArray* param = [NSArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"passwordAlarm"], self.numberFld.text, nil];
         
         [self dismissViewControllerAnimated:YES completion:^(void){
             

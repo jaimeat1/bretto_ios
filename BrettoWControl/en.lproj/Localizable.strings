@@ -12,7 +12,7 @@
 
 "AssembleOn" = "Armar";
 "AssembleOff" = "Desarmar";
-"Sensibility" = "Sensor de golpes";
+"Sensor" = "Sensor de golpes";
 "Save" = "Ahorro de energía";
 "Location" = "Localizar";
 "Engine" = "Motor";

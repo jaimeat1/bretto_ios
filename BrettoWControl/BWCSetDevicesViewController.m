@@ -70,7 +70,7 @@
     } else {
         
         
-        NSMutableArray* param = [NSMutableArray arrayWithObject:[[NSUserDefaults standardUserDefaults] objectForKey:@"parsswordAlarm"]];
+        NSMutableArray* param = [NSMutableArray arrayWithObject:[[NSUserDefaults standardUserDefaults] objectForKey:@"passwordAlarm"]];
         
         if (self.numberA.text.length != 0) {
             [param addObject:self.numberA.text];

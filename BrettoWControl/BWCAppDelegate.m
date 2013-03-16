@@ -15,8 +15,6 @@
 
 /** Main tab bar controller */
 @property (nonatomic, strong) UITabBarController *tabBarController;
-/** Command in process */
-@property (nonatomic, copy) NSString* currentCommand;
 /** Button in interface that has launched the action */
 @property (nonatomic, strong) UIButton* currentSender;
 /** Action sheet used to ask for some options */
@@ -25,7 +23,10 @@
 @property (nonatomic, strong) UIActionSheet* actionSheetConfirmation;
 /** Index pressed in last action sheet */
 @property (nonatomic) NSInteger actionIndex;
-
+/** Alert to ask for application password */
+@property (nonatomic, strong) UIAlertView *alertPassword;
+/** Alert to show message to send, used by debugging */
+@property (nonatomic, strong) UIAlertView *alertMessage;
 
 @end
 
@@ -35,8 +36,10 @@
 {
     // Override point for customization after application launch.
     
-    // TODO: delete
-    [[NSUserDefaults standardUserDefaults] setObject:@"1234" forKey:@"parsswordAlarm"];
+    // Default value for alarm password is 1234
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"passwordAlarm"] == nil) {
+        [[NSUserDefaults standardUserDefaults] setObject:@"1234" forKey:@"passwordAlarm"];
+    }
     
     self.tabBarController = (UITabBarController*)self.window.rootViewController;
     self.tabBarController.delegate = self;
@@ -82,7 +85,7 @@
 {
     self.currentCommand = [(UIButton *)sender accessibilityLabel];
     self.currentSender = (UIButton *)sender;
-    NSArray* param = [NSArray arrayWithObject:[[NSUserDefaults standardUserDefaults] objectForKey:@"parsswordAlarm"]];
+    NSArray* param = [NSArray arrayWithObject:[[NSUserDefaults standardUserDefaults] objectForKey:@"passwordAlarm"]];
     DLog(@"%@", self.currentCommand);
     
     if ([self.currentCommand isEqualToString:@"assembleOn"]){
@@ -169,7 +172,7 @@
     NSString* title = @"";
     
     if ([self.currentCommand isEqualToString:@"sensor"]) {
-        title = NSLocalizedString(@"Sensibility", @"");
+        title = NSLocalizedString(@"Sensor", @"");
     } else if ([self.currentCommand isEqualToString:@"save"]) {
         title = NSLocalizedString(@"Save", @"");
     } else if ([self.currentCommand isEqualToString:@"location"]) {
@@ -283,45 +286,117 @@
         message = NSLocalizedString(@"AskPassword", @"");
     }
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"PasswordTitle", @"")
+    self.alertPassword = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"PasswordTitle", @"")
                                                     message:message
                                                    delegate:self
                                           cancelButtonTitle:nil
                                           otherButtonTitles:@"Accept", nil];
-    [alert setAlertViewStyle:UIAlertViewStyleSecureTextInput];
-    [alert show];
+    [self.alertPassword setAlertViewStyle:UIAlertViewStyleSecureTextInput];
+    [self.alertPassword show];
 }
 
 /**
  Opens SMS application
+ @param message text by default to fill the message composer
  */
 - (void)composeMessage:(NSString *)message
 {
-
     MFMessageComposeViewController *messageComposer = [[MFMessageComposeViewController alloc] init];
     messageComposer.messageComposeDelegate = self;
     messageComposer.body = message;
     messageComposer.recipients = [NSArray arrayWithObject:[[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
     [self.tabBarController presentModalViewController:messageComposer animated:YES];
- 
-    // Shows pop-up with message to send
+    
+    // TODO: comment in release version
+    // Shows pop-up with message to send, used in debbuging version
 /*
-     NSString* title = [NSString stringWithFormat:@"SMS se enviará a %@", [[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
+    NSString* title = [NSString stringWithFormat:@"SMS se enviará a %@", [[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
      
-     [[[UIAlertView alloc] initWithTitle:title
-     message:message
-     delegate:nil
-     cancelButtonTitle:NSLocalizedString(@"Accept", @"")
-     otherButtonTitles:nil]
-     show];
+    self.alertMessage = [[UIAlertView alloc] initWithTitle:title
+                                                   message:message
+                                                  delegate:self
+                                         cancelButtonTitle:NSLocalizedString(@"Accept", @"")
+                                         otherButtonTitles:NSLocalizedString(@"Cancel", @""), nil];
+    
+    [self.alertMessage show];
 */
 }
 
 #pragma mark - MFMessageComposeViewController
-
+ 
+/** 
+ Called when message composer is closed (send success, error or cancel). Some actions must be done after message result
+ */
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
 {
     [controller dismissModalViewControllerAnimated:YES];
+    
+    // Change alarm password if SMS has been successfuly sent
+    if ([self.currentCommand isEqualToString:@"passwordAlarm"] && (result == MessageComposeResultSent)) {
+        
+        NSString *newPass = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"newPasswordAlarm"];
+        [[NSUserDefaults standardUserDefaults] setObject:newPass forKey:@"passwordAlarm"];
+        
+    // Reset all values if SMS has been successfuly sent    
+    } else if ([self.currentCommand isEqualToString:@"hardReset"] && (result == MessageComposeResultSent)) {
+        
+        [[NSUserDefaults standardUserDefaults] setObject:@"1234" forKey:@"passwordAlarm"];
+        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"passwordApp"];
+        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"numberAlarm"];
+        [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"askPassword"];
+        [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"wizzardShown"];
+        
+        [self.tabBarController setSelectedIndex:0];
+        
+    // Wizzard has just been shown
+    } else if ([self.currentCommand isEqualToString:@"wizzard"]) {
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"askPassword"];
+        
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Attention", @"")
+                                    message:NSLocalizedString(@"Advice", @"")
+                                   delegate:nil
+                          cancelButtonTitle:NSLocalizedString(@"Accept", @"")
+                          otherButtonTitles:nil]
+         show];
+    }
+}
+
+/**
+ Mock delegate method used to simulate result of message composing in debugging version, where real message composer is not available
+ This method must be equal to messageComposeViewController:controller didFinishWithResult:
+ */
+- (void)mockDelegateMessageComposeViewControllerDidFinishWithResult:(MessageComposeResult)result
+{
+    // Change alarm password if SMS has been successfuly sent
+    if ([self.currentCommand isEqualToString:@"passwordAlarm"] && (result == MessageComposeResultSent)) {
+        
+        NSString *newPass = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"newPasswordAlarm"];
+        [[NSUserDefaults standardUserDefaults] setObject:newPass forKey:@"passwordAlarm"];
+        
+        // Reset all values if SMS has been successfuly sent
+    } else if ([self.currentCommand isEqualToString:@"hardReset"] && (result == MessageComposeResultSent)) {
+        
+        [[NSUserDefaults standardUserDefaults] setObject:@"1234" forKey:@"passwordAlarm"];
+        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"passwordApp"];
+        [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"numberAlarm"];
+        [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"askPassword"];
+        [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"wizzardShown"];
+        
+        [self.tabBarController setSelectedIndex:0];
+        
+        // Wizzard has just been shown
+    } else if ([self.currentCommand isEqualToString:@"wizzard"]) {
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"askPassword"];
+        
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Attention", @"")
+                                    message:NSLocalizedString(@"Advice", @"")
+                                   delegate:nil
+                          cancelButtonTitle:NSLocalizedString(@"Accept", @"")
+                          otherButtonTitles:nil]
+         show];
+    }
 }
 
 #pragma mark - MFMailComposeViewControllerDelegate
@@ -346,7 +421,7 @@
 {
     DLog(@"buttonIndex %d", buttonIndex);
     
-    NSArray* param = [NSArray arrayWithObject:[[NSUserDefaults standardUserDefaults] objectForKey:@"parsswordAlarm"]];
+    NSArray* param = [NSArray arrayWithObject:[[NSUserDefaults standardUserDefaults] objectForKey:@"passwordAlarm"]];
 
     // Action sheet to ask for an option
     if (self.actionSheetOptions == actionSheet) {
@@ -452,18 +527,8 @@
         } else if ([self.currentCommand isEqualToString:@"hardReset"]) {
             
             switch (buttonIndex) {
-                case 0:
-                    
+                case 0:                
                     [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandHardReset withParameters:param]];  
-                    
-                    [[NSUserDefaults standardUserDefaults] setObject:@"1234" forKey:@"parsswordAlarm"];
-                    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"passwordApp"];
-                    [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"numberAlarm"];
-                    [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"askPassword"];
-                    [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"wizzardShown"];
-                                                    
-                    [self.tabBarController setSelectedIndex:0];
-                    
                     break;
                 case 1:
                     // NO, do nothing
@@ -482,12 +547,28 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    UITextField *password = [alertView textFieldAtIndex:0];
+    // Alert to ask for application password
+    if (alertView == self.alertPassword) {
+        
+        UITextField *password = [alertView textFieldAtIndex:0];
     
-    NSString* validPassword = [[NSUserDefaults standardUserDefaults] stringForKey:@"passwordApp"];
+        NSString* validPassword = [[NSUserDefaults standardUserDefaults] stringForKey:@"passwordApp"];
     
-    if ((password.text.length == 0) || (![validPassword isEqualToString:password.text])) {
-        [self showPasswordAlertWithError:YES];
+        if ((password.text.length == 0) || (![validPassword isEqualToString:password.text])) {
+            [self showPasswordAlertWithError:YES];
+        }
+        
+    // Alert to show message to send, used in debugging
+    } else if (alertView == self.alertMessage) {
+
+        // Simulate SMS sent successfuly
+        if (buttonIndex == 0) {
+            [self mockDelegateMessageComposeViewControllerDidFinishWithResult:MessageComposeResultSent];
+        // Simulate SMS canceled
+        } else {
+            [self mockDelegateMessageComposeViewControllerDidFinishWithResult:MessageComposeResultCancelled];
+        }
+        
     }
 }
 

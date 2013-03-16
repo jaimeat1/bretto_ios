@@ -29,6 +29,11 @@
     [super viewDidLoad];
 
     self.delegate = (BWCAppDelegate*)[[UIApplication sharedApplication] delegate];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     
     // Show current alarm number
     self.numberCell.detailTextLabel.text = [[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"];
