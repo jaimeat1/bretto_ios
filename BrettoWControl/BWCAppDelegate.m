@@ -71,6 +71,16 @@
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"askPassword"]) {
         [self showPasswordAlertWithError:NO];
     }
+    
+    if ([MFMessageComposeViewController canSendText] == NO) {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ErrorTitle", @"")
+                                                        message:NSLocalizedString(@"ErrorSMSconnection", @"")
+                                                       delegate:nil
+                                              cancelButtonTitle:nil
+                                              otherButtonTitles:@"Accept", nil];
+        [alert show];
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -301,25 +311,52 @@
  */
 - (void)composeMessage:(NSString *)message
 {
-    MFMessageComposeViewController *messageComposer = [[MFMessageComposeViewController alloc] init];
-    messageComposer.messageComposeDelegate = self;
-    messageComposer.body = message;
-    messageComposer.recipients = [NSArray arrayWithObject:[[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
-    [self.tabBarController presentModalViewController:messageComposer animated:YES];
-    
-    // TODO: comment in release version
-    // Shows pop-up with message to send, used in debbuging version
+
+    // There is no alarm number configuration
+    if ([[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"] == nil) {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ErrorTitle", @"")
+                                                        message:NSLocalizedString(@"ErrorNoNumberAlarm", @"")
+                                                       delegate:self
+                                              cancelButtonTitle:nil
+                                              otherButtonTitles:@"Accept", nil];
+        [alert show];
+        
+    // There is alarm number
+    } else {
+
+        if ([MFMessageComposeViewController canSendText] == NO) {
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ErrorTitle", @"")
+                                                            message:NSLocalizedString(@"ErrorSMSconnection", @"")
+                                                           delegate:self
+                                                  cancelButtonTitle:nil
+                                                  otherButtonTitles:@"Accept", nil];
+            [alert show];
+            
+        } else {
+            
+            MFMessageComposeViewController *messageComposer = [[MFMessageComposeViewController alloc] init];
+            messageComposer.messageComposeDelegate = self;
+            messageComposer.body = message;
+            messageComposer.recipients = [NSArray arrayWithObject:[[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
+            [self.tabBarController presentModalViewController:messageComposer animated:YES];
+        }
+
+        // TODO: comment in release version
+        // Shows pop-up with message to send, used in debbuging version
 /*
-    NSString* title = [NSString stringWithFormat:@"SMS se enviará a %@", [[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
-     
-    self.alertMessage = [[UIAlertView alloc] initWithTitle:title
-                                                   message:message
-                                                  delegate:self
-                                         cancelButtonTitle:NSLocalizedString(@"Accept", @"")
-                                         otherButtonTitles:NSLocalizedString(@"Cancel", @""), nil];
-    
-    [self.alertMessage show];
+         NSString* title = [NSString stringWithFormat:@"SMS se enviará a %@", [[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
+         
+         self.alertMessage = [[UIAlertView alloc] initWithTitle:title
+         message:message
+         delegate:self
+         cancelButtonTitle:NSLocalizedString(@"Accept", @"")
+         otherButtonTitles:NSLocalizedString(@"Cancel", @""), nil];
+         
+         [self.alertMessage show];
 */
+    }
 }
 
 #pragma mark - MFMessageComposeViewController
@@ -331,30 +368,51 @@
 {
     [controller dismissModalViewControllerAnimated:YES];
     
-    // Change alarm password if SMS has been successfuly sent
+    // Command to change alarm password, change it if SMS has been successfuly sent
     if ([self.currentCommand isEqualToString:@"passwordAlarm"] && (result == MessageComposeResultSent)) {
         
         NSString *newPass = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"newPasswordAlarm"];
         [[NSUserDefaults standardUserDefaults] setObject:newPass forKey:@"passwordAlarm"];
         
-    // Reset all values if SMS has been successfuly sent    
+    // Command to hard reset, reset all values if SMS has been successfuly sent    
     } else if ([self.currentCommand isEqualToString:@"hardReset"] && (result == MessageComposeResultSent)) {
         
         [[NSUserDefaults standardUserDefaults] setObject:@"1234" forKey:@"passwordAlarm"];
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"passwordApp"];
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"numberAlarm"];
         [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"askPassword"];
-        [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"wizzardShown"];
+        [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"wizardShown"];
         
         [self.tabBarController setSelectedIndex:0];
         
-    // Wizzard has just been shown
-    } else if ([self.currentCommand isEqualToString:@"wizzard"]) {
+    // Wizard has just been sent
+    } else if ([self.currentCommand isEqualToString:@"wizard"]){
         
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"askPassword"];
+        // Wizard successfuly sent
+        if (result == MessageComposeResultSent) {
+            
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"wizardShown"];
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"askPassword"];
         
-        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Attention", @"")
-                                    message:NSLocalizedString(@"Advice", @"")
+            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Attention", @"")
+                                        message:NSLocalizedString(@"Advice", @"")
+                                       delegate:nil
+                              cancelButtonTitle:NSLocalizedString(@"Accept", @"")
+                              otherButtonTitles:nil]
+             show];
+
+        // Error in sending wizard
+        } else {
+            
+            [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"wizardShown"];
+        }
+    }
+    
+    // Error sending SMS
+    if (result == MessageComposeResultFailed) {
+        
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"")
+                                    message:NSLocalizedString(@"ErrorSMSsending", @"")
                                    delegate:nil
                           cancelButtonTitle:NSLocalizedString(@"Accept", @"")
                           otherButtonTitles:nil]
@@ -368,30 +426,52 @@
  */
 - (void)mockDelegateMessageComposeViewControllerDidFinishWithResult:(MessageComposeResult)result
 {
-    // Change alarm password if SMS has been successfuly sent
+    // Command to change alarm password, change it if SMS has been successfuly sent
     if ([self.currentCommand isEqualToString:@"passwordAlarm"] && (result == MessageComposeResultSent)) {
         
         NSString *newPass = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"newPasswordAlarm"];
         [[NSUserDefaults standardUserDefaults] setObject:newPass forKey:@"passwordAlarm"];
         
-        // Reset all values if SMS has been successfuly sent
+        // Command to hard reset, reset all values if SMS has been successfuly sent
     } else if ([self.currentCommand isEqualToString:@"hardReset"] && (result == MessageComposeResultSent)) {
         
         [[NSUserDefaults standardUserDefaults] setObject:@"1234" forKey:@"passwordAlarm"];
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"passwordApp"];
         [[NSUserDefaults standardUserDefaults] setObject:nil forKey:@"numberAlarm"];
         [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"askPassword"];
-        [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"wizzardShown"];
+        [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"wizardShown"];
         
         [self.tabBarController setSelectedIndex:0];
         
-        // Wizzard has just been shown
-    } else if ([self.currentCommand isEqualToString:@"wizzard"]) {
+        // Wizard has just been sent
+    } else if ([self.currentCommand isEqualToString:@"wizard"]){
         
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"askPassword"];
+        // Wizard successfuly sent
+        if (result == MessageComposeResultSent) {
+            
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"wizardShown"];
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"askPassword"];
+            
+            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Attention", @"")
+                                        message:NSLocalizedString(@"Advice", @"")
+                                       delegate:nil
+                              cancelButtonTitle:NSLocalizedString(@"Accept", @"")
+                              otherButtonTitles:nil]
+             show];
+            
+        // Error in sending wizard
+        } else {
+            
+            [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"wizardShown"];
+            [[self.tabBarController selectedViewController] viewDidAppear:YES];
+        }
+    }
+    
+    // Error sending SMS
+    if (result == MessageComposeResultFailed) {
         
-        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Attention", @"")
-                                    message:NSLocalizedString(@"Advice", @"")
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"")
+                                    message:NSLocalizedString(@"ErrorSMSsending", @"")
                                    delegate:nil
                           cancelButtonTitle:NSLocalizedString(@"Accept", @"")
                           otherButtonTitles:nil]

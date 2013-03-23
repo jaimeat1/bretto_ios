@@ -46,9 +46,9 @@
 {
     [super viewDidAppear:animated];
     
-    // If its first time after installation, show wizzard
-    if (([[NSUserDefaults standardUserDefaults] objectForKey:@"wizzardShown"] == nil) || ([[NSUserDefaults standardUserDefaults] boolForKey:@"wizzardShown"] == NO)) {
-        [self performSegueWithIdentifier:@"wizzard" sender:nil];
+    // If its first time after installation, show wizard
+    if (([[NSUserDefaults standardUserDefaults] objectForKey:@"wizardShown"] == nil) || ([[NSUserDefaults standardUserDefaults] boolForKey:@"wizardShown"] == NO)) {
+        [self performSegueWithIdentifier:@"wizard" sender:nil];
     }
 }
 

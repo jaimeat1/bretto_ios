@@ -274,7 +274,7 @@
                         <outlet property="sirenBtniPhone5" destination="vO5-Mf-2Tj" id="yQA-ZQ-TDX"/>
                         <outlet property="viewiPhone" destination="IYy-Hq-Ebk" id="tgx-D7-fBT"/>
                         <outlet property="viewiPhone5" destination="aiI-Gf-bHu" id="jdQ-0W-hVP"/>
-                        <segue destination="brI-ft-lvo" kind="modal" identifier="wizzard" modalTransitionStyle="coverVertical" id="VvE-Ui-s0M"/>
+                        <segue destination="brI-ft-lvo" kind="modal" identifier="wizard" modalTransitionStyle="coverVertical" id="VvE-Ui-s0M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
@@ -1096,7 +1096,7 @@
         <!--Step3 View Controller-->
         <scene sceneID="Jjd-d1-ArO">
             <objects>
-                <tableViewController storyboardIdentifier="wizzardStep3" id="Mx3-9j-Njc" customClass="BWCStep3ViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="wizardStep3" id="Mx3-9j-Njc" customClass="BWCStep3ViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="tWv-HP-rr1">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1200,7 +1200,7 @@
         <!--Step2 View Controller-->
         <scene sceneID="VZK-QM-wKC">
             <objects>
-                <tableViewController storyboardIdentifier="wizzardStep2" id="qi9-Kb-eHS" customClass="BWCStep2ViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="wizardStep2" id="qi9-Kb-eHS" customClass="BWCStep2ViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="eY4-2O-3ig">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

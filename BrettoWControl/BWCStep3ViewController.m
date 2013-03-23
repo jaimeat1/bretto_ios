@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     
-    self.title = NSLocalizedString(@"WizzardStep3", @"");
+    self.title = NSLocalizedString(@"WizardStep3", @"");
 
     // Save button
     UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Finish", @"") style:UIBarButtonItemStyleDone target:self action:@selector(donePressed:)];
@@ -74,14 +74,14 @@
             [param addObject:self.numberC.text];
         }
         
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"wizzardShown"];
-        
-        [self dismissViewControllerAnimated:YES completion:^(void){
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"wizardShown"];
 
+        [self dismissViewControllerAnimated:YES completion:^(void){
+            
             NSString *message = [BWCCommandBuilder buildCommand:BWCCommandSetDevices withParameters:param];
             [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
             
-            [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] setCurrentCommand:@"wizzard"];
+            [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] setCurrentCommand:@"wizard"];
         }];
         
     }

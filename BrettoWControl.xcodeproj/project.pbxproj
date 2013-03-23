@@ -96,11 +96,11 @@
 
 /* Begin PBXFileReference section */
 		6F0EA6CE16E3522900043C39 /* BWCStep1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCStep1ViewController.h; sourceTree = "<group>"; };
-		6F0EA6CF16E3522900043C39 /* BWCStep1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCStep1ViewController.m; sourceTree = "<group>"; };
+		6F0EA6CF16E3522900043C39 /* BWCStep1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BWCStep1ViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		6F0EA6D116E3590D00043C39 /* BWCStep2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCStep2ViewController.h; sourceTree = "<group>"; };
-		6F0EA6D216E3590D00043C39 /* BWCStep2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCStep2ViewController.m; sourceTree = "<group>"; };
+		6F0EA6D216E3590D00043C39 /* BWCStep2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BWCStep2ViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		6F0EA6D416E35F3200043C39 /* BWCStep3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCStep3ViewController.h; sourceTree = "<group>"; };
-		6F0EA6D516E35F3200043C39 /* BWCStep3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCStep3ViewController.m; sourceTree = "<group>"; };
+		6F0EA6D516E35F3200043C39 /* BWCStep3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BWCStep3ViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		6F10343F16D0E836004A7C35 /* BWCPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCPasswordViewController.h; sourceTree = "<group>"; };
 		6F10344016D0E836004A7C35 /* BWCPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCPasswordViewController.m; sourceTree = "<group>"; };
 		6F10344316D117F8004A7C35 /* BWCNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCNumberViewController.h; sourceTree = "<group>"; };
@@ -124,9 +124,9 @@
 		6F67C13B16A32C5B00874715 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6F67C13D16A32C5B00874715 /* BrettoWControl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BrettoWControl-Prefix.pch"; sourceTree = "<group>"; };
 		6F67C13E16A32C5B00874715 /* BWCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWCAppDelegate.h; sourceTree = "<group>"; };
-		6F67C13F16A32C5B00874715 /* BWCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWCAppDelegate.m; sourceTree = "<group>"; };
+		6F67C13F16A32C5B00874715 /* BWCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BWCAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		6F67C16116A32CDE00874715 /* BWCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCHomeViewController.h; sourceTree = "<group>"; };
-		6F67C16216A32CDE00874715 /* BWCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCHomeViewController.m; sourceTree = "<group>"; };
+		6F67C16216A32CDE00874715 /* BWCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BWCHomeViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		6F67C16416A32CF200874715 /* BWCAlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCAlarmViewController.h; sourceTree = "<group>"; };
 		6F67C16516A32CF200874715 /* BWCAlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCAlarmViewController.m; sourceTree = "<group>"; };
 		6F67C16716A32CFF00874715 /* BWCSystemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSystemViewController.h; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 		6F715C8216EB58C600AAFE32 /* siren_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "siren_pressed@2x.png"; sourceTree = "<group>"; };
 		6F715C8316EB58C600AAFE32 /* siren@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "siren@2x.png"; sourceTree = "<group>"; };
 		6FD22A9716B72727009AEFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		6FD22A9C16B72759009AEFE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6FD22A9C16B72759009AEFE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		6FF247D716BEC178004A9629 /* BWCSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSettingsViewController.h; sourceTree = "<group>"; };
 		6FF247D816BEC178004A9629 /* BWCSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCSettingsViewController.m; sourceTree = "<group>"; };
 		6FFCDED616C7AD6300BB4A9E /* assemble_off_pressed_iphone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = assemble_off_pressed_iphone5.png; sourceTree = "<group>"; };
@@ -648,7 +648,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BrettoWControl/BrettoWControl-Prefix.pch";
 				INFOPLIST_FILE = "BrettoWControl/BrettoWControl-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -665,10 +665,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BrettoWControl/BrettoWControl-Prefix.pch";
 				INFOPLIST_FILE = "BrettoWControl/BrettoWControl-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5163F261-C755-4144-A24A-ED064B2F68F0";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5163F261-C755-4144-A24A-ED064B2F68F0";
+				PROVISIONING_PROFILE = "F28E79B9-3423-4EC5-AE15-469B7C66FFD3";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F28E79B9-3423-4EC5-AE15-469B7C66FFD3";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

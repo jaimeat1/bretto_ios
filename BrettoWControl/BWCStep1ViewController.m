@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
     
-    self.title = NSLocalizedString(@"WizzardStep1", @"");
+    self.title = NSLocalizedString(@"WizardStep1", @"");
     
     self.password.secureTextEntry = YES;
     self.repeatPassword.secureTextEntry = YES;
@@ -65,7 +65,7 @@
             
             [[NSUserDefaults standardUserDefaults] setObject:self.password.text forKey:@"passwordApp"];
 
-            UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"wizzardStep2"];
+            UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"wizardStep2"];
             [self.navigationController pushViewController:viewController animated:YES];
         }
         

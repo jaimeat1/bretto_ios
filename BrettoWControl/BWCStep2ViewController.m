@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
     
-    self.title = NSLocalizedString(@"WizzardStep2", @"");
+    self.title = NSLocalizedString(@"WizardStep2", @"");
     
     // Save button
     UIBarButtonItem *done = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Next", @"") style:UIBarButtonItemStyleDone target:self action:@selector(donePressed:)];
@@ -57,7 +57,7 @@
         
         [[NSUserDefaults standardUserDefaults] setObject:self.number.text forKey:@"numberAlarm"];
         
-        UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"wizzardStep3"];
+        UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"wizardStep3"];
         [self.navigationController pushViewController:viewController animated:YES];
         
     }

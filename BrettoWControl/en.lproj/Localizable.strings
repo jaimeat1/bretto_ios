@@ -43,14 +43,17 @@
 "ErrorPassNew" = "La contraseña no coincide";
 "ErrorNumber" = "El número no puede estar vacío";
 "ErrorDevices" = "Debes introducir al menos un número receptor";
+"ErrorSMSconnection" = "El envío de SMS no está disponible actualmente en tu dispositivo. Por favor, inténtalo más tarde o revisa tu configuración.";
+"ErrorSMSsending" = "No ha sido posible enviar el SMS. Por favor, inténtalo más tarde o revisa tu configuración.";
+"ErrorNoNumberAlarm" = "Debes configurar un número para la alarma en Ajustes";
 
 "PasswordTitle" = "Contraseña";
 "AskPassword" = "Introduce contraseña de acceso";
 "AskPasswordError" = "Contraseña incorrecta. Introduce contraseña de acceso";
 
-"WizzardStep1" = "Paso 1 de 3";
-"WizzardStep2" = "Paso 2 de 3";
-"WizzardStep3" = "Paso 3 de 3";
+"WizardStep1" = "Paso 1 de 3";
+"WizardStep2" = "Paso 2 de 3";
+"WizardStep3" = "Paso 3 de 3";
 "Next" = "Siguiente";
 "Finish" = "Finalizar";
 
