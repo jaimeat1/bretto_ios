@@ -325,6 +325,7 @@
     // There is alarm number
     } else {
 
+        // SMS can't be send
         if ([MFMessageComposeViewController canSendText] == NO) {
             
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ErrorTitle", @"")
@@ -334,6 +335,12 @@
                                                   otherButtonTitles:@"Accept", nil];
             [alert show];
             
+            // Show wizard again next time
+            if ([self.currentCommand isEqualToString:@"wizard"]){
+                [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"wizardShown"];
+            }
+            
+        // Send SMS
         } else {
             
             MFMessageComposeViewController *messageComposer = [[MFMessageComposeViewController alloc] init];
@@ -403,8 +410,7 @@
 
         // Error in sending wizard
         } else {
-            
-            [[NSUserDefaults standardUserDefaults] setObject:NO forKey:@"wizardShown"];
+            [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"wizardShown"];
         }
     }
     
@@ -646,7 +652,7 @@
             [self mockDelegateMessageComposeViewControllerDidFinishWithResult:MessageComposeResultSent];
         // Simulate SMS canceled
         } else {
-            [self mockDelegateMessageComposeViewControllerDidFinishWithResult:MessageComposeResultCancelled];
+            [self mockDelegateMessageComposeViewControllerDidFinishWithResult:MessageComposeResultFailed];
         }
         
     }

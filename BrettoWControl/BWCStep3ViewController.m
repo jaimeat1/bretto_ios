@@ -78,10 +78,11 @@
 
         [self dismissViewControllerAnimated:YES completion:^(void){
             
+            [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] setCurrentCommand:@"wizard"];
+            
             NSString *message = [BWCCommandBuilder buildCommand:BWCCommandSetDevices withParameters:param];
             [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
-            
-            [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] setCurrentCommand:@"wizard"];
+  
         }];
         
     }
