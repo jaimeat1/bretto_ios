@@ -19,6 +19,7 @@
 		6F1830E716E2097A00F3DF88 /* BWCSetDevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1830E616E2097A00F3DF88 /* BWCSetDevicesViewController.m */; };
 		6F1830EA16E215E000F3DF88 /* BWCSensibilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1830E916E215E000F3DF88 /* BWCSensibilityViewController.m */; };
 		6F2B11E016B401DC00C07BE8 /* BWCCommandBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2B11DF16B401DC00C07BE8 /* BWCCommandBuilder.m */; };
+		6F4EA74917045E150096D5E2 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F4EA74717045E150096D5E2 /* MainStoryboard_iPhone.storyboard */; };
 		6F67C13016A32C5B00874715 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F67C12F16A32C5A00874715 /* UIKit.framework */; };
 		6F67C13216A32C5B00874715 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F67C13116A32C5B00874715 /* Foundation.framework */; };
 		6F67C13416A32C5B00874715 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F67C13316A32C5B00874715 /* CoreGraphics.framework */; };
@@ -42,7 +43,6 @@
 		6F715C9016EB58C600AAFE32 /* sensor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F715C8116EB58C600AAFE32 /* sensor@2x.png */; };
 		6F715C9116EB58C600AAFE32 /* siren_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F715C8216EB58C600AAFE32 /* siren_pressed@2x.png */; };
 		6F715C9216EB58C600AAFE32 /* siren@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F715C8316EB58C600AAFE32 /* siren@2x.png */; };
-		6FD22A9916B72727009AEFE4 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FD22A9616B72727009AEFE4 /* MainStoryboard_iPhone.storyboard */; };
 		6FD22A9D16B72759009AEFE4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6FD22A9B16B72759009AEFE4 /* Localizable.strings */; };
 		6FF247D916BEC178004A9629 /* BWCSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF247D816BEC178004A9629 /* BWCSettingsViewController.m */; };
 		6FFCDEDF16C7AD6300BB4A9E /* assemble_off_pressed_iphone5.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FFCDED616C7AD6300BB4A9E /* assemble_off_pressed_iphone5.png */; };
@@ -116,6 +116,7 @@
 		6F1830E916E215E000F3DF88 /* BWCSensibilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCSensibilityViewController.m; sourceTree = "<group>"; };
 		6F2B11DE16B401DC00C07BE8 /* BWCCommandBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCCommandBuilder.h; sourceTree = "<group>"; };
 		6F2B11DF16B401DC00C07BE8 /* BWCCommandBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCCommandBuilder.m; sourceTree = "<group>"; };
+		6F4EA74817045E150096D5E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		6F67C12B16A32C5A00874715 /* W-Bretto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "W-Bretto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F67C12F16A32C5A00874715 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6F67C13116A32C5B00874715 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -146,7 +147,6 @@
 		6F715C8116EB58C600AAFE32 /* sensor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sensor@2x.png"; sourceTree = "<group>"; };
 		6F715C8216EB58C600AAFE32 /* siren_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "siren_pressed@2x.png"; sourceTree = "<group>"; };
 		6F715C8316EB58C600AAFE32 /* siren@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "siren@2x.png"; sourceTree = "<group>"; };
-		6FD22A9716B72727009AEFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		6FD22A9C16B72759009AEFE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		6FF247D716BEC178004A9629 /* BWCSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSettingsViewController.h; sourceTree = "<group>"; };
 		6FF247D816BEC178004A9629 /* BWCSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCSettingsViewController.m; sourceTree = "<group>"; };
@@ -230,7 +230,7 @@
 		6F2B11DB16B4017A00C07BE8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6FD22A9616B72727009AEFE4 /* MainStoryboard_iPhone.storyboard */,
+				6F4EA74717045E150096D5E2 /* MainStoryboard_iPhone.storyboard */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -471,7 +471,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FD22A9916B72727009AEFE4 /* MainStoryboard_iPhone.storyboard in Resources */,
 				6FD22A9D16B72759009AEFE4 /* Localizable.strings in Resources */,
 				6FFCDEDF16C7AD6300BB4A9E /* assemble_off_pressed_iphone5.png in Resources */,
 				6FFCDEE016C7AD6300BB4A9E /* assemble_off_iphone5.png in Resources */,
@@ -537,6 +536,7 @@
 				6F715C9216EB58C600AAFE32 /* siren@2x.png in Resources */,
 				6F11C6D916F4FE0D00DE7ADD /* iTunesArtwork.png in Resources */,
 				6F11C6DA16F4FE0D00DE7ADD /* iTunesArtwork@2x.png in Resources */,
+				6F4EA74917045E150096D5E2 /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,13 +568,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6FD22A9616B72727009AEFE4 /* MainStoryboard_iPhone.storyboard */ = {
+		6F4EA74717045E150096D5E2 /* MainStoryboard_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6FD22A9716B72727009AEFE4 /* Base */,
+				6F4EA74817045E150096D5E2 /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 		6FD22A9B16B72759009AEFE4 /* Localizable.strings */ = {
@@ -610,7 +609,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -632,7 +631,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
