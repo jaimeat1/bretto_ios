@@ -471,6 +471,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F4EA74917045E150096D5E2 /* MainStoryboard_iPhone.storyboard in Resources */,
 				6FD22A9D16B72759009AEFE4 /* Localizable.strings in Resources */,
 				6FFCDEDF16C7AD6300BB4A9E /* assemble_off_pressed_iphone5.png in Resources */,
 				6FFCDEE016C7AD6300BB4A9E /* assemble_off_iphone5.png in Resources */,
@@ -536,7 +537,6 @@
 				6F715C9216EB58C600AAFE32 /* siren@2x.png in Resources */,
 				6F11C6D916F4FE0D00DE7ADD /* iTunesArtwork.png in Resources */,
 				6F11C6DA16F4FE0D00DE7ADD /* iTunesArtwork@2x.png in Resources */,
-				6F4EA74917045E150096D5E2 /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

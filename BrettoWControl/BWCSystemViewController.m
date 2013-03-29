@@ -37,7 +37,13 @@
 
 - (IBAction)buttonPressed:(id)sender
 {
-    [self.delegate buttonPressed:sender];
+    if (sender == self.stateBtn) {
+        [self.delegate commandPressed:@"state"];
+    } else if (sender == self.softResetBtn) {
+        [self.delegate commandPressed:@"reset"];
+    } else if (sender == self.hardResetBtn) {
+        [self.delegate commandPressed:@"hardReset"];
+    }
 }
 
 @end

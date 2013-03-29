@@ -15,8 +15,6 @@
 
 /** Main tab bar controller */
 @property (nonatomic, strong) UITabBarController *tabBarController;
-/** Button in interface that has launched the action */
-@property (nonatomic, strong) UIButton* currentSender;
 /** Action sheet used to ask for some options */
 @property (nonatomic, strong) UIActionSheet* actionSheetOptions;
 /** Action sheet used to ask for confirmation */
@@ -72,7 +70,9 @@
         [self showPasswordAlertWithError:NO];
     }
     
-    if ([MFMessageComposeViewController canSendText] == NO) {
+    // SMS can't be send or it's not an iPhone
+    if (([MFMessageComposeViewController canSendText] == NO) ||
+        ([[[UIDevice currentDevice] model] rangeOfString:@"iPhone"].location == NSNotFound)) {
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ErrorTitle", @"")
                                                         message:NSLocalizedString(@"ErrorSMSconnection", @"")
@@ -91,10 +91,9 @@
 /**
  Called when the user presses a button. Prepares the command launching
  */
-- (void)buttonPressed:(id)sender
+- (void)commandPressed:(NSString *)command;
 {
-    self.currentCommand = [(UIButton *)sender accessibilityLabel];
-    self.currentSender = (UIButton *)sender;
+    self.currentCommand = command;
     NSArray* param = [NSArray arrayWithObject:[[NSUserDefaults standardUserDefaults] objectForKey:@"passwordAlarm"]];
     DLog(@"%@", self.currentCommand);
     
@@ -325,8 +324,9 @@
     // There is alarm number
     } else {
 
-        // SMS can't be send
-        if ([MFMessageComposeViewController canSendText] == NO) {
+        // SMS can't be send or it's not an iPhone
+        if (([MFMessageComposeViewController canSendText] == NO) ||
+            ([[[UIDevice currentDevice] model] rangeOfString:@"iPhone"].location == NSNotFound)) {
             
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ErrorTitle", @"")
                                                             message:NSLocalizedString(@"ErrorSMSconnection", @"")

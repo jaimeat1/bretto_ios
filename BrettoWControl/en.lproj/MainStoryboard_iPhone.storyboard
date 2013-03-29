@@ -15,7 +15,7 @@
                             <view contentMode="redraw" id="aiI-Gf-bHu" userLabel="View iPhone 5">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="823"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qDX-cJ-ABw" userLabel="Button - Armar">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qDX-cJ-ABw" userLabel="assembleOn">
                                         <rect key="frame" x="0.0" y="67" width="160" height="217"/>
                                         <accessibility key="accessibilityConfiguration" label="assembleOn"/>
                                         <fontDescription key="fontDescription" type="boldSystem" size="button"/>
@@ -29,7 +29,7 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="7K9-FQ-KaY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="I23-8G-laC" userLabel="Button - Desarmar">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="I23-8G-laC" userLabel="assembleOff">
                                         <rect key="frame" x="160" y="67" width="160" height="217"/>
                                         <accessibility key="accessibilityConfiguration" label="assembleOff"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -43,7 +43,7 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="QYG-QG-WcY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7m9-y1-TKC" userLabel="Button - Motor">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7m9-y1-TKC" userLabel="engine">
                                         <rect key="frame" x="0.0" y="283" width="160" height="217"/>
                                         <accessibility key="accessibilityConfiguration" label="engine"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -57,7 +57,7 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="ofM-vY-ovQ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vO5-Mf-2Tj" userLabel="Button - Sirena">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vO5-Mf-2Tj" userLabel="siren">
                                         <rect key="frame" x="160" y="283" width="160" height="217"/>
                                         <accessibility key="accessibilityConfiguration" label="siren"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -71,7 +71,7 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="uLT-Nf-8um"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dpX-cg-Iud" userLabel="Button - Sensor">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dpX-cg-Iud" userLabel="sensor">
                                         <rect key="frame" x="0.0" y="226" width="95" height="110"/>
                                         <accessibility key="accessibilityConfiguration" label="sensor"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -85,7 +85,7 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="m2d-ll-UGv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UfF-YK-GjC" userLabel="Button - Localizar">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UfF-YK-GjC" userLabel="location">
                                         <rect key="frame" x="93" y="214" width="134" height="134"/>
                                         <accessibility key="accessibilityConfiguration" label="location"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -114,7 +114,7 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="RjG-oh-EVk"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Izt-Lo-CSd" userLabel="Button - Banner">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Izt-Lo-CSd" userLabel="bretto">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
                                         <accessibility key="accessibilityConfiguration" label="bretto"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -134,7 +134,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="411"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rdn-tn-Kup" userLabel="Button - Armar">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rdn-tn-Kup" userLabel="assembleOn">
                                         <rect key="frame" x="0.0" y="47" width="160" height="170"/>
                                         <accessibility key="accessibilityConfiguration" label="assembleOn"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -148,7 +148,7 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="EA4-Hg-ot9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bqe-Gj-lMR" userLabel="Button - Desarmar">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bqe-Gj-lMR" userLabel="assembleOff">
                                         <rect key="frame" x="161" y="47" width="160" height="170"/>
                                         <accessibility key="accessibilityConfiguration" label="assembleOff"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -162,7 +162,7 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="zhC-wD-s5i"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BJF-gQ-Yv6" userLabel="Button - Motor">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BJF-gQ-Yv6" userLabel="engine">
                                         <rect key="frame" x="0.0" y="218" width="160" height="194"/>
                                         <accessibility key="accessibilityConfiguration" label="engine"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -176,7 +176,7 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="dja-lg-C1I"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bKB-zk-KTO" userLabel="Button - Sirena">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bKB-zk-KTO" userLabel="siren">
                                         <rect key="frame" x="161" y="218" width="160" height="194"/>
                                         <accessibility key="accessibilityConfiguration" label="siren"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -190,7 +190,7 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="Qer-D4-lfP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6Hb-YD-ogd" userLabel="Button - Location">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6Hb-YD-ogd" userLabel="location">
                                         <rect key="frame" x="93" y="152" width="134" height="134"/>
                                         <accessibility key="accessibilityConfiguration" label="location"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -205,7 +205,7 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="OmU-iF-xZX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="35e-7x-WvK" userLabel="Button - Save">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="35e-7x-WvK" userLabel="save">
                                         <rect key="frame" x="225" y="164" width="95" height="110"/>
                                         <accessibility key="accessibilityConfiguration" label="save"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -220,7 +220,7 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="eE6-Eq-Pgf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BTv-55-Jqj" userLabel="Button - Sensor">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BTv-55-Jqj" userLabel="sensor">
                                         <rect key="frame" x="0.0" y="164" width="95" height="110"/>
                                         <accessibility key="accessibilityConfiguration" label="sensor"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -235,7 +235,7 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="xU0-yZ-9vw"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9fI-Qn-1eg" userLabel="Button - Banner">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9fI-Qn-1eg" userLabel="bretto">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
                                         <accessibility key="accessibilityConfiguration" label="bretto"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -289,7 +289,7 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4JW-bK-wce">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4JW-bK-wce" userLabel="call">
                                 <rect key="frame" x="50" y="77" width="220" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="call"/>
@@ -306,7 +306,7 @@
                                     <segue destination="X9L-8q-8Lc" kind="modal" modalTransitionStyle="flipHorizontal" id="AfZ-NU-C8d"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="22t-TP-Y54">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="22t-TP-Y54" userLabel="imei">
                                 <rect key="frame" x="50" y="129" width="220" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="imei"/>
@@ -322,7 +322,7 @@
                                     <action selector="buttonPressed:" destination="3" eventType="touchUpInside" id="gPa-NL-wx5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZV1-Br-ERV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZV1-Br-ERV" userLabel="setDevices">
                                 <rect key="frame" x="50" y="181" width="220" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="setDevices"/>
@@ -339,7 +339,7 @@
                                     <segue destination="fMu-M3-zCK" kind="modal" modalTransitionStyle="flipHorizontal" id="aEL-AY-o9X"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sHa-dK-pJU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sHa-dK-pJU" userLabel="getDevices">
                                 <rect key="frame" x="50" y="233" width="220" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="getDevices"/>
@@ -355,7 +355,7 @@
                                     <action selector="buttonPressed:" destination="3" eventType="touchUpInside" id="5qS-zz-79J"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xyF-wR-vCX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xyF-wR-vCX" userLabel="sensibility">
                                 <rect key="frame" x="50" y="285" width="220" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="sensibility"/>
@@ -548,7 +548,7 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sfK-Fa-0gG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sfK-Fa-0gG" userLabel="state">
                                 <rect key="frame" x="50" y="77" width="220" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="state"/>
@@ -564,7 +564,7 @@
                                     <action selector="buttonPressed:" destination="OC0-ui-226" eventType="touchUpInside" id="Pf3-9q-aTX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RwP-nw-SaB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RwP-nw-SaB" userLabel="reset">
                                 <rect key="frame" x="50" y="129" width="220" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="reset"/>
@@ -580,7 +580,7 @@
                                     <action selector="buttonPressed:" destination="OC0-ui-226" eventType="touchUpInside" id="0Yh-o8-BQN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UHr-Nw-rGU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UHr-Nw-rGU" userLabel="hardReset">
                                 <rect key="frame" x="50" y="181" width="220" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="hardReset"/>

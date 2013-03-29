@@ -11,7 +11,7 @@
 @protocol BWCButtonDelegate <NSObject>
 
 @required
-- (void)buttonPressed:(id)sender;
+- (void)commandPressed:(NSString *)command;
 
 @end
 

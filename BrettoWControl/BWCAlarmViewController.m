@@ -37,7 +37,17 @@
 
 - (IBAction)buttonPressed:(id)sender
 {
-    [self.delegate buttonPressed:sender];
+    if (sender == self.callBtn) {
+        [self.delegate commandPressed:@"call"];
+    } else if (sender == self.imeiBtn) {
+        [self.delegate commandPressed:@"imei"];
+    } else if (sender == self.setDevicesBtn) {
+        [self.delegate commandPressed:@"setDevices"];
+    } else if (sender == self.getDevicesBtn) {
+        [self.delegate commandPressed:@"getDevices"];
+    } else if (sender == self.setSensibilityBtn) {
+        [self.delegate commandPressed:@"sensibility"];
+    }
 }
 
 @end

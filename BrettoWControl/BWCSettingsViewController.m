@@ -62,7 +62,9 @@
 
 - (IBAction)buttonPressed:(id)sender
 {
-    [self.delegate buttonPressed:sender];
+    if (sender == self.contactMe) {
+        [self.delegate commandPressed:@"contact"];
+    }
 }
 
 #pragma mark - UITableViewDataSource methods
