@@ -340,7 +340,7 @@
                 [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"wizardShown"];
             }
             
-        // Send SMS 
+        // Send SMS
         } else {
             
             MFMessageComposeViewController *messageComposer = [[MFMessageComposeViewController alloc] init];
