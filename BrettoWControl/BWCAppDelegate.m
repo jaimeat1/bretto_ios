@@ -347,7 +347,20 @@
             messageComposer.messageComposeDelegate = self;
             messageComposer.body = message;
             messageComposer.recipients = [NSArray arrayWithObject:[[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
-            [self.tabBarController presentModalViewController:messageComposer animated:YES];
+            
+            @try {
+                [self.tabBarController presentModalViewController:messageComposer animated:YES];
+            }
+            @catch (NSException *ex)
+            {
+                [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"")
+                                            message:NSLocalizedString(@"ErrorSMSsending", @"")
+                                           delegate:nil
+                                  cancelButtonTitle:NSLocalizedString(@"Accept", @"")
+                                  otherButtonTitles:nil]
+                 show];
+            }
+            
         }
 
         // TODO: comment in release version
