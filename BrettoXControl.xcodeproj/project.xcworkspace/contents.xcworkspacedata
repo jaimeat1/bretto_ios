@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:BrettoWControl.xcodeproj">
+      location = "self:BrettoXControl.xcodeproj">
    </FileRef>
 </Workspace>

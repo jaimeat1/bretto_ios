@@ -7,8 +7,8 @@
 //
 
 #import "BWCSetDevicesViewController.h"
-#import "BWCCommandBuilder.h"
-#import "BWCAppDelegate.h"
+#import "BXCCommandBuilder.h"
+#import "BXCAppDelegate.h"
 
 @interface BWCSetDevicesViewController ()
 
@@ -86,8 +86,8 @@
         
         [self dismissViewControllerAnimated:YES completion:^(void){
             
-            NSString *message = [BWCCommandBuilder buildCommand:BWCCommandSetDevices withParameters:param];
-            [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
+            NSString *message = [BXCCommandBuilder buildCommand:BWCCommandSetDevices withParameters:param];
+            [(BXCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
             
         }];
         

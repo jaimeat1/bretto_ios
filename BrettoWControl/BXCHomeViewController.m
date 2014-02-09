@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 MobiOak. All rights reserved.
 //
 
-#import "BWCHomeViewController.h"
+#import "BXCHomeViewController.h"
 
-@interface BWCHomeViewController ()
+@interface BXCHomeViewController ()
 
 @end
 
-@implementation BWCHomeViewController
+@implementation BXCHomeViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +26,7 @@
 {
     [super viewDidLoad];
 	
-    self.delegate = (BWCAppDelegate*)[[UIApplication sharedApplication] delegate];
+    self.delegate = (BXCAppDelegate*)[[UIApplication sharedApplication] delegate];
     
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
         

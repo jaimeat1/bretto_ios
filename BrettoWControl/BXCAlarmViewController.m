@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 MobiOak. All rights reserved.
 //
 
-#import "BWCAlarmViewController.h"
+#import "BXCAlarmViewController.h"
 
-@interface BWCAlarmViewController ()
+@interface BXCAlarmViewController ()
 
 @end
 
-@implementation BWCAlarmViewController
+@implementation BXCAlarmViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +26,7 @@
 {
     [super viewDidLoad];
     
-    self.delegate = (BWCAppDelegate*)[[UIApplication sharedApplication] delegate];
+    self.delegate = (BXCAppDelegate*)[[UIApplication sharedApplication] delegate];
 }
 
 - (void)didReceiveMemoryWarning

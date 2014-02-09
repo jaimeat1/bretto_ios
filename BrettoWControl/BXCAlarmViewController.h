@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "BWCAppDelegate.h"
+#import "BXCAppDelegate.h"
 
-@interface BWCAlarmViewController : UIViewController
+@interface BXCAlarmViewController : UIViewController
 
-@property id <BWCButtonDelegate> delegate;
+@property id <BXCButtonDelegate> delegate;
 
 @property (nonatomic, weak) IBOutlet UIButton *callBtn;
 @property (nonatomic, weak) IBOutlet UIButton *imeiBtn;

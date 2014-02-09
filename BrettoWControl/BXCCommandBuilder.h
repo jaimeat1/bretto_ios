@@ -31,7 +31,7 @@ extern NSInteger const BWCCommandPassword;
 extern NSInteger const BWCCommandSensibility;
 extern NSInteger const BWCCommandState;
 
-@interface BWCCommandBuilder : NSObject
+@interface BXCCommandBuilder : NSObject
 
 /**
  Builds a complete text with a command and its parameters to be send by SMS

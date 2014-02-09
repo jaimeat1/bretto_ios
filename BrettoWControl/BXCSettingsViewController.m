@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 MobiOak. All rights reserved.
 //
 
-#import "BWCSettingsViewController.h"
-#import "BWCPasswordViewController.h"
+#import "BXCSettingsViewController.h"
+#import "BXCPasswordViewController.h"
 
-@interface BWCSettingsViewController ()
+@interface BXCSettingsViewController ()
 
 @end
 
-@implementation BWCSettingsViewController
+@implementation BXCSettingsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
 
-    self.delegate = (BWCAppDelegate*)[[UIApplication sharedApplication] delegate];
+    self.delegate = (BXCAppDelegate*)[[UIApplication sharedApplication] delegate];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -48,7 +48,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get reference to the destination view controller
-    BWCPasswordViewController* passwordViewController = (BWCPasswordViewController*)[(UINavigationController*)[segue destinationViewController] topViewController];
+    BXCPasswordViewController* passwordViewController = (BXCPasswordViewController*)[(UINavigationController*)[segue destinationViewController] topViewController];
     
     if ([[segue identifier] isEqualToString:@"appSegue"])
     {

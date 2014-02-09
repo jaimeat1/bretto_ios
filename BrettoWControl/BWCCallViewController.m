@@ -7,8 +7,8 @@
 //
 
 #import "BWCCallViewController.h"
-#import "BWCCommandBuilder.h"
-#import "BWCAppDelegate.h"
+#import "BXCCommandBuilder.h"
+#import "BXCAppDelegate.h"
 
 @interface BWCCallViewController ()
 
@@ -72,8 +72,8 @@
         
         [self dismissViewControllerAnimated:YES completion:^(void){
             
-            NSString *message = [BWCCommandBuilder buildCommand:BWCCommandCall withParameters:param];
-            [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
+            NSString *message = [BXCCommandBuilder buildCommand:BWCCommandCall withParameters:param];
+            [(BXCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
             
         }];
 

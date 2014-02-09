@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>562FC31D-D50D-49D4-A76C-5CE93BC0791B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BrettoXControl</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A0EE9CA9-2D8B-436E-B56F-22B5F793074A</key>
+		<string>https://github.com/jaimeat1/bretto_ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BrettoXControl.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A0EE9CA9-2D8B-436E-B56F-22B5F793074A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jaimeat1/bretto_ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A0EE9CA9-2D8B-436E-B56F-22B5F793074A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A0EE9CA9-2D8B-436E-B56F-22B5F793074A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BrettoWControl</string>
+		</dict>
+	</array>
+</dict>
+</plist>

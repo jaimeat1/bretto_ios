@@ -6,17 +6,17 @@
 //  Copyright (c) 2013 MobiOak. All rights reserved.
 //
 
-#import "BWCPasswordViewController.h"
-#import "BWCAppDelegate.h"
-#import "BWCCommandBuilder.h"
+#import "BXCPasswordViewController.h"
+#import "BXCAppDelegate.h"
+#import "BXCCommandBuilder.h"
 
-@interface BWCPasswordViewController ()
+@interface BXCPasswordViewController ()
 
 @property (nonatomic, copy) NSString* passwordKey;
 
 @end
 
-@implementation BWCPasswordViewController
+@implementation BXCPasswordViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -110,10 +110,10 @@
                     [[NSUserDefaults standardUserDefaults] setObject:self.theNewPassword.text forKey:@"newPasswordAlarm"];
                     
                     NSMutableArray* params = [NSMutableArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"passwordAlarm"], self.theNewPassword.text, nil];
-                    NSString *message = [BWCCommandBuilder buildCommand:BWCCommandPassword withParameters:params];
+                    NSString *message = [BXCCommandBuilder buildCommand:BWCCommandPassword withParameters:params];
                     
-                    [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
-                    [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] setCurrentCommand:@"passwordAlarm"];
+                    [(BXCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
+                    [(BXCAppDelegate *)[[UIApplication sharedApplication] delegate] setCurrentCommand:@"passwordAlarm"];
                     
                 }];
             }

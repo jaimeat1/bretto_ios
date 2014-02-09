@@ -7,8 +7,8 @@
 //
 
 #import "BWCStep3ViewController.h"
-#import "BWCCommandBuilder.h"
-#import "BWCAppDelegate.h"
+#import "BXCCommandBuilder.h"
+#import "BXCAppDelegate.h"
 
 @interface BWCStep3ViewController ()
 
@@ -78,10 +78,10 @@
 
         [self dismissViewControllerAnimated:YES completion:^(void){
             
-            [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] setCurrentCommand:@"wizard"];
+            [(BXCAppDelegate *)[[UIApplication sharedApplication] delegate] setCurrentCommand:@"wizard"];
             
-            NSString *message = [BWCCommandBuilder buildCommand:BWCCommandSetDevices withParameters:param];
-            [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
+            NSString *message = [BXCCommandBuilder buildCommand:BWCCommandSetDevices withParameters:param];
+            [(BXCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
   
         }];
         

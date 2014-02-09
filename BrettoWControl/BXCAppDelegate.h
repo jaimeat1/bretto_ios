@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol BWCButtonDelegate <NSObject>
+@protocol BXCButtonDelegate <NSObject>
 
 @required
 - (void)commandPressed:(NSString *)command;
 
 @end
 
-@interface BWCAppDelegate : UIResponder <UIApplicationDelegate, BWCButtonDelegate, UIActionSheetDelegate, UITabBarControllerDelegate>
+@interface BXCAppDelegate : UIResponder <UIApplicationDelegate, BXCButtonDelegate, UIActionSheetDelegate, UITabBarControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 /** Command in process */

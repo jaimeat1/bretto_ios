@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BWCPasswordViewController : UITableViewController
+@interface BXCPasswordViewController : UITableViewController
 
 @property (nonatomic) bool isAppPassword;
 

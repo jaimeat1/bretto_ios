@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "BWCAppDelegate.h"
+#import "BXCAppDelegate.h"
 
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([BWCAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([BXCAppDelegate class]));
     }
 }

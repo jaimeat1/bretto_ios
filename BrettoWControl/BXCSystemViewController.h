@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "BWCAppDelegate.h"
+#import "BXCAppDelegate.h"
 
-@interface BWCSystemViewController : UIViewController
+@interface BXCSystemViewController : UIViewController
 
-@property id <BWCButtonDelegate> delegate;
+@property id <BXCButtonDelegate> delegate;
 
 @property (nonatomic, weak) IBOutlet UIButton *stateBtn;
 @property (nonatomic, weak) IBOutlet UIButton *softResetBtn;

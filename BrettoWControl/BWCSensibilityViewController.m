@@ -7,8 +7,8 @@
 //
 
 #import "BWCSensibilityViewController.h"
-#import "BWCCommandBuilder.h"
-#import "BWCAppDelegate.h"
+#import "BXCCommandBuilder.h"
+#import "BXCAppDelegate.h"
 
 @interface BWCSensibilityViewController ()
 
@@ -67,8 +67,8 @@
         NSLog(@"sensibility after %@",sensibility);
         
         NSMutableArray* params = [NSMutableArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"passwordAlarm"], sensibility, nil];
-        NSString *message = [BWCCommandBuilder buildCommand:BWCCommandSensibility withParameters:params];
-        [(BWCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
+        NSString *message = [BXCCommandBuilder buildCommand:BWCCommandSensibility withParameters:params];
+        [(BXCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
         
     }];
 }

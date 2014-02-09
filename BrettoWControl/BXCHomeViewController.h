@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "BWCAppDelegate.h"
+#import "BXCAppDelegate.h"
 
-@interface BWCHomeViewController : UIViewController
+@interface BXCHomeViewController : UIViewController
 
-@property id <BWCButtonDelegate> delegate;
+@property id <BXCButtonDelegate> delegate;
 
 @property (nonatomic, weak) IBOutlet UIButton *assembleOnBtn;
 @property (nonatomic, weak) IBOutlet UIButton *assembleOffBtn;

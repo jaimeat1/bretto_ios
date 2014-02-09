@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-#import "BWCAppDelegate.h"
+#import "BXCAppDelegate.h"
 
-@interface BWCSettingsViewController : UITableViewController
+@interface BXCSettingsViewController : UITableViewController
 
 @property (nonatomic, weak) IBOutlet UITableViewCell *numberCell;
 @property (nonatomic, weak) IBOutlet UIButton *contactMe;
-@property id <BWCButtonDelegate> delegate;
+@property id <BXCButtonDelegate> delegate;
 
 - (IBAction)buttonPressed:(id)sender;
 

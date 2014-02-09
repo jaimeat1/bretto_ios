@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 MobiOak. All rights reserved.
 //
 
-#import "BWCCommandBuilder.h"
+#import "BXCCommandBuilder.h"
 
 NSInteger const BWCCommandAssembleOn = 0;
 NSInteger const BWCCommandAssembleOff = 1;
@@ -31,7 +31,7 @@ NSInteger const BWCCommandPassword = 19;
 NSInteger const BWCCommandSensibility = 20;
 NSInteger const BWCCommandState = 21;
 
-@implementation BWCCommandBuilder
+@implementation BXCCommandBuilder
 
 + (NSString *)buildCommand:(NSInteger)command withParameters:(NSArray *)parameters
 {
