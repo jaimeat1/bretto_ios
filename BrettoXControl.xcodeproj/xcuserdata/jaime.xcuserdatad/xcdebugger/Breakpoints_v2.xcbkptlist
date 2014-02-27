@@ -17,6 +17,36 @@
             endingLineNumber = "13"
             landmarkName = "@interface BXCHomeViewController"
             landmarkType = "2">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BXCHomeViewController delegate]"
+                  moduleName = "W-Bretto"
+                  urlString = "file:///Users/jaime/Documents/BrettoWControl/BrettoWControl/BXCHomeViewController.h"
+                  timestampString = "413654168.908932"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "30">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BXCHomeViewController setDelegate:]"
+                  moduleName = "W-Bretto"
+                  urlString = "file:///Users/jaime/Documents/BrettoWControl/BrettoWControl/BXCHomeViewController.h"
+                  timestampString = "413654168.910181"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "43">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

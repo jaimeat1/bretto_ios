@@ -64,16 +64,16 @@
         [self.delegate commandPressed:@"assembleOn"];
     } else if ((sender == self.assembleOffBtn) || (sender == self.assembleOffBtniPhone5)) {
         [self.delegate commandPressed:@"assembleOff"];
-    } else if ((sender == self.sensorBtn) || (sender == self.sensorBtniPhone5)) {
-        [self.delegate commandPressed:@"sensor"];
-    } else if ((sender == self.saveBtn) || (sender == self.saveBtniPhone5)) {
-        [self.delegate commandPressed:@"save"];
-    } else if ((sender == self.locationBtn) || (sender == self.locationBtniPhone5)) {
-        [self.delegate commandPressed:@"location"];
+    } else if ((sender == self.climateBtn) || (sender == self.climateBtniPhone5)) {
+        [self.delegate commandPressed:@"climate"];
     } else if ((sender == self.engineBtn) || (sender == self.engineBtniPhone5)) {
         [self.delegate commandPressed:@"engine"];
-    } else if ((sender == self.sirenBtn) || (sender == self.sirenBtniPhone5)) {
-        [self.delegate commandPressed:@"siren"];
+    } else if ((sender == self.ignitionBtn) || (sender == self.ignitionBtniPhone5)) {
+        [self.delegate commandPressed:@"ignition"];
+    } else if ((sender == self.locationBtn) || (sender == self.locationBtniPhone5)) {
+        [self.delegate commandPressed:@"location"];
+    } else if ((sender == self.sensorBtn) || (sender == self.sensorBtniPhone5)) {
+        [self.delegate commandPressed:@"sensor"];
     } else if ((sender == self.bannerBtn) || (sender == self.bannerBtniPhone5)) {
         [self.delegate commandPressed:@"bretto"];
     }

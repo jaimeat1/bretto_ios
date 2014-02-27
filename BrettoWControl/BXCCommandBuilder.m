@@ -17,10 +17,8 @@ NSInteger const BWCCommandSensorOff = 5;
 NSInteger const BWCCommandLocationWeb = 6;
 NSInteger const BWCCommandLocationGPRMC = 7;
 NSInteger const BWCCommandLocationGPSD = 8;
-NSInteger const BWCCommandSirenOn = 9;
-NSInteger const BWCCommandSirenOff = 10;
-NSInteger const BWCCommandSaveOn = 11;
-NSInteger const BWCCommandSaveOff = 12;
+NSInteger const BWCCommandClimateOn = 11;
+NSInteger const BWCCommandClimateOff = 12;
 NSInteger const BWCCommandCall = 13;
 NSInteger const BWCCommandImei = 14;
 NSInteger const BWCCommandReset = 15;
@@ -69,17 +67,11 @@ NSInteger const BWCCommandState = 21;
         case BWCCommandLocationGPSD:
             message = [NSString stringWithFormat:@"%@%@", message, @"GPSD#"];
             break;
-        case BWCCommandSirenOn:
-            message = [NSString stringWithFormat:@"%@%@", message, @"SIRENON#"];
+        case BWCCommandClimateOn:
+            message = [NSString stringWithFormat:@"%@%@%@#", message, @"air start", [parameters objectAtIndex:1]];
             break;
-        case BWCCommandSirenOff:
-            message = [NSString stringWithFormat:@"%@%@", message, @"SIRENOFF#"];
-            break;
-        case BWCCommandSaveOn:
-            message = [NSString stringWithFormat:@"%@%@", message, @"SL*O#"];
-            break;
-        case BWCCommandSaveOff:
-            message = [NSString stringWithFormat:@"%@%@", message, @"SL*C#"];
+        case BWCCommandClimateOff:
+            message = [NSString stringWithFormat:@"%@%@", message, @"air off#"];
             break;
         case BWCCommandCall:
             message = [NSString stringWithFormat:@"%@%@%@#", message, @"VM", [parameters objectAtIndex:1]];

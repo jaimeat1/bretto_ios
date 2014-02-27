@@ -15,7 +15,7 @@
 
 @end
 
-@interface BXCAppDelegate : UIResponder <UIApplicationDelegate, BXCButtonDelegate, UIActionSheetDelegate, UITabBarControllerDelegate>
+@interface BXCAppDelegate : UIResponder <UIApplicationDelegate, BXCButtonDelegate, UIActionSheetDelegate, UITabBarControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (strong, nonatomic) UIWindow *window;
 /** Command in process */

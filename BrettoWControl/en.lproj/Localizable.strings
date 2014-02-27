@@ -13,7 +13,7 @@
 "AssembleOn" = "Armar";
 "AssembleOff" = "Desarmar";
 "Sensor" = "Sensor de golpes";
-"Save" = "Ahorro de energía";
+"Climate" = "Climatización";
 "Location" = "Localizar";
 "Engine" = "Motor";
 "Siren" = "Sirena";

@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view autoresizesSubviews="NO" contentMode="redraw" id="IYy-Hq-Ebk" userLabel="View iPhone">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="411"/>
+                                <rect key="frame" x="-1" y="0.0" width="320" height="411"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rdn-tn-Kup" userLabel="assembleOn">
@@ -45,9 +45,9 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="zhC-wD-s5i"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BJF-gQ-Yv6" userLabel="engine">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BJF-gQ-Yv6" userLabel="location">
                                         <rect key="frame" x="0.0" y="218" width="160" height="194"/>
-                                        <accessibility key="accessibilityConfiguration" label="engine"/>
+                                        <accessibility key="accessibilityConfiguration" label="location"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" backgroundImage="engine.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -59,9 +59,9 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="dja-lg-C1I"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bKB-zk-KTO" userLabel="siren">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bKB-zk-KTO" userLabel="sensor">
                                         <rect key="frame" x="161" y="218" width="160" height="194"/>
-                                        <accessibility key="accessibilityConfiguration" label="siren"/>
+                                        <accessibility key="accessibilityConfiguration" label="sensor"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" backgroundImage="siren.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -73,9 +73,9 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="Qer-D4-lfP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6Hb-YD-ogd" userLabel="location">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6Hb-YD-ogd" userLabel="engine">
                                         <rect key="frame" x="93" y="152" width="134" height="134"/>
-                                        <accessibility key="accessibilityConfiguration" label="location"/>
+                                        <accessibility key="accessibilityConfiguration" label="engine"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" backgroundImage="location.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -88,9 +88,9 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="OmU-iF-xZX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="35e-7x-WvK" userLabel="save">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="35e-7x-WvK" userLabel="ignition">
                                         <rect key="frame" x="225" y="164" width="95" height="110"/>
-                                        <accessibility key="accessibilityConfiguration" label="save"/>
+                                        <accessibility key="accessibilityConfiguration" label="ignition"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" backgroundImage="save.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -103,9 +103,9 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="eE6-Eq-Pgf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BTv-55-Jqj" userLabel="sensor">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BTv-55-Jqj" userLabel="climate">
                                         <rect key="frame" x="0.0" y="164" width="95" height="110"/>
-                                        <accessibility key="accessibilityConfiguration" label="sensor"/>
+                                        <accessibility key="accessibilityConfiguration" label="climate"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" backgroundImage="sensor.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -136,7 +136,7 @@
                                 </subviews>
                             </view>
                             <view contentMode="redraw" id="aiI-Gf-bHu" userLabel="View iPhone 5">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="823"/>
+                                <rect key="frame" x="-1" y="0.0" width="320" height="823"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qDX-cJ-ABw" userLabel="assembleOn">
                                         <rect key="frame" x="0.0" y="67" width="160" height="217"/>
@@ -168,9 +168,9 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="QYG-QG-WcY"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7m9-y1-TKC" userLabel="engine">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7m9-y1-TKC" userLabel="location">
                                         <rect key="frame" x="0.0" y="283" width="160" height="217"/>
-                                        <accessibility key="accessibilityConfiguration" label="engine"/>
+                                        <accessibility key="accessibilityConfiguration" label="location"/>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" backgroundImage="engine_iphone5.png">
@@ -183,9 +183,9 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="ofM-vY-ovQ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vO5-Mf-2Tj" userLabel="siren">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vO5-Mf-2Tj" userLabel="sensor">
                                         <rect key="frame" x="160" y="283" width="160" height="217"/>
-                                        <accessibility key="accessibilityConfiguration" label="siren"/>
+                                        <accessibility key="accessibilityConfiguration" label="sensor"/>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" backgroundImage="siren_iphone5.png">
@@ -196,11 +196,12 @@
                                         </state>
                                         <connections>
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="uLT-Nf-8um"/>
+                                            <segue destination="7h0-He-sjz" kind="modal" identifier="sensibility" id="Lpn-gf-zxm"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dpX-cg-Iud" userLabel="sensor">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dpX-cg-Iud" userLabel="climate">
                                         <rect key="frame" x="0.0" y="226" width="95" height="110"/>
-                                        <accessibility key="accessibilityConfiguration" label="sensor"/>
+                                        <accessibility key="accessibilityConfiguration" label="climate"/>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" backgroundImage="sensor_iphone5.png">
@@ -213,9 +214,9 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="m2d-ll-UGv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UfF-YK-GjC" userLabel="location">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UfF-YK-GjC" userLabel="engine">
                                         <rect key="frame" x="93" y="214" width="134" height="134"/>
-                                        <accessibility key="accessibilityConfiguration" label="location"/>
+                                        <accessibility key="accessibilityConfiguration" label="engine"/>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" backgroundImage="location_iphone5.png">
@@ -228,9 +229,9 @@
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="Os2-kj-VKq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jJV-U4-0KP" userLabel="Button - Ahorro">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jJV-U4-0KP" userLabel="ignition">
                                         <rect key="frame" x="225" y="226" width="95" height="110"/>
-                                        <accessibility key="accessibilityConfiguration" label="save"/>
+                                        <accessibility key="accessibilityConfiguration" label="ignition"/>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" backgroundImage="save_iphone5.png">
@@ -270,16 +271,16 @@
                         <outlet property="assembleOnBtniPhone5" destination="qDX-cJ-ABw" id="7vO-rN-3fe"/>
                         <outlet property="bannerBtn" destination="9fI-Qn-1eg" id="6VF-TQ-n6y"/>
                         <outlet property="bannerBtniPhone5" destination="Izt-Lo-CSd" id="fqk-bJ-q7S"/>
-                        <outlet property="engineBtn" destination="BJF-gQ-Yv6" id="fEJ-aF-SQw"/>
-                        <outlet property="engineBtniPhone5" destination="7m9-y1-TKC" id="XRi-9F-9Y1"/>
-                        <outlet property="locationBtn" destination="6Hb-YD-ogd" id="LUn-Cb-81Y"/>
-                        <outlet property="locationBtniPhone5" destination="UfF-YK-GjC" id="s21-5w-RbH"/>
-                        <outlet property="saveBtn" destination="35e-7x-WvK" id="f1e-EB-dGH"/>
-                        <outlet property="saveBtniPhone5" destination="jJV-U4-0KP" id="Itc-eb-CEO"/>
-                        <outlet property="sensorBtn" destination="BTv-55-Jqj" id="X3e-yh-74l"/>
-                        <outlet property="sensorBtniPhone5" destination="dpX-cg-Iud" id="RtZ-5G-z2P"/>
-                        <outlet property="sirenBtn" destination="bKB-zk-KTO" id="fzb-Gd-c3O"/>
-                        <outlet property="sirenBtniPhone5" destination="vO5-Mf-2Tj" id="yQA-ZQ-TDX"/>
+                        <outlet property="climateBtn" destination="BTv-55-Jqj" id="OA0-5y-gCv"/>
+                        <outlet property="climateBtniPhone5" destination="dpX-cg-Iud" id="KKk-RI-A1C"/>
+                        <outlet property="engineBtn" destination="6Hb-YD-ogd" id="YGg-7h-Ppm"/>
+                        <outlet property="engineBtniPhone5" destination="UfF-YK-GjC" id="7FS-qQ-Z9f"/>
+                        <outlet property="ignitionBtn" destination="35e-7x-WvK" id="hnM-69-4VZ"/>
+                        <outlet property="ignitionBtniPhone5" destination="jJV-U4-0KP" id="CaL-6F-Txf"/>
+                        <outlet property="locationBtn" destination="BJF-gQ-Yv6" id="6aW-be-KBf"/>
+                        <outlet property="locationBtniPhone5" destination="7m9-y1-TKC" id="exv-bn-3gs"/>
+                        <outlet property="sensorBtn" destination="bKB-zk-KTO" id="s2x-cr-QUI"/>
+                        <outlet property="sensorBtniPhone5" destination="vO5-Mf-2Tj" id="EqX-bH-m8c"/>
                         <outlet property="viewiPhone" destination="IYy-Hq-Ebk" id="tgx-D7-fBT"/>
                         <outlet property="viewiPhone5" destination="aiI-Gf-bHu" id="jdQ-0W-hVP"/>
                         <segue destination="brI-ft-lvo" kind="modal" identifier="wizard" modalTransitionStyle="coverVertical" id="VvE-Ui-s0M"/>
@@ -287,7 +288,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="421" y="-244"/>
+            <point key="canvasLocation" x="421" y="-1683"/>
         </scene>
         <!--Alarm View Controller-->
         <scene sceneID="13">
@@ -362,7 +363,6 @@
                                 <state key="highlighted" backgroundImage="button_pressed.png"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="3" eventType="touchUpInside" id="DIJ-RY-ke5"/>
-                                    <segue destination="7h0-He-sjz" kind="modal" modalTransitionStyle="flipHorizontal" id="qFk-cX-wzj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -694,14 +694,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Número de la alarma" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MKr-gS-297">
-                                                    <rect key="frame" x="10" y="2" width="168" height="21"/>
+                                                    <rect key="frame" x="10" y="3" width="164" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YnY-85-1SL">
-                                                    <rect key="frame" x="10" y="23" width="47" height="18"/>
+                                                    <rect key="frame" x="10" y="24" width="50" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -755,7 +755,7 @@
         <scene sceneID="8yK-yX-Sou">
             <objects>
                 <tableViewController id="cXg-VI-psn" customClass="BWCSensibilityViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="28B-1X-6sB">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="28B-1X-6sB">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -768,6 +768,15 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jZN-ce-vUc" id="cui-bm-HZc">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="IkX-Jq-FcC">
+                                                    <rect key="frame" x="44" y="11" width="228" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="sliderValueChanged:" destination="cXg-VI-psn" eventType="valueChanged" id="xyO-4p-Hqe"/>
+                                                    </connections>
+                                                </slider>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -779,10 +788,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="cb8-W7-dMf"/>
+                    <connections>
+                        <outlet property="slider" destination="IkX-Jq-FcC" id="q82-Sj-y4s"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rXc-Hd-wZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1597" y="1199"/>
+            <point key="canvasLocation" x="1557" y="-969"/>
         </scene>
         <!--Password View Controller-->
         <scene sceneID="7FM-xJ-Nbl">
@@ -1069,7 +1081,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kN-KC-IrJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1573" y="-1027"/>
+            <point key="canvasLocation" x="1557" y="-1683"/>
         </scene>
         <!--Step3 View Controller-->
         <scene sceneID="Jjd-d1-ArO">
@@ -1170,7 +1182,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9D-JB-6mb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2479" y="-1019"/>
+            <point key="canvasLocation" x="2463" y="-1675"/>
         </scene>
         <!--Step2 View Controller-->
         <scene sceneID="VZK-QM-wKC">
@@ -1216,7 +1228,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0MU-dj-ISl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2029" y="-1019"/>
+            <point key="canvasLocation" x="2013" y="-1675"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zQe-Bw-oiW">
@@ -1270,7 +1282,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zNT-wY-WOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1071" y="1199"/>
+            <point key="canvasLocation" x="1031" y="-969"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K7F-9c-DCu">
@@ -1288,7 +1300,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xtp-f2-bgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047" y="-1027"/>
+            <point key="canvasLocation" x="1031" y="-1683"/>
         </scene>
     </scenes>
     <resources>
@@ -1335,6 +1347,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="BWL-V3-RnU"/>
+        <segue reference="ukK-Pc-Kvu"/>
     </inferredMetricsTieBreakers>
 </document>

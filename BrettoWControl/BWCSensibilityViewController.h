@@ -10,4 +10,8 @@
 
 @interface BWCSensibilityViewController : UITableViewController
 
+@property (nonatomic, weak) IBOutlet UISlider *slider;
+
+- (IBAction)sliderValueChanged:(UISlider *)slider;
+
 @end

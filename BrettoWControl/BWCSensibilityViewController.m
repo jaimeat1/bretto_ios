@@ -12,7 +12,6 @@
 
 @interface BWCSensibilityViewController ()
 
-@property (nonatomic, strong) UISlider *slider;
 @property (nonatomic, strong) UILabel *currentValue;
 
 @end
@@ -96,18 +95,21 @@
             [aCell.contentView addSubview:self.currentValue];
             
             // Configure slider
-            aCell.selectionStyle = UITableViewCellSelectionStyleNone;
-            self.slider = [[UISlider alloc] initWithFrame:CGRectZero];
-            [aCell.contentView addSubview:self.slider];
+            //aCell.selectionStyle = UITableViewCellSelectionStyleNone;
+            //self.slider = [[UISlider alloc] initWithFrame:CGRectZero];
+            /*
             self.slider.bounds = CGRectMake(0, 0, aCell.contentView.bounds.size.width - 100, self.slider.bounds.size.height);
             self.slider.center = CGPointMake(CGRectGetMidX(aCell.contentView.bounds), CGRectGetMidY(aCell.contentView.bounds));
             self.slider.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
             self.slider.minimumValue = 0;
             self.slider.maximumValue = 600;
-            self.slider.value = 0;
-            [self.slider addTarget:self action:@selector(sliderValueChanged:)
-               forControlEvents:UIControlEventValueChanged];
+            self.slider.value = 50;
+             */
+            //[self.slider addTarget:self action:@selector(sliderValueChanged:)
+            //   forControlEvents:UIControlEventValueChanged];
 
+            //[aCell.contentView addSubview:self.slider];
+            
             return aCell;
         }
     }
@@ -115,7 +117,7 @@
     return [super tableView:tableView cellForRowAtIndexPath:indexPath];
 }
 
-- (void)sliderValueChanged:(UISlider *)slider
+- (IBAction)sliderValueChanged:(UISlider *)slider
 {
     self.currentValue.text = [NSString stringWithFormat:@"%d", [[NSNumber numberWithFloat:slider.value] integerValue]];
 }

@@ -25,6 +25,8 @@
 @property (nonatomic, strong) UIAlertView *alertPassword;
 /** Alert to show message to send, used by debugging */
 @property (nonatomic, strong) UIAlertView *alertMessage;
+/** Picker view used to select values as time and speed */
+@property (nonatomic, strong) UIPickerView *pickerView;
 
 @end
 
@@ -105,29 +107,33 @@
         
         [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandAssembleOff withParameters:param]];
         
-    } else if ([self.currentCommand isEqualToString:@"sensor"]) {
-        
-        [self askForOptions];
-        
-    } else if ([self.currentCommand isEqualToString:@"save"]) {
-        
-        [self askForOptions];
-        
-    } else if ([self.currentCommand isEqualToString:@"location"]) {
+    } else if ([self.currentCommand isEqualToString:@"climate"]) {
         
         [self askForOptions];
         
     } else if ([self.currentCommand isEqualToString:@"engine"]) {
         
-        [self askForOptions];
+        // TODO:
         
-    } else if ([self.currentCommand isEqualToString:@"siren"]) {
+    } else if ([self.currentCommand isEqualToString:@"ignition"]) {
         
-        [self askForOptions];
+        // TODO:
+        
+    } else if ([self.currentCommand isEqualToString:@"location"]) {
+        
+        // TODO:
+        
+    } else if ([self.currentCommand isEqualToString:@"sensor"]) {
+        
+        // [self askForOptions];
+        
+        // TODO:
         
     } else if ([self.currentCommand isEqualToString:@"bretto"]) {
         
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.bretto.es"]];
+        
+        
         
     } else if ([self.currentCommand isEqualToString:@"call"]) {
         
@@ -182,8 +188,8 @@
     
     if ([self.currentCommand isEqualToString:@"sensor"]) {
         title = NSLocalizedString(@"Sensor", @"");
-    } else if ([self.currentCommand isEqualToString:@"save"]) {
-        title = NSLocalizedString(@"Save", @"");
+    } else if ([self.currentCommand isEqualToString:@"climate"]) {
+        title = NSLocalizedString(@"Climate", @"");
     } else if ([self.currentCommand isEqualToString:@"location"]) {
         title = NSLocalizedString(@"Location", @"");
     } else if ([self.currentCommand isEqualToString:@"engine"]) {
@@ -208,7 +214,7 @@
     
     // Enable/ Disable options
     if ([self.currentCommand isEqualToString:@"sensor"] ||
-        [self.currentCommand isEqualToString:@"save"] ||
+        [self.currentCommand isEqualToString:@"climate"] ||
         [self.currentCommand isEqualToString:@"engine"] ||
         [self.currentCommand isEqualToString:@"siren"]) {
         
@@ -323,7 +329,8 @@
         
     // There is alarm number
     } else {
-
+// TODO: uncomment in release
+/*
         // SMS can't be send or it's not an iPhone
         if (([MFMessageComposeViewController canSendText] == NO) ||
             ([[[UIDevice currentDevice] model] rangeOfString:@"iPhone"].location == NSNotFound)) {
@@ -362,10 +369,10 @@
             }
             
         }
-
+*/
         // TODO: comment in release version
         // Shows pop-up with message to send, used in debbuging version
-/*
+
          NSString* title = [NSString stringWithFormat:@"SMS se enviará a %@", [[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
          
          self.alertMessage = [[UIAlertView alloc] initWithTitle:title
@@ -375,7 +382,7 @@
          otherButtonTitles:NSLocalizedString(@"Cancel", @""), nil];
          
          [self.alertMessage show];
-*/
+
     }
 }
 
@@ -451,7 +458,7 @@
         NSString *newPass = (NSString *)[[NSUserDefaults standardUserDefaults] objectForKey:@"newPasswordAlarm"];
         [[NSUserDefaults standardUserDefaults] setObject:newPass forKey:@"passwordAlarm"];
         
-        // Command to hard reset, reset all values if SMS has been successfuly sent
+    // Command to hard reset, reset all values if SMS has been successfuly sent
     } else if ([self.currentCommand isEqualToString:@"hardReset"] && (result == MessageComposeResultSent)) {
         
         [[NSUserDefaults standardUserDefaults] setObject:@"1234" forKey:@"passwordAlarm"];
@@ -462,7 +469,7 @@
         
         [self.tabBarController setSelectedIndex:0];
         
-        // Wizard has just been sent
+    // Wizard has just been sent
     } else if ([self.currentCommand isEqualToString:@"wizard"]){
         
         // Wizard successfuly sent
@@ -546,14 +553,14 @@
                     break;
             }
     
-        } else if ([self.currentCommand isEqualToString:@"save"]) {
+        } else if ([self.currentCommand isEqualToString:@"climate"]) {
             
             switch (buttonIndex) {
                 case 0:
-                    [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandSaveOn withParameters:param]];
+                    // TODO: segue to set climate
                     break;
                 case 1:
-                    [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandSaveOff withParameters:param]];
+                    [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandClimateOff withParameters:param]];
                     break;
                 default:
                     break;
@@ -570,19 +577,6 @@
                     break;
                 case 2:
                     [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandLocationWeb withParameters:param]];
-                    break;
-                default:
-                    break;
-            }
-            
-        } else if ([self.currentCommand isEqualToString:@"siren"]) {
-            
-            switch (buttonIndex) {
-                case 0:
-                    [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandSirenOn withParameters:param]];
-                    break;
-                case 1:
-                    [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandSirenOff withParameters:param]];
                     break;
                 default:
                     break;
@@ -669,6 +663,46 @@
         }
         
     }
+}
+
+#pragma mark - UIPickerViewDataSource methods
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    
+    if ([self.currentCommand isEqualToString:@"climate"] || [self.currentCommand isEqualToString:@"engine"]) {
+        return 1;
+    } else {
+        // TODO: check "speed" command
+        return 2;
+    }
+    
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    if ([self.currentCommand isEqualToString:@"climate"] || [self.currentCommand isEqualToString:@"engine"]) {
+        return 99;
+    } else {
+        // TODO: check "speed" command
+        if (component == 0) {
+            return 279;
+        } else {
+            return 99;
+        }
+    }
+}
+
+#pragma mark - UIPickerViewDelegate methods
+
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    // TODO
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    // TODO
+    return @"";
 }
 
 @end
