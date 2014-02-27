@@ -151,7 +151,7 @@
         
         [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandGetDevices withParameters:param]];
         
-    } else if ([self.currentCommand isEqualToString:@"sensibility"]) {
+    } else if ([self.currentCommand isEqualToString:@"speed"]) {
         
         // segue in storyboard
         

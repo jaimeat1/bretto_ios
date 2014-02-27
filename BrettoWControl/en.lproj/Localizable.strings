@@ -24,11 +24,15 @@
 "GetImei" = "Obtener IMEI";
 "SetDevices" = "Configurar móviles";
 "GetDevices" = "Comprobar móviles";
-"Sensibility" = "Ajustar sensibilidad";
-"SensibilityShort" = "Sensibilidad";
+"Speed" = "Alarma velocidad";
 "State" = "Estado de la alarma";
 "Reset" = "Reseteo parcial";
 "ResetHard" = "Reseteo completo";
+
+"TimeHeader" = "Ajuste de temporizador";
+"TimeFooter" = "Seleccione el tiempo de funcionamiento";
+"SpeedHeader" = "Ajuste de velocidad";
+"SpeedFooter" = "Seleccione la velocidad límite de funcionamiento";
 
 "Confirmation1" = "¿Estás seguro de esta operación?";
 "Confirmation2" = "¿Estás seguro? Esta operación no se puede deshacer.";

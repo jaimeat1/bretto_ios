@@ -17,7 +17,7 @@
 		6F11C6DA16F4FE0D00DE7ADD /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F11C6D816F4FE0D00DE7ADD /* iTunesArtwork@2x.png */; };
 		6F1830E316E2011600F3DF88 /* BWCCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1830E216E2011600F3DF88 /* BWCCallViewController.m */; };
 		6F1830E716E2097A00F3DF88 /* BWCSetDevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1830E616E2097A00F3DF88 /* BWCSetDevicesViewController.m */; };
-		6F1830EA16E215E000F3DF88 /* BWCSensibilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1830E916E215E000F3DF88 /* BWCSensibilityViewController.m */; };
+		6F1830EA16E215E000F3DF88 /* BXCTimeAndSpeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1830E916E215E000F3DF88 /* BXCTimeAndSpeedViewController.m */; };
 		6F2B11E016B401DC00C07BE8 /* BXCCommandBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2B11DF16B401DC00C07BE8 /* BXCCommandBuilder.m */; };
 		6F4EA74917045E150096D5E2 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F4EA74717045E150096D5E2 /* MainStoryboard_iPhone.storyboard */; };
 		6F67C13016A32C5B00874715 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F67C12F16A32C5A00874715 /* UIKit.framework */; };
@@ -112,8 +112,8 @@
 		6F1830E216E2011600F3DF88 /* BWCCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCCallViewController.m; sourceTree = "<group>"; };
 		6F1830E516E2097A00F3DF88 /* BWCSetDevicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSetDevicesViewController.h; sourceTree = "<group>"; };
 		6F1830E616E2097A00F3DF88 /* BWCSetDevicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCSetDevicesViewController.m; sourceTree = "<group>"; };
-		6F1830E816E215E000F3DF88 /* BWCSensibilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSensibilityViewController.h; sourceTree = "<group>"; };
-		6F1830E916E215E000F3DF88 /* BWCSensibilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCSensibilityViewController.m; sourceTree = "<group>"; };
+		6F1830E816E215E000F3DF88 /* BXCTimeAndSpeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXCTimeAndSpeedViewController.h; sourceTree = "<group>"; };
+		6F1830E916E215E000F3DF88 /* BXCTimeAndSpeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXCTimeAndSpeedViewController.m; sourceTree = "<group>"; };
 		6F2B11DE16B401DC00C07BE8 /* BXCCommandBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXCCommandBuilder.h; sourceTree = "<group>"; };
 		6F2B11DF16B401DC00C07BE8 /* BXCCommandBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXCCommandBuilder.m; sourceTree = "<group>"; };
 		6F4EA74817045E150096D5E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
@@ -330,8 +330,8 @@
 				6F1830E216E2011600F3DF88 /* BWCCallViewController.m */,
 				6F1830E516E2097A00F3DF88 /* BWCSetDevicesViewController.h */,
 				6F1830E616E2097A00F3DF88 /* BWCSetDevicesViewController.m */,
-				6F1830E816E215E000F3DF88 /* BWCSensibilityViewController.h */,
-				6F1830E916E215E000F3DF88 /* BWCSensibilityViewController.m */,
+				6F1830E816E215E000F3DF88 /* BXCTimeAndSpeedViewController.h */,
+				6F1830E916E215E000F3DF88 /* BXCTimeAndSpeedViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -559,7 +559,7 @@
 				6F10344516D117F8004A7C35 /* BWCNumberViewController.m in Sources */,
 				6F1830E316E2011600F3DF88 /* BWCCallViewController.m in Sources */,
 				6F1830E716E2097A00F3DF88 /* BWCSetDevicesViewController.m in Sources */,
-				6F1830EA16E215E000F3DF88 /* BWCSensibilityViewController.m in Sources */,
+				6F1830EA16E215E000F3DF88 /* BXCTimeAndSpeedViewController.m in Sources */,
 				6F0EA6D016E3522900043C39 /* BWCStep1ViewController.m in Sources */,
 				6F0EA6D316E3590D00043C39 /* BWCStep2ViewController.m in Sources */,
 				6F0EA6D616E35F3200043C39 /* BWCStep3ViewController.m in Sources */,

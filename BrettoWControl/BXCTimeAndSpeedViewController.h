@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BWCSensibilityViewController : UITableViewController
+@interface BXCTimeAndSpeedViewController : UITableViewController
 
-@property (nonatomic, weak) IBOutlet UISlider *slider;
-
-- (IBAction)sliderValueChanged:(UISlider *)slider;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @end

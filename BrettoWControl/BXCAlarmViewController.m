@@ -46,7 +46,7 @@
     } else if (sender == self.getDevicesBtn) {
         [self.delegate commandPressed:@"getDevices"];
     } else if (sender == self.setSensibilityBtn) {
-        [self.delegate commandPressed:@"sensibility"];
+        [self.delegate commandPressed:@"speed"];
     }
 }
 
