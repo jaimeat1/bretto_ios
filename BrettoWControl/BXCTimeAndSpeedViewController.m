@@ -105,34 +105,34 @@
         if( aCell == nil ) {
             aCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"sliderCell"];
             
-            // Configure labels
-            UILabel *minValue = [[UILabel alloc] initWithFrame:CGRectMake(7, 0, 40, 44)];
-            minValue.backgroundColor = [UIColor clearColor];
-            minValue.text = @"0";
-            minValue.textAlignment = UITextAlignmentCenter;
-            [aCell.contentView addSubview:minValue];
-            
-            self.currentValue = [[UILabel alloc] initWithFrame:CGRectMake(257, 0, 40, 44)];
-            self.currentValue.backgroundColor = [UIColor clearColor];
-            self.currentValue.text = @"0";
-            self.currentValue.textAlignment = UITextAlignmentCenter;
-            [aCell.contentView addSubview:self.currentValue];
-            
             // Configure slider
             aCell.selectionStyle = UITableViewCellSelectionStyleNone;
             UISlider *slider = [[UISlider alloc] initWithFrame:CGRectZero];
             
-            slider.bounds = CGRectMake(0, 0, aCell.contentView.bounds.size.width - 100, slider.bounds.size.height);
-            slider.center = CGPointMake(CGRectGetMidX(aCell.contentView.bounds), CGRectGetMidY(aCell.contentView.bounds));
+            slider.frame = CGRectMake(0, 0, aCell.contentView.frame.size.width - 100, 44);
+            slider.center = CGPointMake(CGRectGetMidX(aCell.contentView.frame), CGRectGetMidY(aCell.contentView.frame));
             slider.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
             slider.minimumValue = 0;
             slider.maximumValue = 600;
-            slider.value = 50;
+            slider.value = 0;
             
             [slider addTarget:self action:@selector(sliderValueChanged:)
-               forControlEvents:UIControlEventValueChanged];
-
+             forControlEvents:UIControlEventValueChanged];
+            
             [aCell.contentView addSubview:slider];
+            
+            // Configure labels
+            UILabel *minValue = [[UILabel alloc] initWithFrame:CGRectMake(slider.frame.origin.x - 5 - 40, 0, 40, 44)];
+            minValue.backgroundColor = [UIColor blueColor];
+            minValue.text = @"0";
+            minValue.textAlignment = UITextAlignmentCenter;
+            [aCell.contentView addSubview:minValue];
+            
+            self.currentValue = [[UILabel alloc] initWithFrame:CGRectMake(slider.frame.origin.x + slider.frame.size.width + 5, 0, 40, 44)];
+            self.currentValue.backgroundColor = [UIColor blueColor];
+            self.currentValue.text = @"0";
+            self.currentValue.textAlignment = UITextAlignmentCenter;
+            [aCell.contentView addSubview:self.currentValue];
             
             return aCell;
         }
