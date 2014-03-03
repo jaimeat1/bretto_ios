@@ -10,24 +10,31 @@
 
 NSInteger const BWCCommandAssembleOn = 0;
 NSInteger const BWCCommandAssembleOff = 1;
-NSInteger const BWCCommandImmobilizeOn = 2;
-NSInteger const BWCCommandImmobilizeOff = 3;
-NSInteger const BWCCommandSensorOn = 4;
-NSInteger const BWCCommandSensorOff = 5;
-NSInteger const BWCCommandLocationWeb = 6;
-NSInteger const BWCCommandLocationGPRMC = 7;
-NSInteger const BWCCommandLocationGPSD = 8;
-NSInteger const BWCCommandClimateOn = 11;
-NSInteger const BWCCommandClimateOff = 12;
-NSInteger const BWCCommandCall = 13;
-NSInteger const BWCCommandImei = 14;
-NSInteger const BWCCommandReset = 15;
-NSInteger const BWCCommandHardReset = 16;
+NSInteger const BWCCommandClimateOn = 2;
+NSInteger const BWCCommandClimateOff = 3;
+NSInteger const BWCCommandEngineOn = 4;
+NSInteger const BWCCommandEngineOff = 5;
+NSInteger const BWCCommandIgnitionOn = 6;
+NSInteger const BWCCommandIgnitionOff = 7;
+NSInteger const BWCCommandLocationGPRMC = 8;
+NSInteger const BWCCommandLocationGPSD = 9;
+NSInteger const BWCCommandLocationDDMMSS = 10;
+NSInteger const BWCCommandLocationParking = 11;
+NSInteger const BWCCommandLocationWeb = 12;
+NSInteger const BWCCommandSensorOn = 13;
+NSInteger const BWCCommandSensorOff = 14;
+NSInteger const BWCCommandCall = 15;
+NSInteger const BWCCommandImei = 16;
 NSInteger const BWCCommandSetDevices = 17;
 NSInteger const BWCCommandGetDevices = 18;
-NSInteger const BWCCommandPassword = 19;
-NSInteger const BWCCommandSensibility = 20;
-NSInteger const BWCCommandState = 21;
+NSInteger const BWCCommandAutomaticOn= 19;
+NSInteger const BWCCommandAutomaticOff= 20;
+NSInteger const BWCCommandSpeedOn = 21;
+NSInteger const BWCCommandSpeedOff = 22;
+NSInteger const BWCCommandState = 23;
+NSInteger const BWCCommandReset = 24;
+NSInteger const BWCCommandHardReset = 25;
+NSInteger const BWCCommandPassword = 26;
 
 @implementation BXCCommandBuilder
 
@@ -46,20 +53,25 @@ NSInteger const BWCCommandState = 21;
         case BWCCommandAssembleOff:
             message = [NSString stringWithFormat:@"%@%@", message, @"C#"];
             break;
-        case BWCCommandImmobilizeOn:
+        case BWCCommandClimateOn:
+            message = [NSString stringWithFormat:@"%@%@ %@#", message, @"air start", [parameters objectAtIndex:1]];
+            break;
+        case BWCCommandClimateOff:
+            message = [NSString stringWithFormat:@"%@%@", message, @"air off#"];
+            break;
+        case BWCCommandEngineOn:
+            message = [NSString stringWithFormat:@"%@%@ %@#", message, @"engine start", [parameters objectAtIndex:1]];
+            break;
+        case BWCCommandEngineOff:
+            message = [NSString stringWithFormat:@"%@%@", message, @"engine off#"];
+            break;
+        case BWCCommandIgnitionOn:
             message = [NSString stringWithFormat:@"%@%@", message, @"K#"];
+            // TODO: right?
             break;
-        case BWCCommandImmobilizeOff:
+        case BWCCommandIgnitionOff:
             message = [NSString stringWithFormat:@"%@%@", message, @"STOP#"];
-            break;
-        case BWCCommandSensorOn:
-            message = [NSString stringWithFormat:@"%@%@", message, @"H#"];
-            break;
-        case BWCCommandSensorOff:
-            message = [NSString stringWithFormat:@"%@%@", message, @"N#"];
-            break;
-        case BWCCommandLocationWeb:
-            message = [NSString stringWithFormat:@"%@%@", message, @"P#"];
+            // TODO: right?
             break;
         case BWCCommandLocationGPRMC:
             message = [NSString stringWithFormat:@"%@%@", message, @"GPS#"];
@@ -67,11 +79,20 @@ NSInteger const BWCCommandState = 21;
         case BWCCommandLocationGPSD:
             message = [NSString stringWithFormat:@"%@%@", message, @"GPSD#"];
             break;
-        case BWCCommandClimateOn:
-            message = [NSString stringWithFormat:@"%@%@%@#", message, @"air start", [parameters objectAtIndex:1]];
+        case BWCCommandLocationDDMMSS:
+            message = [NSString stringWithFormat:@"%@%@", message, @"GPSM#"];
             break;
-        case BWCCommandClimateOff:
-            message = [NSString stringWithFormat:@"%@%@", message, @"air off#"];
+        case BWCCommandLocationParking:
+            message = [NSString stringWithFormat:@"%@%@", message, @"T#"];
+            break;
+        case BWCCommandLocationWeb:
+            message = [NSString stringWithFormat:@"%@%@", message, @"GPSW#"];
+            break;
+        case BWCCommandSensorOn:
+            message = [NSString stringWithFormat:@"%@%@", message, @"H#"];
+            break;
+        case BWCCommandSensorOff:
+            message = [NSString stringWithFormat:@"%@%@", message, @"N#"];
             break;
         case BWCCommandCall:
             message = [NSString stringWithFormat:@"%@%@%@#", message, @"VM", [parameters objectAtIndex:1]];
@@ -79,14 +100,8 @@ NSInteger const BWCCommandState = 21;
         case BWCCommandImei:
             message = [NSString stringWithFormat:@"%@%@", message, @"IMEI#"];
             break;
-        case BWCCommandReset:
-            message = [NSString stringWithFormat:@"%@%@", message, @"Z#"];
-            break;
-        case BWCCommandHardReset:
-            message = [NSString stringWithFormat:@"%@%@", message, @"V#"];
-            break;
         case BWCCommandSetDevices:
-            // Concat add parameters 
+            // Concat add parameters
             switch (parameters.count) {
                 case 2:
                     message = [NSString stringWithFormat:@"%@A%@#", message,
@@ -110,14 +125,33 @@ NSInteger const BWCCommandState = 21;
         case BWCCommandGetDevices:
             message = [NSString stringWithFormat:@"%@%@", message, @"YY#"];
             break;
-        case BWCCommandPassword:
-            message = [NSString stringWithFormat:@"%@E%@#", message, [parameters objectAtIndex:1]];
+        case BWCCommandAutomaticOn:
+            message = [NSString stringWithFormat:@"%@%@", message, @"Aon#"];
             break;
-        case BWCCommandSensibility:
-            message = [NSString stringWithFormat:@"%@VS*%@#", message, [parameters objectAtIndex:1]];
+        case BWCCommandAutomaticOff:
+            message = [NSString stringWithFormat:@"%@%@", message, @"Aoff#"];
+            break;
+        case BWCCommandSpeedOn:
+            message = [NSString stringWithFormat:@"%@%@%@,%@#",
+                       message,
+                       @"SPD",
+                       [parameters objectAtIndex:1],
+                       [parameters objectAtIndex:2]];
+            break;
+        case BWCCommandSpeedOff:
+            // TODO:
             break;
         case BWCCommandState:
             message = [NSString stringWithFormat:@"%@%@", message, @"X#"];
+            break;
+        case BWCCommandReset:
+            message = [NSString stringWithFormat:@"%@%@", message, @"Z#"];
+            break;
+        case BWCCommandHardReset:
+            message = [NSString stringWithFormat:@"%@%@", message, @"V#"];
+            break;
+        case BWCCommandPassword:
+            message = [NSString stringWithFormat:@"%@E%@#", message, [parameters objectAtIndex:1]];
             break;
         default:
             message = nil;

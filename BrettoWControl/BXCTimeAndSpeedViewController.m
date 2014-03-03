@@ -10,11 +10,16 @@
 #import "BXCCommandBuilder.h"
 #import "BXCAppDelegate.h"
 
+#define MAX_TIME 99;
+#define MAX_SPEED 999;
+
 @interface BXCTimeAndSpeedViewController ()
 
 /* Flag to show time and speed (YES), or only time (NO) */
 @property (nonatomic) BOOL *timeAndSpeed;
-@property (nonatomic, strong) UILabel *currentValue;
+@property (nonatomic, copy) NSString *currentCommand;
+@property (nonatomic, strong) UILabel *timeLabel;
+@property (nonatomic, strong) UILabel *speedLabel;
 
 @end
 
@@ -34,21 +39,21 @@
     [super viewDidLoad];
     
     BXCAppDelegate *delegate = (BXCAppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSString *currentCommand =  delegate.currentCommand;
+    self.currentCommand =  delegate.currentCommand;
     
     // Check time and speed, or only time
-    if ([currentCommand compare:@"speed"] == 0) {
+    if ([self.currentCommand compare:@"speed"] == 0) {
         self.timeAndSpeed = YES;
     } else {
         self.timeAndSpeed = NO;
     }
 
     // Set right title
-    if ([currentCommand compare:@"speed"] == 0) {
+    if ([self.currentCommand compare:@"speed"] == 0) {
         self.title = NSLocalizedString(@"Speed", @"");
-    } else if ([currentCommand compare:@"climate"]) {
+    } else if ([self.currentCommand compare:@"climate"]) {
         self.title = NSLocalizedString(@"Climate", @"");
-    } else if ([currentCommand compare:@"engine"]) {
+    } else if ([self.currentCommand compare:@"engine"]) {
         self.title = NSLocalizedString(@"Engine", @"");
     }
     
@@ -75,68 +80,109 @@
 - (void)savePressed:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:^(void){
-        /*
-        NSString *sensibility = [NSString stringWithFormat:@"%d", [[NSNumber numberWithFloat:self.slider.value] integerValue]];
-        
-        NSLog(@"sensibility before %@",sensibility);
-        while (sensibility.length < 4) {
-            sensibility = [NSString stringWithFormat:@"0%@",sensibility];
+
+        NSMutableArray *params;
+        NSString *message;
+        NSInteger command;
+        if ([self.currentCommand compare:@"speed"] == 0) {
+            
+        } else if ([self.currentCommand compare:@"climate"]) {
+            NSString *time = [NSString stringWithFormat:@"%@", self.timeLabel.text];
+            params = [NSMutableArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"passwordAlarm"], time, nil];
+            command = BWCCommandClimateOn;
+        } else if ([self.currentCommand compare:@"engine"]) {
+            NSString *time = [NSString stringWithFormat:@"%@", self.timeLabel.text];
+            params = [NSMutableArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"passwordAlarm"], time, nil];
+            command = BWC;
         }
-        NSLog(@"sensibility after %@",sensibility);
         
-        NSMutableArray* params = [NSMutableArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"passwordAlarm"], sensibility, nil];
-        NSString *message = [BXCCommandBuilder buildCommand:BWCCommandSensibility withParameters:params];
+        
+        
+        NSString *message = [BXCCommandBuilder buildCommand:command withParameters:params];
         [(BXCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
-        */
+
     }];
 }
 
-- (IBAction)sliderValueChanged:(UISlider *)slider
+- (IBAction)timeValueChanged:(UISlider *)slider
 {
-    self.currentValue.text = [NSString stringWithFormat:@"%d", [[NSNumber numberWithFloat:slider.value] integerValue]];
+    self.timeLabel.text = [NSString stringWithFormat:@"%d", [[NSNumber numberWithFloat:slider.value] integerValue]];
+}
+
+- (IBAction)speedValueChanged:(UISlider *)slider
+{
+    self.speedLabel.text = [NSString stringWithFormat:@"%d", [[NSNumber numberWithFloat:slider.value] integerValue]];
 }
 
 #pragma mark - UITableViewDataSource methods
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //if ((indexPath.section == 0) && (indexPath.row == 0)) {
-        UITableViewCell* aCell = [tableView dequeueReusableCellWithIdentifier:@"sliderCell"];
-        if( aCell == nil ) {
-            aCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"sliderCell"];
-            
-            // Configure slider
-            aCell.selectionStyle = UITableViewCellSelectionStyleNone;
-            UISlider *slider = [[UISlider alloc] initWithFrame:CGRectZero];
-            
-            slider.frame = CGRectMake(0, 0, aCell.contentView.frame.size.width - 100, 44);
-            slider.center = CGPointMake(CGRectGetMidX(aCell.contentView.frame), CGRectGetMidY(aCell.contentView.frame));
-            slider.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
-            slider.minimumValue = 0;
-            slider.maximumValue = 600;
-            slider.value = 0;
-            
-            [slider addTarget:self action:@selector(sliderValueChanged:)
-             forControlEvents:UIControlEventValueChanged];
-            
-            [aCell.contentView addSubview:slider];
-            
-            // Configure labels
-            UILabel *minValue = [[UILabel alloc] initWithFrame:CGRectMake(slider.frame.origin.x - 5 - 40, 0, 40, 44)];
-            minValue.backgroundColor = [UIColor blueColor];
-            minValue.text = @"0";
-            minValue.textAlignment = UITextAlignmentCenter;
-            [aCell.contentView addSubview:minValue];
-            
-            self.currentValue = [[UILabel alloc] initWithFrame:CGRectMake(slider.frame.origin.x + slider.frame.size.width + 5, 0, 40, 44)];
-            self.currentValue.backgroundColor = [UIColor blueColor];
-            self.currentValue.text = @"0";
-            self.currentValue.textAlignment = UITextAlignmentCenter;
-            [aCell.contentView addSubview:self.currentValue];
-            
-            return aCell;
+    UITableViewCell* aCell = [tableView dequeueReusableCellWithIdentifier:@"sliderCell"];
+
+    // section 0, time
+    // section 1, speed
+    
+    if( aCell == nil ) {
+        aCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"sliderCell"];
+        
+        // Configure slider
+        aCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        UISlider *slider = [[UISlider alloc] initWithFrame:CGRectZero];
+        
+        slider.frame = CGRectMake(0, 0, aCell.contentView.frame.size.width - 100, 44);
+        slider.center = CGPointMake(CGRectGetMidX(aCell.contentView.frame), CGRectGetMidY(aCell.contentView.frame));
+        slider.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+        slider.minimumValue = 0;
+        
+        // Max. value differs from slider
+        if (indexPath.section == 0) slider.maximumValue = MAX_TIME
+        else slider.maximumValue = MAX_SPEED;
+        
+        slider.value = 0;
+        
+        // Different selectors for each slider
+        if (indexPath.section == 0) {
+            [slider addTarget:self action:@selector(timeValueChanged:) forControlEvents:UIControlEventValueChanged];
+        } else {
+            [slider addTarget:self action:@selector(speedValueChanged:) forControlEvents:UIControlEventValueChanged];
         }
-    //}
+        
+        [aCell.contentView addSubview:slider];
+        
+        // Configure labels
+        
+        UILabel *minLabel = [[UILabel alloc] initWithFrame:CGRectMake(slider.frame.origin.x - 5 - 40, 0, 40, 44)];
+        minLabel.backgroundColor = [UIColor clearColor];
+        minLabel.text = @"0";
+        minLabel.textAlignment = UITextAlignmentCenter;
+        [aCell.contentView addSubview:minLabel];
+        
+        // Due versions issue, coordinates change in iOS7 and iOS6 or lower
+        CGFloat labelOrigin;
+        if ([[[UIApplication sharedApplication] delegate] respondsToSelector:@selector(application:didReceiveRemoteNotification:fetchCompletionHandler:)])
+        {
+            // iOS7 and later
+            labelOrigin = slider.frame.origin.x + slider.frame.size.width + 5;
+        } else {
+            // lower than iOS7
+            labelOrigin = slider.frame.origin.x + slider.frame.size.width - 15;
+        }
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(labelOrigin, 0, 40, 44)];
+        label.backgroundColor = [UIColor clearColor];
+        label.text = @"0";
+        label.textAlignment = UITextAlignmentCenter;
+        
+        if (indexPath.section == 0) {
+            self.timeLabel = label;
+        } else {
+            self.speedLabel = label;
+        }
+        
+        [aCell.contentView addSubview:label];
+        
+        return aCell;
+    }
     
     return [super tableView:tableView cellForRowAtIndexPath:indexPath];
 }
