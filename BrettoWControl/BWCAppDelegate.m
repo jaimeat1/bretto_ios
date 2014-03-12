@@ -208,7 +208,6 @@
     
     // Enable/ Disable options
     if ([self.currentCommand isEqualToString:@"sensor"] ||
-        [self.currentCommand isEqualToString:@"save"] ||
         [self.currentCommand isEqualToString:@"engine"] ||
         [self.currentCommand isEqualToString:@"siren"]) {
         
@@ -227,6 +226,12 @@
                                                    destructiveButtonTitle:nil
                                                         otherButtonTitles:NSLocalizedString(@"GPRMC", @""), NSLocalizedString(@"GPS", @""), NSLocalizedString(@"Web", @""), nil];
 
+    } else if ([self.currentCommand isEqualToString:@"save"]) {
+        self.actionSheetOptions = [[UIActionSheet alloc] initWithTitle:[self getTitleForActionSheet]
+                                                              delegate:self
+                                                     cancelButtonTitle:NSLocalizedString(@"Cancel", @"")
+                                                destructiveButtonTitle:nil
+                                                     otherButtonTitles:NSLocalizedString(@"SaveNormal", @""), NSLocalizedString(@"SaveSuper", @""), nil];
     }
     
     [self.actionSheetOptions showFromTabBar:self.tabBarController.tabBar];
@@ -550,9 +555,12 @@
             
             switch (buttonIndex) {
                 case 0:
-                    [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandSaveOn withParameters:param]];
+                    [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandSaveOnNormal withParameters:param]];
                     break;
                 case 1:
+                    [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandSaveOnSuper withParameters:param]];
+                    break;
+                case 2:
                     [self composeMessage:[BWCCommandBuilder buildCommand:BWCCommandSaveOff withParameters:param]];
                     break;
                 default:

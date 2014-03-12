@@ -19,17 +19,18 @@ NSInteger const BWCCommandLocationGPRMC = 7;
 NSInteger const BWCCommandLocationGPSD = 8;
 NSInteger const BWCCommandSirenOn = 9;
 NSInteger const BWCCommandSirenOff = 10;
-NSInteger const BWCCommandSaveOn = 11;
-NSInteger const BWCCommandSaveOff = 12;
-NSInteger const BWCCommandCall = 13;
-NSInteger const BWCCommandImei = 14;
-NSInteger const BWCCommandReset = 15;
-NSInteger const BWCCommandHardReset = 16;
-NSInteger const BWCCommandSetDevices = 17;
-NSInteger const BWCCommandGetDevices = 18;
-NSInteger const BWCCommandPassword = 19;
-NSInteger const BWCCommandSensibility = 20;
-NSInteger const BWCCommandState = 21;
+NSInteger const BWCCommandSaveOnNormal = 11;
+NSInteger const BWCCommandSaveOnSuper = 12;
+NSInteger const BWCCommandSaveOff = 13;
+NSInteger const BWCCommandCall = 14;
+NSInteger const BWCCommandImei = 15;
+NSInteger const BWCCommandReset = 16;
+NSInteger const BWCCommandHardReset = 17;
+NSInteger const BWCCommandSetDevices = 18;
+NSInteger const BWCCommandGetDevices = 19;
+NSInteger const BWCCommandPassword = 20;
+NSInteger const BWCCommandSensibility = 21;
+NSInteger const BWCCommandState = 22;
 
 @implementation BWCCommandBuilder
 
@@ -43,10 +44,10 @@ NSInteger const BWCCommandState = 21;
     // Concat command code and its parameters
     switch (command) {
         case BWCCommandAssembleOn:
-            message = [NSString stringWithFormat:@"%@%@", message, @"S#"];
+            message = [NSString stringWithFormat:@"%@%@", message, @"ARM#"];
             break;
         case BWCCommandAssembleOff:
-            message = [NSString stringWithFormat:@"%@%@", message, @"C#"];
+            message = [NSString stringWithFormat:@"%@%@", message, @"DISARM#"];
             break;
         case BWCCommandImmobilizeOn:
             message = [NSString stringWithFormat:@"%@%@", message, @"K#"];
@@ -75,8 +76,11 @@ NSInteger const BWCCommandState = 21;
         case BWCCommandSirenOff:
             message = [NSString stringWithFormat:@"%@%@", message, @"SIRENOFF#"];
             break;
-        case BWCCommandSaveOn:
+        case BWCCommandSaveOnNormal:
             message = [NSString stringWithFormat:@"%@%@", message, @"SL*O#"];
+            break;
+        case BWCCommandSaveOnSuper:
+            message = [NSString stringWithFormat:@"%@%@", message, @"SL*A#"];
             break;
         case BWCCommandSaveOff:
             message = [NSString stringWithFormat:@"%@%@", message, @"SL*C#"];

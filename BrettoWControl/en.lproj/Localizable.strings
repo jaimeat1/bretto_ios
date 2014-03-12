@@ -9,6 +9,8 @@
 "GPRMC" = "Datos GPRMC";
 "GPS" = "Datos GPS";
 "Web" = "Enlace a mapa web";
+"SaveNormal" = "Activar modo Normal Sleep";
+"SaveSuper" = "Activar modo Super Sleep";
 
 "AssembleOn" = "Armar";
 "AssembleOff" = "Desarmar";

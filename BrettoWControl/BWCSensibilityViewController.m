@@ -61,7 +61,7 @@
         NSString *sensibility = [NSString stringWithFormat:@"%d", [[NSNumber numberWithFloat:self.slider.value] integerValue]];
         
         NSLog(@"sensibility before %@",sensibility);
-        while (sensibility.length < 4) {
+        while (sensibility.length < 3) {
             sensibility = [NSString stringWithFormat:@"0%@",sensibility];
         }
         NSLog(@"sensibility after %@",sensibility);
