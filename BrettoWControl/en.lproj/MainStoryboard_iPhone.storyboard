@@ -18,7 +18,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rdn-tn-Kup" userLabel="assembleOn">
-                                        <rect key="frame" x="0.0" y="67" width="160" height="170"/>
+                                        <rect key="frame" x="0.0" y="60" width="160" height="186"/>
                                         <accessibility key="accessibilityConfiguration" label="assembleOn"/>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -33,7 +33,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bqe-Gj-lMR" userLabel="assembleOff">
-                                        <rect key="frame" x="161" y="67" width="160" height="170"/>
+                                        <rect key="frame" x="161" y="67" width="160" height="186"/>
                                         <accessibility key="accessibilityConfiguration" label="assembleOff"/>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -48,14 +48,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BJF-gQ-Yv6" userLabel="location">
-                                        <rect key="frame" x="0.0" y="238" width="160" height="194"/>
+                                        <rect key="frame" x="0.0" y="238" width="160" height="191"/>
                                         <accessibility key="accessibilityConfiguration" label="location"/>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" backgroundImage="engine.png">
+                                        <state key="normal" backgroundImage="location.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="highlighted" backgroundImage="engine_pressed.png">
+                                        <state key="highlighted" backgroundImage="location_pressed.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -63,14 +63,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bKB-zk-KTO" userLabel="sensor">
-                                        <rect key="frame" x="161" y="238" width="160" height="194"/>
+                                        <rect key="frame" x="161" y="238" width="160" height="191"/>
                                         <accessibility key="accessibilityConfiguration" label="sensor"/>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" backgroundImage="siren.png">
+                                        <state key="normal" backgroundImage="sensor.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="highlighted" backgroundImage="siren_pressed.png">
+                                        <state key="highlighted" backgroundImage="sensor_pressed.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -82,16 +82,15 @@
                                         <accessibility key="accessibilityConfiguration" label="engine"/>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" backgroundImage="location.png">
+                                        <state key="normal" backgroundImage="engine.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="highlighted" backgroundImage="location_pressed.png">
+                                        <state key="highlighted" backgroundImage="engine_pressed.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="OmU-iF-xZX"/>
-                                            <segue destination="7h0-He-sjz" kind="modal" id="JaQ-JO-dLs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="35e-7x-WvK" userLabel="ignition">
@@ -99,11 +98,11 @@
                                         <accessibility key="accessibilityConfiguration" label="ignition"/>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" backgroundImage="save.png">
+                                        <state key="normal" backgroundImage="ignition.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="highlighted" backgroundImage="save_pressed.png">
+                                        <state key="highlighted" backgroundImage="ignition_pressed.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -115,16 +114,15 @@
                                         <accessibility key="accessibilityConfiguration" label="climate"/>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" backgroundImage="sensor.png">
+                                        <state key="normal" backgroundImage="climate.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="highlighted" backgroundImage="sensor_pressed.png">
+                                        <state key="highlighted" backgroundImage="climate_pressed.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="xU0-yZ-9vw"/>
-                                            <segue destination="7h0-He-sjz" kind="modal" id="GjX-SC-q2E"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9fI-Qn-1eg" userLabel="bretto">
@@ -183,10 +181,10 @@
                                         <accessibility key="accessibilityConfiguration" label="location"/>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" backgroundImage="engine_iphone5.png">
+                                        <state key="normal" backgroundImage="location_iphone5.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="highlighted" backgroundImage="engine_pressed_iphone5.png">
+                                        <state key="highlighted" backgroundImage="location_pressed_iphone5.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -198,10 +196,10 @@
                                         <accessibility key="accessibilityConfiguration" label="sensor"/>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" backgroundImage="siren_iphone5.png">
+                                        <state key="normal" backgroundImage="sensor_iphone5.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="highlighted" backgroundImage="siren_pressed_iphone5.png">
+                                        <state key="highlighted" backgroundImage="sensor_pressed_iphone5.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -213,15 +211,14 @@
                                         <accessibility key="accessibilityConfiguration" label="climate"/>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" backgroundImage="sensor_iphone5.png">
+                                        <state key="normal" backgroundImage="climate_iphone5.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="highlighted" backgroundImage="sensor_pressed_iphone5.png">
+                                        <state key="highlighted" backgroundImage="climate_pressed_iphone5.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="m2d-ll-UGv"/>
-                                            <segue destination="7h0-He-sjz" kind="modal" id="r0H-ES-Iav"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UfF-YK-GjC" userLabel="engine">
@@ -229,15 +226,14 @@
                                         <accessibility key="accessibilityConfiguration" label="engine"/>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" backgroundImage="location_iphone5.png">
+                                        <state key="normal" backgroundImage="engine_iphone5.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="highlighted" backgroundImage="location_pressed_iphone5.png">
+                                        <state key="highlighted" backgroundImage="engine_pressed_iphone5.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="buttonPressed:" destination="2" eventType="touchUpInside" id="Os2-kj-VKq"/>
-                                            <segue destination="7h0-He-sjz" kind="modal" id="fYM-b7-Jd4"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jJV-U4-0KP" userLabel="ignition">
@@ -245,11 +241,11 @@
                                         <accessibility key="accessibilityConfiguration" label="ignition"/>
                                         <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" backgroundImage="save_iphone5.png">
+                                        <state key="normal" backgroundImage="ignition_iphone5.png">
                                             <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="highlighted" backgroundImage="save_pressed_iphone5.png">
+                                        <state key="highlighted" backgroundImage="ignition_pressed_iphone5.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -296,6 +292,7 @@
                         <outlet property="viewiPhone" destination="IYy-Hq-Ebk" id="tgx-D7-fBT"/>
                         <outlet property="viewiPhone5" destination="aiI-Gf-bHu" id="jdQ-0W-hVP"/>
                         <segue destination="brI-ft-lvo" kind="modal" identifier="wizard" modalTransitionStyle="coverVertical" id="VvE-Ui-s0M"/>
+                        <segue destination="7h0-He-sjz" kind="modal" identifier="timeAndSpeed" id="IpJ-RB-mLb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
@@ -306,7 +303,7 @@
         <scene sceneID="13">
             <objects>
                 <viewController title="Second" id="3" userLabel="Alarm View Controller" customClass="BXCAlarmViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="center" id="17">
+                    <view key="view" contentMode="scaleToFill" id="17">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -394,7 +391,6 @@
                                 <state key="highlighted" backgroundImage="button_pressed.png"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="3" eventType="touchUpInside" id="DIJ-RY-ke5"/>
-                                    <segue destination="7h0-He-sjz" kind="modal" id="JZV-ct-bjW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -408,6 +404,7 @@
                         <outlet property="imeiBtn" destination="22t-TP-Y54" id="cKw-em-cTY"/>
                         <outlet property="setDevicesBtn" destination="ZV1-Br-ERV" id="NPj-Gk-Sx7"/>
                         <outlet property="speedBtn" destination="xyF-wR-vCX" id="whj-1b-LSi"/>
+                        <segue destination="7h0-He-sjz" kind="modal" identifier="timeAndSpeed" id="g9N-gC-ezl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
@@ -426,14 +423,14 @@
                             <tableViewSection headerTitle="Número de teléfono" footerTitle="La alarma realizará una llamada al número introducido" id="2lp-zq-zPa">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="smZ-h0-oyp">
-                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="smZ-h0-oyp" id="cnu-hX-77U">
-                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" id="qln-dR-jxs">
-                                                    <rect key="frame" x="20" y="7" width="260" height="30"/>
+                                                    <rect key="frame" x="20" y="7" width="260" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                     <connections>
@@ -472,10 +469,10 @@
                             <tableViewSection headerTitle="Números" footerTitle="Configura hasta 3 números receptores para la alarma" id="eKw-al-9TS">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="A3F-kW-BKL">
-                                        <rect key="frame" x="0.0" y="46" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A3F-kW-BKL" id="wmf-mE-xRq">
-                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Número A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fmU-Qq-Rgw">
@@ -496,10 +493,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="DPx-rN-T78">
-                                        <rect key="frame" x="0.0" y="91" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="163" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DPx-rN-T78" id="6rB-OP-bbx">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Número B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uAN-6n-2bb">
@@ -520,10 +517,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="uMj-fZ-BKk">
-                                        <rect key="frame" x="0.0" y="135" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="207" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uMj-fZ-BKk" id="daV-er-qwH">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Número C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EqJ-aG-aHW">
@@ -576,7 +573,7 @@
                                 <accessibility key="accessibilityConfiguration" label="state"/>
                                 <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Estado" backgroundImage="button.png">
+                                <state key="normal" title="Estado de la alarma" backgroundImage="button.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1032,20 +1029,20 @@
                                 <string key="footerTitle">Por tu seguridad, es necesario que configures una contraseña de acceso a la aplicación. Puedes editarla en cualquier momento desde Ajustes.</string>
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="LVo-Ge-F9b">
-                                        <rect key="frame" x="0.0" y="46" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LVo-Ge-F9b" id="Lpy-DM-qK4">
-                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Contraseña" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oxv-4b-Psv">
-                                                    <rect key="frame" x="20" y="11" width="150" height="21"/>
+                                                    <rect key="frame" x="20" y="9" width="150" height="22"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" id="FaM-9A-Ybg">
-                                                    <rect key="frame" x="178" y="6" width="110" height="30"/>
+                                                    <rect key="frame" x="178" y="3" width="110" height="31"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     <connections>
@@ -1056,20 +1053,20 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Wbd-Pg-1qc">
-                                        <rect key="frame" x="0.0" y="91" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="163" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wbd-Pg-1qc" id="YlB-4O-DBH">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Repite contraseña" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3K1-45-hqG">
-                                                    <rect key="frame" x="20" y="11" width="150" height="21"/>
+                                                    <rect key="frame" x="20" y="9" width="150" height="22"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" id="APt-cW-hG1">
-                                                    <rect key="frame" x="178" y="8" width="110" height="30"/>
+                                                    <rect key="frame" x="178" y="6" width="110" height="31"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     <connections>
@@ -1109,10 +1106,10 @@
                             <tableViewSection headerTitle="Números receptores" footerTitle="Define al menos un número de teléfono receptor. Puedes editarlos en cualquier momento desde la pestaña Alarma." id="LYR-kt-twK">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5b3-V9-Clw">
-                                        <rect key="frame" x="0.0" y="46" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="55" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5b3-V9-Clw" id="8XI-fF-mGq">
-                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Número A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FwK-ae-qmQ">
@@ -1133,10 +1130,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="qD4-O5-JQl">
-                                        <rect key="frame" x="0.0" y="91" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qD4-O5-JQl" id="ySa-AJ-O18">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Número B" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fvy-ks-7qA">
@@ -1157,10 +1154,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="w86-p7-B1p">
-                                        <rect key="frame" x="0.0" y="135" width="320" height="45"/>
+                                        <rect key="frame" x="0.0" y="143" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w86-p7-B1p" id="cqb-l0-SCe">
-                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Número C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ikn-FV-hHd">
@@ -1210,14 +1207,14 @@
                             <tableViewSection headerTitle="Número de la alarma" footerTitle="Define un número de teléfono para la alarma. Puedes editarlo en cualquier momento desde Ajustes." id="7Y7-mk-HjU">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="WDY-Pe-Dyc">
-                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="55" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WDY-Pe-Dyc" id="m0U-XR-EYe">
-                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" id="xO3-s5-UPC">
-                                                    <rect key="frame" x="20" y="7" width="260" height="30"/>
+                                                    <rect key="frame" x="20" y="6" width="260" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                     <connections>
@@ -1319,40 +1316,40 @@
     </scenes>
     <resources>
         <image name="alarm.png" width="30" height="30"/>
-        <image name="assemble_off.png" width="159" height="170"/>
-        <image name="assemble_off_iphone5.png" width="317" height="434"/>
-        <image name="assemble_off_pressed.png" width="159" height="170"/>
-        <image name="assemble_off_pressed_iphone5.png" width="317" height="434"/>
-        <image name="assemble_on.png" width="161" height="170"/>
-        <image name="assemble_on_iphone5.png" width="323" height="434"/>
-        <image name="assemble_on_pressed.png" width="161" height="170"/>
-        <image name="assemble_on_pressed_iphone5.png" width="323" height="434"/>
+        <image name="assemble_off.png" width="160" height="186"/>
+        <image name="assemble_off_iphone5.png" width="318" height="428"/>
+        <image name="assemble_off_pressed.png" width="160" height="186"/>
+        <image name="assemble_off_pressed_iphone5.png" width="318" height="428"/>
+        <image name="assemble_on.png" width="160" height="186"/>
+        <image name="assemble_on_iphone5.png" width="322" height="428"/>
+        <image name="assemble_on_pressed.png" width="160" height="185"/>
+        <image name="assemble_on_pressed_iphone5.png" width="322" height="428"/>
         <image name="banner.png" width="320" height="47"/>
         <image name="banner_iphone5.png" width="640" height="136"/>
         <image name="button.png" width="220" height="44"/>
         <image name="button_pressed.png" width="220" height="44"/>
-        <image name="engine.png" width="161" height="194"/>
-        <image name="engine_iphone5.png" width="323" height="428"/>
-        <image name="engine_pressed.png" width="161" height="194"/>
-        <image name="engine_pressed_iphone5.png" width="323" height="428"/>
+        <image name="climate.png" width="98" height="114"/>
+        <image name="climate_iphone5.png" width="194" height="224"/>
+        <image name="climate_pressed.png" width="98" height="114"/>
+        <image name="climate_pressed_iphone5.png" width="194" height="224"/>
+        <image name="engine.png" width="122" height="118"/>
+        <image name="engine_iphone5.png" width="243" height="234"/>
+        <image name="engine_pressed.png" width="122" height="118"/>
+        <image name="engine_pressed_iphone5.png" width="243" height="234"/>
         <image name="home.png" width="30" height="30"/>
-        <image name="location.png" width="135" height="134"/>
-        <image name="location_iphone5.png" width="261" height="260"/>
-        <image name="location_pressed.png" width="135" height="134"/>
-        <image name="location_pressed_iphone5.png" width="261" height="260"/>
-        <image name="save.png" width="98" height="110"/>
-        <image name="save_iphone5.png" width="194" height="220"/>
-        <image name="save_pressed.png" width="98" height="110"/>
-        <image name="save_pressed_iphone5.png" width="194" height="220"/>
-        <image name="sensor.png" width="98" height="110"/>
-        <image name="sensor_iphone5.png" width="194" height="220"/>
-        <image name="sensor_pressed.png" width="98" height="110"/>
-        <image name="sensor_pressed_iphone5.png" width="194" height="220"/>
+        <image name="ignition.png" width="98" height="114"/>
+        <image name="ignition_iphone5.png" width="194" height="224"/>
+        <image name="ignition_pressed.png" width="98" height="114"/>
+        <image name="ignition_pressed_iphone5.png" width="194" height="224"/>
+        <image name="location.png" width="160" height="185"/>
+        <image name="location_iphone5.png" width="320" height="434"/>
+        <image name="location_pressed.png" width="160" height="185"/>
+        <image name="location_pressed_iphone5.png" width="320" height="434"/>
+        <image name="sensor.png" width="160" height="185"/>
+        <image name="sensor_iphone5.png" width="320" height="434"/>
+        <image name="sensor_pressed.png" width="160" height="185"/>
+        <image name="sensor_pressed_iphone5.png" width="320" height="434"/>
         <image name="settings.png" width="30" height="30"/>
-        <image name="siren.png" width="159" height="194"/>
-        <image name="siren_iphone5.png" width="317" height="428"/>
-        <image name="siren_pressed.png" width="159" height="194"/>
-        <image name="siren_pressed_iphone5.png" width="317" height="428"/>
         <image name="system.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -1361,7 +1358,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="JZV-ct-bjW"/>
+        <segue reference="g9N-gC-ezl"/>
         <segue reference="ukK-Pc-Kvu"/>
     </inferredMetricsTieBreakers>
 </document>

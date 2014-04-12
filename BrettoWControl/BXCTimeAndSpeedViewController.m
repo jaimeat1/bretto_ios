@@ -87,7 +87,7 @@
         if ([self.currentCommand compare:@"speed"] == 0) {
             NSString *time = [NSString stringWithFormat:@"%@", self.timeLabel.text];
             NSString *speed = [NSString stringWithFormat:@"%@", self.speedLabel.text];
-            params = [NSMutableArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"passwordAlarm"], time, speed, nil];
+            params = [NSMutableArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"passwordAlarm"], speed, time, nil];
             command = BWCCommandSpeedOn;
         } else if ([self.currentCommand compare:@"climate"] == 0) {
             NSString *time = [NSString stringWithFormat:@"%@", self.timeLabel.text];

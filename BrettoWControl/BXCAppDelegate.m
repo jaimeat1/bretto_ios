@@ -25,8 +25,6 @@
 @property (nonatomic, strong) UIAlertView *alertPassword;
 /** Alert to show message to send, used by debugging */
 @property (nonatomic, strong) UIAlertView *alertMessage;
-/** Picker view used to select values as time and speed */
-@property (nonatomic, strong) UIPickerView *pickerView;
 
 @end
 
@@ -153,7 +151,7 @@
 
     } else if ([self.currentCommand isEqualToString:@"speed"]) {
         
-        // segue in storyboard
+        [self askForOptions];
         
     } else if ([self.currentCommand isEqualToString:@"state"]) {
         
@@ -194,10 +192,14 @@
         title = NSLocalizedString(@"Location", @"");
     } else if ([self.currentCommand isEqualToString:@"engine"]) {
         title = NSLocalizedString(@"Engine", @"");
+    }else if ([self.currentCommand isEqualToString:@"ignition"]) {
+        title = NSLocalizedString(@"Ignition", @"");
     } else if ([self.currentCommand isEqualToString:@"siren"]) {
         title = NSLocalizedString(@"Siren", @"");
     } else if ([self.currentCommand isEqualToString:@"automatic"]) {
-        title = NSLocalizedString(@"Siren", @"");
+        title = NSLocalizedString(@"Automatic", @"");
+    } else if ([self.currentCommand isEqualToString:@"speed"]) {
+        title = NSLocalizedString(@"Speed", @"");
     } else if ([self.currentCommand isEqualToString:@"reset"]) {
         title = NSLocalizedString(@"Reset", @"");
     } else if ([self.currentCommand isEqualToString:@"hardReset"]) {
@@ -220,7 +222,8 @@
         [self.currentCommand isEqualToString:@"engine"] ||
         [self.currentCommand isEqualToString:@"ignition"] ||
         [self.currentCommand isEqualToString:@"siren"] ||
-        [self.currentCommand isEqualToString:@"automatic"]) {
+        [self.currentCommand isEqualToString:@"automatic"] ||
+        [self.currentCommand isEqualToString:@"speed"]) {
         
         self.actionSheetOptions = [[UIActionSheet alloc] initWithTitle:[self getTitleForActionSheet]
                                                                  delegate:self
@@ -539,8 +542,7 @@
     // Action sheet to ask for an option
     if (self.actionSheetOptions == actionSheet) {
         
-        if ((([self.currentCommand isEqualToString:@"engine"] ||
-            [self.currentCommand isEqualToString:@"reset"] ||
+        if ((([self.currentCommand isEqualToString:@"reset"] ||
             [self.currentCommand isEqualToString:@"hardReset"])) &&
             (buttonIndex != 2)) {
             
@@ -551,10 +553,23 @@
             
             switch (buttonIndex) {
                 case 0:
-                    // TODO: segue to set climate
+                    [[self.tabBarController selectedViewController]performSegueWithIdentifier:@"timeAndSpeed" sender:nil];
                     break;
                 case 1:
                     [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandClimateOff withParameters:param]];
+                    break;
+                default:
+                    break;
+            }
+            
+        } else if ([self.currentCommand isEqualToString:@"engine"]) {
+            
+            switch (buttonIndex) {
+                case 0:
+                    [[self.tabBarController selectedViewController]performSegueWithIdentifier:@"timeAndSpeed" sender:nil];
+                    break;
+                case 1:
+                    [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandEngineOff withParameters:param]];
                     break;
                 default:
                     break;
@@ -621,29 +636,25 @@
                     break;
             }
             
-        }
-        
-    // Action sheet to ask for confirmation YES/NO
-    } else if (self.actionSheetConfirmation == actionSheet){
-        
-        if ([self.currentCommand isEqualToString:@"engine"]) {
+        } else if ([self.currentCommand isEqualToString:@"speed"]) {
             
             switch (buttonIndex) {
                 case 0:
-                    if (self.actionIndex == 0) {
-                        [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandEngineOn withParameters:param]];
-                    } else {
-                        [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandEngineOff withParameters:param]];
-                    }
+                    [[self.tabBarController selectedViewController]performSegueWithIdentifier:@"timeAndSpeed" sender:nil];
                     break;
                 case 1:
-                    // NO, do nothing
+                    [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandSpeedOff withParameters:param]];
                     break;
                 default:
                     break;
             }
             
-        } else if ([self.currentCommand isEqualToString:@"reset"]) {
+        }
+        
+    // Action sheet to ask for confirmation YES/NO
+    } else if (self.actionSheetConfirmation == actionSheet){
+        
+        if ([self.currentCommand isEqualToString:@"reset"]) {
             
             switch (buttonIndex) {
                 case 0:
@@ -702,46 +713,6 @@
         }
         
     }
-}
-
-#pragma mark - UIPickerViewDataSource methods
-
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    
-    if ([self.currentCommand isEqualToString:@"climate"] || [self.currentCommand isEqualToString:@"engine"]) {
-        return 1;
-    } else {
-        // TODO: check "speed" command
-        return 2;
-    }
-    
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    if ([self.currentCommand isEqualToString:@"climate"] || [self.currentCommand isEqualToString:@"engine"]) {
-        return 99;
-    } else {
-        // TODO: check "speed" command
-        if (component == 0) {
-            return 279;
-        } else {
-            return 99;
-        }
-    }
-}
-
-#pragma mark - UIPickerViewDelegate methods
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-{
-    // TODO
-}
-
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    // TODO
-    return @"";
 }
 
 @end

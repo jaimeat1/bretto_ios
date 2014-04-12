@@ -18,8 +18,10 @@
 "Climate" = "Climatización";
 "Location" = "Localizar";
 "Engine" = "Motor";
+"Ignition" = "Corte de encendido";
 "Siren" = "Sirena";
 "Automatic" = "Armado automático";
+"Speed" = "Alarma de velocidad";
 "Banner" = "Bretto";
 
 "Engine" = "Motor";
@@ -27,7 +29,6 @@
 "GetImei" = "Obtener IMEI";
 "SetDevices" = "Configurar móviles";
 "GetDevices" = "Comprobar móviles";
-"Speed" = "Alarma velocidad";
 "State" = "Estado de la alarma";
 "Reset" = "Reseteo parcial";
 "ResetHard" = "Reseteo completo";
