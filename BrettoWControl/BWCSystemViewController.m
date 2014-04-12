@@ -35,6 +35,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    DLog(@"preferredStatusBarStyle");
+    return UIStatusBarStyleLightContent;
+}
+
 - (IBAction)buttonPressed:(id)sender
 {
     if (sender == self.stateBtn) {
