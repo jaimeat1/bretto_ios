@@ -35,6 +35,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (IBAction)buttonPressed:(id)sender
 {
     if (sender == self.callBtn) {
@@ -45,7 +50,9 @@
         [self.delegate commandPressed:@"setDevices"];
     } else if (sender == self.getDevicesBtn) {
         [self.delegate commandPressed:@"getDevices"];
-    } else if (sender == self.setSensibilityBtn) {
+    } else if (sender == self.automaticBtn) {
+        [self.delegate commandPressed:@"automatic"];
+    }else if (sender == self.speedBtn) {
         [self.delegate commandPressed:@"speed"];
     }
 }

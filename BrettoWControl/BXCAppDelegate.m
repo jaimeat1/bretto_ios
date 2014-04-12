@@ -113,27 +113,23 @@
         
     } else if ([self.currentCommand isEqualToString:@"engine"]) {
         
-        // TODO:
+        [self askForOptions];
         
     } else if ([self.currentCommand isEqualToString:@"ignition"]) {
         
-        // TODO:
+        [self askForOptions];
         
     } else if ([self.currentCommand isEqualToString:@"location"]) {
         
-        // TODO:
+        [self askForOptions];
         
     } else if ([self.currentCommand isEqualToString:@"sensor"]) {
         
-        // [self askForOptions];
-        
-        // TODO:
+        [self askForOptions];
         
     } else if ([self.currentCommand isEqualToString:@"bretto"]) {
         
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.bretto.es"]];
-        
-        
         
     } else if ([self.currentCommand isEqualToString:@"call"]) {
         
@@ -151,6 +147,10 @@
         
         [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandGetDevices withParameters:param]];
         
+    } else if ([self.currentCommand isEqualToString:@"automatic"]) {
+        
+        [self askForOptions];
+
     } else if ([self.currentCommand isEqualToString:@"speed"]) {
         
         // segue in storyboard
@@ -173,7 +173,7 @@
             MFMailComposeViewController *emailComposer = [[MFMailComposeViewController alloc] init];
             [emailComposer setMailComposeDelegate:self];
             [emailComposer setToRecipients:[NSArray arrayWithObject:@"contacto@bretto.es"]];
-            [self.tabBarController presentModalViewController:emailComposer animated:YES];
+            [self.tabBarController presentViewController:emailComposer animated:YES completion:nil];
         }
         
     }
@@ -196,6 +196,8 @@
         title = NSLocalizedString(@"Engine", @"");
     } else if ([self.currentCommand isEqualToString:@"siren"]) {
         title = NSLocalizedString(@"Siren", @"");
+    } else if ([self.currentCommand isEqualToString:@"automatic"]) {
+        title = NSLocalizedString(@"Siren", @"");
     } else if ([self.currentCommand isEqualToString:@"reset"]) {
         title = NSLocalizedString(@"Reset", @"");
     } else if ([self.currentCommand isEqualToString:@"hardReset"]) {
@@ -216,7 +218,9 @@
     if ([self.currentCommand isEqualToString:@"sensor"] ||
         [self.currentCommand isEqualToString:@"climate"] ||
         [self.currentCommand isEqualToString:@"engine"] ||
-        [self.currentCommand isEqualToString:@"siren"]) {
+        [self.currentCommand isEqualToString:@"ignition"] ||
+        [self.currentCommand isEqualToString:@"siren"] ||
+        [self.currentCommand isEqualToString:@"automatic"]) {
         
         self.actionSheetOptions = [[UIActionSheet alloc] initWithTitle:[self getTitleForActionSheet]
                                                                  delegate:self
@@ -231,8 +235,11 @@
                                                                  delegate:self
                                                         cancelButtonTitle:NSLocalizedString(@"Cancel", @"")
                                                    destructiveButtonTitle:nil
-                                                        otherButtonTitles:NSLocalizedString(@"GPRMC", @""), NSLocalizedString(@"GPS", @""), NSLocalizedString(@"Web", @""), nil];
-
+                                                        otherButtonTitles:NSLocalizedString(@"GPRMC", @""),
+                                                                          NSLocalizedString(@"GPSD", @""),
+                                                                          NSLocalizedString(@"DDMMSS", @""),
+                                                                          NSLocalizedString(@"Parking", @""),
+                                                                          NSLocalizedString(@"Web", @""), nil];
     }
     
     [self.actionSheetOptions showFromTabBar:self.tabBarController.tabBar];
@@ -393,7 +400,7 @@
  */
 - (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
 {
-    [controller dismissModalViewControllerAnimated:YES];
+    [controller dismissViewControllerAnimated:YES completion:nil];
     
     // Command to change alarm password, change it if SMS has been successfuly sent
     if ([self.currentCommand isEqualToString:@"passwordAlarm"] && (result == MessageComposeResultSent)) {
@@ -514,7 +521,7 @@
           didFinishWithResult:(MFMailComposeResult)result
                         error:(NSError*)error
 {
-    [controller dismissModalViewControllerAnimated:YES];
+    [controller dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - UIActionSheetDelgate methods
@@ -540,19 +547,6 @@
             self.actionIndex = buttonIndex;            
             [self askForConfirmation];
             
-        } else if ([self.currentCommand isEqualToString:@"sensor"]) {
-            
-            switch (buttonIndex) {
-                case 0:
-                    [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandSensorOn withParameters:param]];
-                    break;
-                case 1:
-                    [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandSensorOff withParameters:param]];
-                    break;
-                default:
-                    break;
-            }
-    
         } else if ([self.currentCommand isEqualToString:@"climate"]) {
             
             switch (buttonIndex) {
@@ -561,6 +555,19 @@
                     break;
                 case 1:
                     [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandClimateOff withParameters:param]];
+                    break;
+                default:
+                    break;
+            }
+            
+        } else if ([self.currentCommand isEqualToString:@"ignition"]) {
+            
+            switch (buttonIndex) {
+                case 0:
+                    [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandIgnitionOff withParameters:param]];
+                    break;
+                case 1:
+                    [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandIgnitionOn withParameters:param]];
                     break;
                 default:
                     break;
@@ -576,7 +583,39 @@
                     [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandLocationGPSD withParameters:param]];
                     break;
                 case 2:
+                    [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandLocationDDMMSS withParameters:param]];
+                    break;
+                case 3:
+                    [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandLocationParking withParameters:param]];
+                    break;
+                case 4:
                     [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandLocationWeb withParameters:param]];
+                    break;
+                default:
+                    break;
+            }
+            
+        } else if ([self.currentCommand isEqualToString:@"sensor"]) {
+            
+            switch (buttonIndex) {
+                case 0:
+                    [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandSensorOn withParameters:param]];
+                    break;
+                case 1:
+                    [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandSensorOff withParameters:param]];
+                    break;
+                default:
+                    break;
+            }
+            
+        } else if ([self.currentCommand isEqualToString:@"automatic"]) {
+            
+            switch (buttonIndex) {
+                case 0:
+                    [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandAutomaticOn withParameters:param]];
+                    break;
+                case 1:
+                    [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandAutomaticOff withParameters:param]];
                     break;
                 default:
                     break;
@@ -592,9 +631,9 @@
             switch (buttonIndex) {
                 case 0:
                     if (self.actionIndex == 0) {
-                        [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandImmobilizeOff withParameters:param]];
+                        [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandEngineOn withParameters:param]];
                     } else {
-                        [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandImmobilizeOn withParameters:param]];
+                        [self composeMessage:[BXCCommandBuilder buildCommand:BWCCommandEngineOff withParameters:param]];
                     }
                     break;
                 case 1:

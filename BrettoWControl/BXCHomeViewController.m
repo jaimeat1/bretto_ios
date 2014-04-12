@@ -58,6 +58,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (IBAction)buttonPressed:(id)sender
 {    
     if ((sender == self.assembleOnBtn) || (sender == self.assembleOnBtniPhone5)) {

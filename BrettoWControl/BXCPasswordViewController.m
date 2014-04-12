@@ -60,7 +60,7 @@
 
 - (void)cancelPressed:(id)sender
 {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)savePressed:(id)sender
@@ -100,7 +100,7 @@
             if (self.isAppPassword) {
                 
                 [[NSUserDefaults standardUserDefaults] setObject:self.theNewPassword.text forKey:self.passwordKey];
-                [self dismissModalViewControllerAnimated:YES];
+                [self dismissViewControllerAnimated:YES completion:nil];
             
             // It's alarm password, send command    
             } else {

@@ -74,7 +74,7 @@
 
 - (void)cancelPressed:(id)sender
 {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)savePressed:(id)sender
@@ -83,22 +83,23 @@
 
         NSMutableArray *params;
         NSString *message;
-        NSInteger command;
+        NSInteger command = 0;
         if ([self.currentCommand compare:@"speed"] == 0) {
-            
-        } else if ([self.currentCommand compare:@"climate"]) {
+            NSString *time = [NSString stringWithFormat:@"%@", self.timeLabel.text];
+            NSString *speed = [NSString stringWithFormat:@"%@", self.speedLabel.text];
+            params = [NSMutableArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"passwordAlarm"], time, speed, nil];
+            command = BWCCommandSpeedOn;
+        } else if ([self.currentCommand compare:@"climate"] == 0) {
             NSString *time = [NSString stringWithFormat:@"%@", self.timeLabel.text];
             params = [NSMutableArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"passwordAlarm"], time, nil];
             command = BWCCommandClimateOn;
-        } else if ([self.currentCommand compare:@"engine"]) {
+        } else if ([self.currentCommand compare:@"engine"] == 0) {
             NSString *time = [NSString stringWithFormat:@"%@", self.timeLabel.text];
             params = [NSMutableArray arrayWithObjects:[[NSUserDefaults standardUserDefaults] objectForKey:@"passwordAlarm"], time, nil];
-            command = BWC;
+            command = BWCCommandEngineOn;
         }
-        
-        
-        
-        NSString *message = [BXCCommandBuilder buildCommand:command withParameters:params];
+
+        message = [BXCCommandBuilder buildCommand:command withParameters:params];
         [(BXCAppDelegate *)[[UIApplication sharedApplication] delegate] composeMessage:message];
 
     }];
@@ -155,7 +156,7 @@
         UILabel *minLabel = [[UILabel alloc] initWithFrame:CGRectMake(slider.frame.origin.x - 5 - 40, 0, 40, 44)];
         minLabel.backgroundColor = [UIColor clearColor];
         minLabel.text = @"0";
-        minLabel.textAlignment = UITextAlignmentCenter;
+        minLabel.textAlignment = NSTextAlignmentCenter;
         [aCell.contentView addSubview:minLabel];
         
         // Due versions issue, coordinates change in iOS7 and iOS6 or lower
@@ -171,7 +172,7 @@
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(labelOrigin, 0, 40, 44)];
         label.backgroundColor = [UIColor clearColor];
         label.text = @"0";
-        label.textAlignment = UITextAlignmentCenter;
+        label.textAlignment = NSTextAlignmentCenter;
         
         if (indexPath.section == 0) {
             self.timeLabel = label;

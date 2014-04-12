@@ -7,7 +7,9 @@
 "Yes" = "Sí";
 "No" = "No";
 "GPRMC" = "Datos GPRMC";
-"GPS" = "Datos GPS";
+"GPSD" = "Datos GPS";
+"DDMMSS" = "Datos DDMMSS";
+"Parking" = "Parking";
 "Web" = "Enlace a mapa web";
 
 "AssembleOn" = "Armar";
@@ -17,6 +19,7 @@
 "Location" = "Localizar";
 "Engine" = "Motor";
 "Siren" = "Sirena";
+"Automatic" = "Armado automático";
 "Banner" = "Bretto";
 
 "Engine" = "Motor";

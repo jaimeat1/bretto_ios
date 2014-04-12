@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 MobiOak. All rights reserved.
 //
 
-#import "BWCCallViewController.h"
+#import "BXCCallViewController.h"
 #import "BXCCommandBuilder.h"
 #import "BXCAppDelegate.h"
 
-@interface BWCCallViewController ()
+@interface BXCCallViewController ()
 
 @end
 
-@implementation BWCCallViewController
+@implementation BXCCallViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -49,7 +49,7 @@
 
 - (void)cancelPressed:(id)sender
 {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)callPressed:(id)sender

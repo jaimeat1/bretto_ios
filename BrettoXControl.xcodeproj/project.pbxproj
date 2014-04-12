@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F0EA6D016E3522900043C39 /* BWCStep1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0EA6CF16E3522900043C39 /* BWCStep1ViewController.m */; };
-		6F0EA6D316E3590D00043C39 /* BWCStep2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0EA6D216E3590D00043C39 /* BWCStep2ViewController.m */; };
-		6F0EA6D616E35F3200043C39 /* BWCStep3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0EA6D516E35F3200043C39 /* BWCStep3ViewController.m */; };
+		6F0EA6D016E3522900043C39 /* BXCStep1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0EA6CF16E3522900043C39 /* BXCStep1ViewController.m */; };
+		6F0EA6D316E3590D00043C39 /* BXCStep2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0EA6D216E3590D00043C39 /* BXCStep2ViewController.m */; };
+		6F0EA6D616E35F3200043C39 /* BXCStep3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0EA6D516E35F3200043C39 /* BXCStep3ViewController.m */; };
 		6F10344116D0E836004A7C35 /* BXCPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10344016D0E836004A7C35 /* BXCPasswordViewController.m */; };
-		6F10344516D117F8004A7C35 /* BWCNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10344416D117F8004A7C35 /* BWCNumberViewController.m */; };
+		6F10344516D117F8004A7C35 /* BXCNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10344416D117F8004A7C35 /* BXCNumberViewController.m */; };
 		6F10344716D131F9004A7C35 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F10344616D131F9004A7C35 /* MessageUI.framework */; };
 		6F11C6D916F4FE0D00DE7ADD /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F11C6D716F4FE0D00DE7ADD /* iTunesArtwork.png */; };
 		6F11C6DA16F4FE0D00DE7ADD /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F11C6D816F4FE0D00DE7ADD /* iTunesArtwork@2x.png */; };
-		6F1830E316E2011600F3DF88 /* BWCCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1830E216E2011600F3DF88 /* BWCCallViewController.m */; };
-		6F1830E716E2097A00F3DF88 /* BWCSetDevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1830E616E2097A00F3DF88 /* BWCSetDevicesViewController.m */; };
+		6F1830E316E2011600F3DF88 /* BXCCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1830E216E2011600F3DF88 /* BXCCallViewController.m */; };
+		6F1830E716E2097A00F3DF88 /* BXCSetDevicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1830E616E2097A00F3DF88 /* BXCSetDevicesViewController.m */; };
 		6F1830EA16E215E000F3DF88 /* BXCTimeAndSpeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1830E916E215E000F3DF88 /* BXCTimeAndSpeedViewController.m */; };
 		6F2B11E016B401DC00C07BE8 /* BXCCommandBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2B11DF16B401DC00C07BE8 /* BXCCommandBuilder.m */; };
 		6F4EA74917045E150096D5E2 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F4EA74717045E150096D5E2 /* MainStoryboard_iPhone.storyboard */; };
@@ -95,23 +95,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6F0EA6CE16E3522900043C39 /* BWCStep1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCStep1ViewController.h; sourceTree = "<group>"; };
-		6F0EA6CF16E3522900043C39 /* BWCStep1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BWCStep1ViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		6F0EA6D116E3590D00043C39 /* BWCStep2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCStep2ViewController.h; sourceTree = "<group>"; };
-		6F0EA6D216E3590D00043C39 /* BWCStep2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BWCStep2ViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		6F0EA6D416E35F3200043C39 /* BWCStep3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCStep3ViewController.h; sourceTree = "<group>"; };
-		6F0EA6D516E35F3200043C39 /* BWCStep3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BWCStep3ViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		6F0EA6CE16E3522900043C39 /* BXCStep1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXCStep1ViewController.h; sourceTree = "<group>"; };
+		6F0EA6CF16E3522900043C39 /* BXCStep1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BXCStep1ViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		6F0EA6D116E3590D00043C39 /* BXCStep2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXCStep2ViewController.h; sourceTree = "<group>"; };
+		6F0EA6D216E3590D00043C39 /* BXCStep2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BXCStep2ViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		6F0EA6D416E35F3200043C39 /* BXCStep3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXCStep3ViewController.h; sourceTree = "<group>"; };
+		6F0EA6D516E35F3200043C39 /* BXCStep3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BXCStep3ViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		6F10343F16D0E836004A7C35 /* BXCPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXCPasswordViewController.h; sourceTree = "<group>"; };
 		6F10344016D0E836004A7C35 /* BXCPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXCPasswordViewController.m; sourceTree = "<group>"; };
-		6F10344316D117F8004A7C35 /* BWCNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCNumberViewController.h; sourceTree = "<group>"; };
-		6F10344416D117F8004A7C35 /* BWCNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCNumberViewController.m; sourceTree = "<group>"; };
+		6F10344316D117F8004A7C35 /* BXCNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXCNumberViewController.h; sourceTree = "<group>"; };
+		6F10344416D117F8004A7C35 /* BXCNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXCNumberViewController.m; sourceTree = "<group>"; };
 		6F10344616D131F9004A7C35 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		6F11C6D716F4FE0D00DE7ADD /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		6F11C6D816F4FE0D00DE7ADD /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		6F1830E116E2011600F3DF88 /* BWCCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCCallViewController.h; sourceTree = "<group>"; };
-		6F1830E216E2011600F3DF88 /* BWCCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCCallViewController.m; sourceTree = "<group>"; };
-		6F1830E516E2097A00F3DF88 /* BWCSetDevicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSetDevicesViewController.h; sourceTree = "<group>"; };
-		6F1830E616E2097A00F3DF88 /* BWCSetDevicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCSetDevicesViewController.m; sourceTree = "<group>"; };
+		6F1830E116E2011600F3DF88 /* BXCCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXCCallViewController.h; sourceTree = "<group>"; };
+		6F1830E216E2011600F3DF88 /* BXCCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXCCallViewController.m; sourceTree = "<group>"; };
+		6F1830E516E2097A00F3DF88 /* BXCSetDevicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXCSetDevicesViewController.h; sourceTree = "<group>"; };
+		6F1830E616E2097A00F3DF88 /* BXCSetDevicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXCSetDevicesViewController.m; sourceTree = "<group>"; };
 		6F1830E816E215E000F3DF88 /* BXCTimeAndSpeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXCTimeAndSpeedViewController.h; sourceTree = "<group>"; };
 		6F1830E916E215E000F3DF88 /* BXCTimeAndSpeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BXCTimeAndSpeedViewController.m; sourceTree = "<group>"; };
 		6F2B11DE16B401DC00C07BE8 /* BXCCommandBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BXCCommandBuilder.h; sourceTree = "<group>"; };
@@ -217,12 +217,12 @@
 		6F0EA6CC16E3521700043C39 /* Wizzard */ = {
 			isa = PBXGroup;
 			children = (
-				6F0EA6CE16E3522900043C39 /* BWCStep1ViewController.h */,
-				6F0EA6CF16E3522900043C39 /* BWCStep1ViewController.m */,
-				6F0EA6D116E3590D00043C39 /* BWCStep2ViewController.h */,
-				6F0EA6D216E3590D00043C39 /* BWCStep2ViewController.m */,
-				6F0EA6D416E35F3200043C39 /* BWCStep3ViewController.h */,
-				6F0EA6D516E35F3200043C39 /* BWCStep3ViewController.m */,
+				6F0EA6CE16E3522900043C39 /* BXCStep1ViewController.h */,
+				6F0EA6CF16E3522900043C39 /* BXCStep1ViewController.m */,
+				6F0EA6D116E3590D00043C39 /* BXCStep2ViewController.h */,
+				6F0EA6D216E3590D00043C39 /* BXCStep2ViewController.m */,
+				6F0EA6D416E35F3200043C39 /* BXCStep3ViewController.h */,
+				6F0EA6D516E35F3200043C39 /* BXCStep3ViewController.m */,
 			);
 			name = Wizzard;
 			sourceTree = "<group>";
@@ -324,12 +324,12 @@
 				6FF247D816BEC178004A9629 /* BXCSettingsViewController.m */,
 				6F10343F16D0E836004A7C35 /* BXCPasswordViewController.h */,
 				6F10344016D0E836004A7C35 /* BXCPasswordViewController.m */,
-				6F10344316D117F8004A7C35 /* BWCNumberViewController.h */,
-				6F10344416D117F8004A7C35 /* BWCNumberViewController.m */,
-				6F1830E116E2011600F3DF88 /* BWCCallViewController.h */,
-				6F1830E216E2011600F3DF88 /* BWCCallViewController.m */,
-				6F1830E516E2097A00F3DF88 /* BWCSetDevicesViewController.h */,
-				6F1830E616E2097A00F3DF88 /* BWCSetDevicesViewController.m */,
+				6F10344316D117F8004A7C35 /* BXCNumberViewController.h */,
+				6F10344416D117F8004A7C35 /* BXCNumberViewController.m */,
+				6F1830E116E2011600F3DF88 /* BXCCallViewController.h */,
+				6F1830E216E2011600F3DF88 /* BXCCallViewController.m */,
+				6F1830E516E2097A00F3DF88 /* BXCSetDevicesViewController.h */,
+				6F1830E616E2097A00F3DF88 /* BXCSetDevicesViewController.m */,
 				6F1830E816E215E000F3DF88 /* BXCTimeAndSpeedViewController.h */,
 				6F1830E916E215E000F3DF88 /* BXCTimeAndSpeedViewController.m */,
 			);
@@ -422,9 +422,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6F67C12A16A32C5A00874715 /* W-Bretto */ = {
+		6F67C12A16A32C5A00874715 /* X-Bretto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6F67C15D16A32C5B00874715 /* Build configuration list for PBXNativeTarget "W-Bretto" */;
+			buildConfigurationList = 6F67C15D16A32C5B00874715 /* Build configuration list for PBXNativeTarget "X-Bretto" */;
 			buildPhases = (
 				6F67C12716A32C5A00874715 /* Sources */,
 				6F67C12816A32C5A00874715 /* Frameworks */,
@@ -434,7 +434,7 @@
 			);
 			dependencies = (
 			);
-			name = "W-Bretto";
+			name = "X-Bretto";
 			productName = BrettoWControl;
 			productReference = 6F67C12B16A32C5A00874715 /* W-Bretto.app */;
 			productType = "com.apple.product-type.application";
@@ -445,7 +445,7 @@
 		6F67C12216A32C5A00874715 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = BWC;
+				CLASSPREFIX = BXC;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = MobiOak;
 			};
@@ -462,7 +462,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6F67C12A16A32C5A00874715 /* W-Bretto */,
+				6F67C12A16A32C5A00874715 /* X-Bretto */,
 			);
 		};
 /* End PBXProject section */
@@ -556,13 +556,13 @@
 				6F2B11E016B401DC00C07BE8 /* BXCCommandBuilder.m in Sources */,
 				6FF247D916BEC178004A9629 /* BXCSettingsViewController.m in Sources */,
 				6F10344116D0E836004A7C35 /* BXCPasswordViewController.m in Sources */,
-				6F10344516D117F8004A7C35 /* BWCNumberViewController.m in Sources */,
-				6F1830E316E2011600F3DF88 /* BWCCallViewController.m in Sources */,
-				6F1830E716E2097A00F3DF88 /* BWCSetDevicesViewController.m in Sources */,
+				6F10344516D117F8004A7C35 /* BXCNumberViewController.m in Sources */,
+				6F1830E316E2011600F3DF88 /* BXCCallViewController.m in Sources */,
+				6F1830E716E2097A00F3DF88 /* BXCSetDevicesViewController.m in Sources */,
 				6F1830EA16E215E000F3DF88 /* BXCTimeAndSpeedViewController.m in Sources */,
-				6F0EA6D016E3522900043C39 /* BWCStep1ViewController.m in Sources */,
-				6F0EA6D316E3590D00043C39 /* BWCStep2ViewController.m in Sources */,
-				6F0EA6D616E35F3200043C39 /* BWCStep3ViewController.m in Sources */,
+				6F0EA6D016E3522900043C39 /* BXCStep1ViewController.m in Sources */,
+				6F0EA6D316E3590D00043C39 /* BXCStep2ViewController.m in Sources */,
+				6F0EA6D616E35F3200043C39 /* BXCStep3ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,7 +648,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BrettoWControl/BrettoXControl-Prefix.pch";
 				INFOPLIST_FILE = "BrettoWControl/BrettoXControl-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -665,10 +665,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BrettoWControl/BrettoXControl-Prefix.pch";
 				INFOPLIST_FILE = "BrettoWControl/BrettoXControl-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "F28E79B9-3423-4EC5-AE15-469B7C66FFD3";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F28E79B9-3423-4EC5-AE15-469B7C66FFD3";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -686,7 +686,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6F67C15D16A32C5B00874715 /* Build configuration list for PBXNativeTarget "W-Bretto" */ = {
+		6F67C15D16A32C5B00874715 /* Build configuration list for PBXNativeTarget "X-Bretto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6F67C15E16A32C5B00874715 /* Debug */,

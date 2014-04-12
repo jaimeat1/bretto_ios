@@ -18,7 +18,8 @@
 @property (nonatomic, weak) IBOutlet UIButton *imeiBtn;
 @property (nonatomic, weak) IBOutlet UIButton *setDevicesBtn;
 @property (nonatomic, weak) IBOutlet UIButton *getDevicesBtn;
-@property (nonatomic, weak) IBOutlet UIButton *setSensibilityBtn;
+@property (nonatomic, weak) IBOutlet UIButton *automaticBtn;
+@property (nonatomic, weak) IBOutlet UIButton *speedBtn;
 
 - (IBAction)buttonPressed:(id)sender;
 

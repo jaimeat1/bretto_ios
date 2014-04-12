@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BWCStep2ViewController : UITableViewController
+@interface BXCStep2ViewController : UITableViewController
 
 @property (nonatomic, weak) IBOutlet UITextField* number;
 

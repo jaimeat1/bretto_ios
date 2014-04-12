@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 MobiOak. All rights reserved.
 //
 
-#import "BWCNumberViewController.h"
+#import "BXCNumberViewController.h"
 
-@interface BWCNumberViewController ()
+@interface BXCNumberViewController ()
 
 @end
 
-@implementation BWCNumberViewController
+@implementation BXCNumberViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,7 +50,7 @@
 
 - (void)cancelPressed:(id)sender
 {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)savePressed:(id)sender
@@ -69,7 +69,7 @@
     } else {
 
         [[NSUserDefaults standardUserDefaults] setObject:self.numberFld.text forKey:@"numberAlarm"];
-        [self dismissModalViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
 
     }
 }

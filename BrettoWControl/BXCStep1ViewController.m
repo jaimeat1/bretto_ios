@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 MobiOak. All rights reserved.
 //
 
-#import "BWCStep1ViewController.h"
-#import "BWCStep2ViewController.h"
+#import "BXCStep1ViewController.h"
+#import "BXCStep2ViewController.h"
 
-@interface BWCStep1ViewController ()
+@interface BXCStep1ViewController ()
 
 @end
 
-@implementation BWCStep1ViewController
+@implementation BXCStep1ViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

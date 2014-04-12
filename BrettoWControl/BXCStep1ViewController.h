@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BWCStep1ViewController : UITableViewController
+@interface BXCStep1ViewController : UITableViewController
 
 @property (nonatomic, weak) IBOutlet UITextField* password;
 @property (nonatomic, weak) IBOutlet UITextField* repeatPassword;

@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 MobiOak. All rights reserved.
 //
 
-#import "BWCStep3ViewController.h"
+#import "BXCStep3ViewController.h"
 #import "BXCCommandBuilder.h"
 #import "BXCAppDelegate.h"
 
-@interface BWCStep3ViewController ()
+@interface BXCStep3ViewController ()
 
 @end
 
-@implementation BWCStep3ViewController
+@implementation BXCStep3ViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

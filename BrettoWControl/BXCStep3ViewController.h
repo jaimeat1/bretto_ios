@@ -1,14 +1,14 @@
 //
-//  BWCConfigureNumbersViewController.h
+//  BWCStep3ViewController.h
 //  BrettoWControl
 //
-//  Created by Jaime on 02/03/13.
+//  Created by Jaime on 03/03/13.
 //  Copyright (c) 2013 MobiOak. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface BWCSetDevicesViewController : UITableViewController
+@interface BXCStep3ViewController : UITableViewController
 
 @property (nonatomic, weak) IBOutlet UITextField* numberA;
 @property (nonatomic, weak) IBOutlet UITextField* numberB;

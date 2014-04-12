@@ -6,15 +6,15 @@
 //  Copyright (c) 2013 MobiOak. All rights reserved.
 //
 
-#import "BWCSetDevicesViewController.h"
+#import "BXCSetDevicesViewController.h"
 #import "BXCCommandBuilder.h"
 #import "BXCAppDelegate.h"
 
-@interface BWCSetDevicesViewController ()
+@interface BXCSetDevicesViewController ()
 
 @end
 
-@implementation BWCSetDevicesViewController
+@implementation BXCSetDevicesViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -48,7 +48,7 @@
 
 - (void)cancelPressed:(id)sender
 {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)savePressed:(id)sender
