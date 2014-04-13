@@ -430,13 +430,6 @@
             
             [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"wizardShown"];
             [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"askPassword"];
-        
-            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Attention", @"")
-                                        message:NSLocalizedString(@"Advice", @"")
-                                       delegate:nil
-                              cancelButtonTitle:NSLocalizedString(@"Accept", @"")
-                              otherButtonTitles:nil]
-             show];
 
         // Error in sending wizard
         } else {
@@ -487,13 +480,6 @@
             
             [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"wizardShown"];
             [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"askPassword"];
-            
-            [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Attention", @"")
-                                        message:NSLocalizedString(@"Advice", @"")
-                                       delegate:nil
-                              cancelButtonTitle:NSLocalizedString(@"Accept", @"")
-                              otherButtonTitles:nil]
-             show];
             
         // Error in sending wizard
         } else {

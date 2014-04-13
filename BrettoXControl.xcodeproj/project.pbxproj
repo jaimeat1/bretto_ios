@@ -162,7 +162,7 @@
 		6F54F18D18F9B53900EE624D /* location_pressed_iphone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_pressed_iphone5.png; sourceTree = "<group>"; };
 		6F54F18E18F9B53900EE624D /* sensor_iphone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sensor_iphone5.png; sourceTree = "<group>"; };
 		6F54F18F18F9B53900EE624D /* sensor_pressed_iphone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sensor_pressed_iphone5.png; sourceTree = "<group>"; };
-		6F67C12B16A32C5A00874715 /* W-Bretto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "W-Bretto.app"; path = "X-Bretto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F67C12B16A32C5A00874715 /* X-Bretto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X-Bretto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F67C12F16A32C5A00874715 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6F67C13116A32C5B00874715 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6F67C13316A32C5B00874715 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -260,7 +260,7 @@
 		6F67C12C16A32C5A00874715 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6F67C12B16A32C5A00874715 /* W-Bretto.app */,
+				6F67C12B16A32C5A00874715 /* X-Bretto.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -436,7 +436,7 @@
 			);
 			name = "X-Bretto";
 			productName = BrettoWControl;
-			productReference = 6F67C12B16A32C5A00874715 /* W-Bretto.app */;
+			productReference = 6F67C12B16A32C5A00874715 /* X-Bretto.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -597,7 +597,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Jaime Aranaz (JHP429439D)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jaime Aranaz (JHP429439D)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -612,6 +613,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "2A0A3ECF-0422-4C39-846D-6466A30C31E5";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -626,7 +628,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jaime Aranaz (JU2RPJFHF7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jaime Aranaz (JU2RPJFHF7)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -634,6 +637,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "2A0A3ECF-0422-4C39-846D-6466A30C31E5";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
