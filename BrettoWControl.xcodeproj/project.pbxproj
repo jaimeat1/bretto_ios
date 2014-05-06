@@ -458,6 +458,11 @@
 				CLASSPREFIX = BWC;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = MobiOak;
+				TargetAttributes = {
+					6F67C12A16A32C5A00874715 = {
+						DevelopmentTeam = JU2RPJFHF7;
+					};
+				};
 			};
 			buildConfigurationList = 6F67C12516A32C5A00874715 /* Build configuration list for PBXProject "BrettoWControl" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -608,7 +613,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jaime Aranaz (JU2RPJFHF7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jaime Aranaz (JU2RPJFHF7)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -637,7 +643,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jaime Aranaz (JU2RPJFHF7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jaime Aranaz (JU2RPJFHF7)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -654,15 +661,15 @@
 		6F67C15E16A32C5B00874715 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jaime Aranaz (JHP429439D)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jaime Aranaz (JHP429439D)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jaime Aranaz (JU2RPJFHF7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BrettoWControl/BrettoWControl-Prefix.pch";
 				INFOPLIST_FILE = "BrettoWControl/BrettoWControl-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "98A0ECF6-E341-45EC-80A0-F424355CEB5F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "98A0ECF6-E341-45EC-80A0-F424355CEB5F";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -671,15 +678,15 @@
 		6F67C15F16A32C5B00874715 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Jaime Aranaz";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jaime Aranaz";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jaime Aranaz (JU2RPJFHF7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BrettoWControl/BrettoWControl-Prefix.pch";
 				INFOPLIST_FILE = "BrettoWControl/BrettoWControl-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "F28E79B9-3423-4EC5-AE15-469B7C66FFD3";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F28E79B9-3423-4EC5-AE15-469B7C66FFD3";
+				PROVISIONING_PROFILE = "98A0ECF6-E341-45EC-80A0-F424355CEB5F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "98A0ECF6-E341-45EC-80A0-F424355CEB5F";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
