@@ -339,8 +339,6 @@
         
     // There is alarm number
     } else {
-// TODO: uncomment in release
-/*
         // SMS can't be send or it's not an iPhone
         if (([MFMessageComposeViewController canSendText] == NO) ||
             ([[[UIDevice currentDevice] model] rangeOfString:@"iPhone"].location == NSNotFound)) {
@@ -379,10 +377,10 @@
             }
             
         }
-*/
+
         // TODO: comment in release version
         // Shows pop-up with message to send, used in debbuging version
-
+/*
          NSString* title = [NSString stringWithFormat:@"SMS se enviará a %@", [[NSUserDefaults standardUserDefaults] stringForKey:@"numberAlarm"]];
          
          self.alertMessage = [[UIAlertView alloc] initWithTitle:title
@@ -392,7 +390,7 @@
          otherButtonTitles:NSLocalizedString(@"Cancel", @""), nil];
          
          [self.alertMessage show];
-
+*/
     }
 }
 
